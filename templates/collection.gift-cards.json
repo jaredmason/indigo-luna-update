@@ -1,0 +1,139 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-gift-cards",
+      "settings": {
+        "hide_title": false,
+        "enable_descriptions": true,
+        "crop": "0.8",
+        "grid": 4,
+        "rows": 40,
+        "grid_mobile": "2",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "linklist": "",
+        "capitalize_filters": true,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "ef7b7f78-8fe2-4759-97f4-c531bc94c1b8": {
+      "type": "main-page-faqs",
+      "blocks": {
+        "abfae86d-ad54-47ec-9a8d-9b832a3a69df": {
+          "type": "row",
+          "settings": {
+            "title": "Where can I use the Gift Card?",
+            "text": "<p>E-Gift vouchers can be used for online purchases on our website and in-store at our HQ.<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "619b7f18-9cfa-40a6-9e2d-c685b46d8ffd": {
+          "type": "row",
+          "settings": {
+            "title": "Can I use my gift card multiple times?",
+            "text": "<p>Yes. Vouchers hold a balance, which can be spent over more than one order.<br\/><\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "532aa635-7775-4108-9588-1c7e5f155f8c": {
+          "type": "row",
+          "settings": {
+            "title": "How do I check my balance?",
+            "text": "<p>You just need to click on the orignial link sent to your email. This will show your remaining balance. <br\/><\/p><p>If you have deleted the email by accident, please contact our <a href=\"\/pages\/contact-us\" title=\"Contact Us\">support team<\/a> to request it to be re-sent.<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14512817832007__ef7b7f78-8fe2-4759-97f4-c531bc94c1b8-1670468224b81e8b21-2": {
+          "type": "row",
+          "settings": {
+            "title": "Do gift cards have an expiration date?",
+            "text": "<p>No. Our gift cards do not have an expiration date.<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14512817832007__ef7b7f78-8fe2-4759-97f4-c531bc94c1b8-1670468224b81e8b21-1": {
+          "type": "row",
+          "settings": {
+            "title": "When will a scheduled Gift Card be delivered?",
+            "text": "<p>When purchasing or issuing a new gift card, scheduling the date as <strong>today<\/strong> means the email will be sent <strong>immediately<\/strong>. When selecting a <strong>date in the future<\/strong>, it will be delivered on that date at 9am (GMT+11).<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "7909628d-ba04-41ef-a565-6d0ab13c9fd4": {
+          "type": "row",
+          "settings": {
+            "title": "Can I use a discount code to purchase a gift card?",
+            "text": "<p>No. Discounts cannot be used to purchase gift cards.<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "4063237d-9417-4afe-81c2-70e6dac124ed": {
+          "type": "row",
+          "settings": {
+            "title": "Can I buy products in clearance?",
+            "text": "<p>Yes. You can buy any product you wish on our website or in our stores.<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14512817832007__ef7b7f78-8fe2-4759-97f4-c531bc94c1b8-1670468224b81e8b21-0": {
+          "type": "row",
+          "settings": {
+            "title": "Why did I not receive an email with the gift card?",
+            "text": "<p>You will receive an order confirmation email. <br\/>Whoever you made the <strong>recipient<\/strong> will receive their code via the email provided on the date scheduled. <br\/><strong><br\/>The gift recipient's email address may be wrong or misspelled. <br\/><\/strong>If this is the case, please contact our support team <a href=\"\/pages\/contact-us\" title=\"Contact Us\">here<\/a> and let us know the correct email. We will change the email address and resend it.<\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        },
+        "4e5886fc-f24b-4cbc-a5b0-894b4cd18cc9": {
+          "type": "row",
+          "settings": {
+            "title": "I have lost or deleted by accident my E-gift voucher",
+            "text": "<p>No need to worry. Please contact our support team <a href=\"\/pages\/contact-us\" title=\"Contact Us\">here<\/a> and we will resend the email. <\/p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "abfae86d-ad54-47ec-9a8d-9b832a3a69df",
+        "619b7f18-9cfa-40a6-9e2d-c685b46d8ffd",
+        "532aa635-7775-4108-9588-1c7e5f155f8c",
+        "template--14512817832007__ef7b7f78-8fe2-4759-97f4-c531bc94c1b8-1670468224b81e8b21-2",
+        "template--14512817832007__ef7b7f78-8fe2-4759-97f4-c531bc94c1b8-1670468224b81e8b21-1",
+        "7909628d-ba04-41ef-a565-6d0ab13c9fd4",
+        "4063237d-9417-4afe-81c2-70e6dac124ed",
+        "template--14512817832007__ef7b7f78-8fe2-4759-97f4-c531bc94c1b8-1670468224b81e8b21-0",
+        "4e5886fc-f24b-4cbc-a5b0-894b4cd18cc9"
+      ],
+      "settings": {
+        "title": "FAQ'S",
+        "richtext": "",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "text_alignment": "text-center"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ef7b7f78-8fe2-4759-97f4-c531bc94c1b8"
+  ]
+}

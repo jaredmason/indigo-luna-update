@@ -1,0 +1,29 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "grid",
+        "show_title": true,
+        "show_rss": false,
+        "enable_tag_filter": true,
+        "feature_content_position": "lg:items-center",
+        "feature_image_width": "one-half",
+        "desktop_image_position": "right",
+        "show_author": false,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_tags": false,
+        "show_comments": false,
+        "show_link": true,
+        "crop": "1",
+        "no_posts": 24,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

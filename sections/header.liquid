@@ -1,0 +1,514 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available in the "Header" section in the theme editor.
+
+  Theme Store required settings
+  - Show announcement
+  - Text: message to announce
+  - Link: link of the announcement bar
+
+  Theme Store optional settings
+  - Home page only: only shows on the home page
+{%- endcomment -%}
+{%- liquid
+  assign layout = "logo_center_menu_drawer"
+  assign section_color = 'header'
+  assign overlay_text_color = section.settings.overlay_text_color
+  assign show_icons = true
+  assign show_search = true
+  assign link_all = false
+
+  if section.settings.overlay_homepage and template.name == 'index' or template.name == 'article'
+    assign overlay_header = true
+    assign overlay_header_with_sticky = false
+    assign overlay_header_without_sticky = true
+  elsif page.template_suffix == 'contact' or page.template_suffix == 'image-overlay' or page.template_suffix == 'who-we-are'
+  	assign overlay_header = true
+    assign overlay_header_with_sticky = false
+    assign overlay_header_without_sticky = true
+  else
+    assign overlay_header = false
+  endif
+
+  assign drop_down_cols_position = 'justify-center'
+  if section.settings.layout contains 'menu_left'
+    assign drop_down_cols_position = 'justify-start'
+  endif
+-%}
+
+<style>
+:root {
+  --color-header-accent: var(--color-{{ section.settings.color_scheme }}-accent);
+  --color-header-text: var(--color-{{ section.settings.color_scheme }}-text);
+  --color-header-background: var(--color-{{ section.settings.color_scheme }}-background);
+  --color-header-background-hex: var(--color-{{ section.settings.color_scheme }}-background-hex);
+  --color-header-background-0: var(--color-{{ section.settings.color_scheme  }}-background-0);
+  --color-header-meta: var(--color-{{ section.settings.color_scheme }}-meta);
+  --color-header-text--overlay: var(--color-{{ section.settings.color_scheme }}-text--overlay);
+  --color-header-accent--overlay: var(--color-{{ section.settings.color_scheme }}-accent--overlay);
+  --color-header-accent-placeholder: var(--color-{{ section.settings.color_scheme }}-text-placeholder);
+}
+</style>
+
+{% comment %}
+  Logo
+{% endcomment %}
+{%- capture header_logo %}
+  {% if template.name == 'index' %}
+    <h1 class="">
+  {% else %}
+    <div class="h1">
+  {% endif %}
+      <a href="{{ routes.root_url }}" class="inline-block logo-image break-all">
+          <div x-show="headerIsStuck" x-cloak>
+            {% render 'icon-logo' %}
+          </div>
+
+          {%- if overlay_header -%}
+          <div class="py-1 max-h-logo lg:h-full" x-show="!headerIsStuck">
+            {% render 'icon-logo-overlay' %}
+          </div>
+          {% else %}
+          <div class="py-1 max-h-logo lg:h-full" x-show="!headerIsStuck">
+            {% render 'icon-logo-full' %}
+          </div>
+          {%- endif -%}
+      </a>
+  {% if template.name == 'index' %}
+    </h1>
+  {% else %}
+    </div>
+  {% endif %}
+{%- endcapture -%}
+
+
+{% comment %}
+  Regular Nav
+{% endcomment %}
+{%- capture header_menu %}
+  <ul class="flex flex-wrap justify-start">
+  {%- for link in linklists[section.settings.menu].links -%}
+      <li class="mr-6">
+        <button class="js-enabled inline-block py-2 {% if settings.header_uppercase %}uppercase{% endif %}"
+                x-bind:aria-expanded="$store.drawer.menuDrawerOpen"
+                @click="$store.drawer.menuDrawerOpen = !$store.drawer.menuDrawerOpen"
+                onclick="selectMenu('{{ link.title }}')"
+                data-menu-drawer-toggle>
+          {{ link.title }}
+        </button>
+      </li>
+  {%- endfor -%}
+  </ul>
+{%- endcapture -%}
+
+{% comment %}
+  Secondary Nav
+{% endcomment %}
+{%- capture secondary_menu %}
+  <ul class="flex flex-wrap justify-start">
+  {%- for link in linklists[section.settings.secondary_menu].links -%}
+      <li class="ml-6">
+        <button class="js-enabled inline-block py-2 {% if settings.header_uppercase %}uppercase{% endif %}"
+                x-bind:aria-expanded="$store.drawer.supportDrawerOpen"
+                @click.prevent="$store.drawer.supportOpener = $event.currentTarget; $store.drawer.supportDrawerOpen = !$store.drawer.supportDrawerOpen"
+                onclick="selectSupport('{{ link.title }}')"
+                data-support-drawer-toggle>
+          {{ link.title }}
+        </button>
+      </li>
+  {%- endfor -%}
+  </ul>
+{%- endcapture -%}
+
+{%- capture header_menu_toggle -%}
+  <button class="js-enabled inline-block py-2 {% if settings.header_uppercase %}uppercase{% endif %}"
+          x-bind:aria-expanded="$store.drawer.menuDrawerOpen"
+          @click="$store.drawer.menuDrawerOpen = !$store.drawer.menuDrawerOpen"
+          data-menu-drawer-toggle>
+    {{ 'layout.navigation.menu' | t }}
+  </button>
+{%- endcapture -%}
+
+{% comment %}
+  Accounts
+{% endcomment %}
+{% if shop.customer_accounts_enabled %}
+{%- capture customer_accounts %}
+  {% if customer %}
+    <a class="inline-block py-2" href="{{ routes.account_url }}">
+      {%- if show_icons -%}
+        <span class="visually-hidden">{{ 'layout.customer.account' | t }}</span>
+        <span class="inline-block w-5 h-5 align-middle">{%- render 'icon-account' -%}</span>
+      {%- else -%}
+        {{ 'layout.customer.account' | t }}
+      {%- endif -%}
+    </a>
+  {% else %}
+    <a class="inline-block py-2" href="{{ routes.account_login_url }}">
+      {%- if show_icons -%}
+        <span class="visually-hidden">{{ 'layout.customer.log_in' | t }}</span>
+        <span class="inline-block w-5 h-5 align-middle">{%- render 'icon-account' -%}</span>
+      {%- else -%}
+       {{ 'layout.customer.log_in' | t }}
+      {%- endif -%}
+      </a>
+  {% endif %}
+{%- endcapture -%}
+{% endif %}
+
+{% comment %}
+  Search
+{% endcomment %}
+{%- capture search %}
+  <a x-ref="search" @click.prevent="openSearch()" @keydown.space="openSearch()" class="inline-block py-2" href="{{ routes.search_url }}">
+    {%- if show_icons -%}
+    <span class="visually-hidden">{{ 'layout.navigation.search' | t }}</span>
+    <span class="inline-block w-5 h-5 align-middle">{%- render 'icon-search' -%}</span>
+    {%- else -%}
+    {{ 'layout.navigation.search' | t }}
+    {%- endif -%}
+  </a>
+  <div :class="{ 'bottom-0' : headerIsStuck, 'bottom-header-intersect' : !headerIsStuck }" class="absolute left-0 w-full transform {% if layout contains 'menu_below' %}translate-y-1{% else %}translate-y-full{% endif %} z-60 bg-secondary-accent text-{{ section_color }}-text py-1 section-x-padding"
+    x-cloak
+    x-show="searchOpen"
+    x-transition:enter="transition ease duration-200"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease duration-00"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    @click.away.prevent="searchOpen = false"
+    data-header-search
+    @focusout="searchFocusOut($event)"
+  >
+   <form action="{{ routes.search_url }}" method="get" class="input-group search" role="search">
+      <label for="search" class="hidden">{{ 'general.search.submit' | t }}</label>
+      <div class="flex items-center justify-between">
+        <button class="py-2 mr-4"
+          aria-label="{{ 'general.search.submit' | t }}"
+          type="submit">
+          <span class="inline-block w-5 h-5 align-middle">{%- render 'icon-search' -%}</span>
+          <span class="visually-hidden">{{ 'general.search.submit' | t }}</span>
+        </button>
+        <input type="hidden" name="type" value="product" />
+        <input x-ref="searchInput" id="search" type="text" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'general.search.placeholder' | t }}" class="placeholder-current font-body w-full block bg-transparent flex-grow" aria-label="{{ 'general.search.placeholder' | t }}" data-search-input>
+        <button class="py-2 ml-4"
+          @click="searchOpen = false"
+          type="button">
+          <span class="visually-hidden">{{ 'general.accessibility.close_modal' | t }}</span>
+          <span class="inline-block w-5 h-5 align-middle">{%- render 'icon-close' -%}</span>
+        </button>
+      </div>
+    </form>
+  </div>
+{%- endcapture -%}
+
+{% comment %}
+  Cart
+{% endcomment %}
+{%- capture header_cart %}
+  <a  href="{{ routes.cart_url }}"
+      class="inline-block py-2 {% if settings.header_uppercase %}uppercase{% endif %}"
+      {% if settings.ajax_cart_method == 'drawer' %}
+        data-cart-drawer-toggle
+        x-bind:aria-expanded="$store.drawer.cartDrawerOpen"
+        @click.prevent="$store.drawer.cartOpener = $event.currentTarget; $store.drawer.cartDrawerOpen = !$store.drawer.cartDrawerOpen"
+        @keydown.space="$store.drawer.cartOpener = $event.currentTarget; $store.drawer.cartDrawerOpen = !$store.drawer.cartDrawerOpen"
+      {% endif %}
+    >
+  {%- if show_icons -%}
+    <div class="relative">
+      <span class="inline-block w-5 h-5 fill-current align-middle" x-show="$store.cartCount.count < 1">{%- render 'icon-cart-empty' -%}</span>
+      <span class="inline-block w-5 h-5 fill-current align-middle" x-show="$store.cartCount.count > 0" x-cloak>{%- render 'icon-cart' -%}</span>
+      <span class="visually-hidden" id="CartCount" x-text="$store.cartCount.countWithText()"></span>
+    </div>
+  {%- else -%}
+   {{ 'layout.cart.title' | t }} (<span x-text="$store.cartCount.count" id="CartCount">{{ cart.item_count }}</span>)
+  {%- endif -%}
+  </a>
+{%- endcapture -%}
+
+<section x-data="ThemeSection_{{ section.id }}()" x-init="mounted()" data-section-id="{{ section.id }}" data-section-type="header" data-dropdown-count="{{ counter }}" data-sticky="true">
+  <sticky-header>
+  <header
+    {% if overlay_header %}:class="{ 'bg-{{ section_color }}-background text-{{ section_color }}-text border-{{ section_color }}-text' : headerIsStuck, 'bg-transparent text-{{ overlay_text_color }}-text border-{{ overlay_text_color }}-text' : !headerIsStuck }"
+    {% else %}:class="{ 'bg-{{ section_color }}-background text-{{ section_color }}-text border-{{ section_color }}-text' : headerIsStuck, 'bg-{{ section_color }}-background lg:bg-transparent text-{{ section_color }}-text border-{{ section_color }}-text' : !headerIsStuck }"{% endif %}
+    class="transition duration-300 {% if overlay_header_without_sticky %}text-{{ overlay_text_color }}-text{% endif %} {% unless overlay_header_without_sticky %}text-{{ section_color }}-text bg-{{ section_color }}-background{% endunless %} relative {% if overlay_header_without_sticky %}border-{{ overlay_text_color }}-text{% endif %} {% unless overlay_header %}border-theme-color{% endunless %}">
+     <div class="lg:relative section-x-padding flex justify-between py-1" :class="{ 'items-center' : headerIsStuck, 'items-start' : !headerIsStuck }">
+
+      <div class="lg:hidden flex items-center {% if layout contains 'logo_center' %}flex-grow w-1/3{% endif %}" :class="{ 'pt-4' : !headerIsStuck }">
+        {% if layout contains 'logo_center' %}
+          {{ header_menu_toggle }}
+        {% endif %}
+      </div>
+
+      <div class="hidden lg:flex items-center {% if layout contains 'logo_center' %}flex-grow w-1/3{% endif %}" :class="{ 'pt-4' : !headerIsStuck }">
+        {% if layout contains 'logo_center' %}
+          {{ header_menu }}
+        {% endif %}
+      </div>
+
+      {% if layout contains 'logo_center' %}
+        <div class="justify-center text-center">
+          {{ header_logo }}
+        </div>
+      {% endif %}
+
+      <div class="flex items-center justify-end text-right {% if layout contains 'logo_center' %}flex-grow w-1/3{% endif %}" :class="{ 'pt-4' : !headerIsStuck }">
+
+        {% if layout contains 'logo_center' %}
+        <div class="hidden lg:block">
+          {{ secondary_menu }}
+        </div>
+        {% endif %}
+
+        {% if show_search %}
+        <div class="hidden lg:block whitespace-nowrap ml-6">
+          {{ search }}
+        </div>
+        {% endif %}
+
+        {%- if shop.customer_accounts_enabled -%}
+        <div class="hidden lg:block whitespace-nowrap ml-6">
+          {{ customer_accounts }}
+        </div>
+        {%- endif -%}
+
+        <div class="ml-6 mt-1 whitespace-nowrap">
+          <!-- include 'wishlist-link' -->
+        </div>
+
+        <div class="ml-6 whitespace-nowrap">
+          {{ header_cart }}
+        </div>
+      </div>
+
+    </div>
+  </header>
+  </sticky-header>
+</section>
+
+<noscript>
+  <style>
+    .no-js-focus-wrapper:focus-within .no-js-focus-container {
+      display: block !important;
+    }
+    {% if layout == 'logo_center_menu_drawer' %}
+    .section-sidebar {
+      display: block !important;
+    }
+    {%- endif -%}
+  </style>
+</noscript>
+
+<style>
+  {% if overlay_header %}
+    #shopify-section-header {
+      z-index: 50;
+    }
+  {% endif %}
+  :root {
+    --sticky-header-height: 66px;
+  }
+  .shopify-section-header-sticky {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+  }
+  #shopify-section-header.animate {
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1);;
+  }
+  .shopify-section-header-hidden {
+    transform: translateY(-100%);
+  }
+</style>
+
+{% if section.settings.logo != blank %}
+  <style>
+    .logo-image {
+      display: block;
+      max-width: {{ section.settings.logo_max_width }}px;
+    }
+  </style>
+{% endif %}
+
+{% javascript %}
+  class StickyHeader extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    connectedCallback() {
+      this.header = document.getElementById('shopify-section-header');
+      this.headerBounds = {};
+      this.currentScrollTop = 0;
+      this.preventReveal = false;
+
+      this.onScrollHandler = this.onScroll.bind(this);
+      this.hideHeaderOnScrollUp = () => this.preventReveal = true;
+
+      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.addEventListener('scroll', this.onScrollHandler, false);
+
+      this.createObserver();
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
+      window.removeEventListener('scroll', this.onScrollHandler);
+    }
+
+    createObserver() {
+      let observer = new IntersectionObserver((entries, observer) => {
+        this.headerBounds = entries[0].intersectionRect;
+        observer.disconnect();
+      });
+
+      observer.observe(this.header);
+    }
+
+    onScroll() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        requestAnimationFrame(this.hide.bind(this));
+      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+        if (!this.preventReveal) {
+          requestAnimationFrame(this.reveal.bind(this));
+        } else {
+          window.clearTimeout(this.isScrolling);
+
+          this.isScrolling = setTimeout(() => {
+            this.preventReveal = false;
+          }, 66);
+
+          requestAnimationFrame(this.hide.bind(this));
+        }
+      } else if (scrollTop <= this.headerBounds.top) {
+        requestAnimationFrame(this.reset.bind(this));
+      }
+
+      this.currentScrollTop = scrollTop;
+    }
+
+    hide() {
+      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');
+    }
+
+    reveal() {
+      this.header.classList.add('shopify-section-header-sticky', 'animate');
+      this.header.classList.remove('shopify-section-header-hidden');
+    }
+
+    reset() {
+      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');
+    }
+
+  }
+
+  customElements.define('sticky-header', StickyHeader);
+{% endjavascript %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Indigo Luna",
+  "url": "https://indigoluna.store/",
+  "logo": "https://cdn.shopify.com/s/files/1/1963/6793/files/indigo-luna-checkout_98168d47-f60b-4d20-af10-1214eab63aa7.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+614 9022 7851",
+    "contactType": "customer service",
+    "availableLanguage": "en"
+  },
+  "sameAs": [
+    "https://www.instagram.com/indigoluna.store/",
+    "https://www.facebook.com/indigolunastore/",
+    "https://id.pinterest.com/indigolunastore/"
+  ]
+}
+</script>
+
+{% if template.name == 'index' %}
+  {% assign potential_action_target = shop.url | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ shop.url | append: page.url | json }}
+    }
+  </script>
+{% endif %}
+
+<script>
+window.selectMenu = function(menu){
+    document.getElementById('selectMenu').__x.$data.menuActive = menu
+};
+window.selectSupport = function(support){
+    document.getElementById('selectSupport').__x.$data.supportActive = support
+};
+</script>
+
+{% schema %}
+  {
+    "name": "Header",
+    "class": "section-header absolute w-full",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Menu",
+        "default": "main-menu"
+      },
+      {
+        "type": "link_list",
+        "id": "secondary_menu",
+        "label": "Secondary menu"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "options": [
+            { "value": "primary", "label": "Primary"},
+            { "value": "secondary", "label": "Secondary"},
+            { "value": "tertiary", "label": "Tertiary"}
+        ],
+        "default":   "primary"
+      },
+      {
+        "type": "header",
+        "content": "Overlay Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "overlay_homepage",
+        "label": "Overlay header over home page"
+      },
+      {
+        "type": "select",
+        "id": "overlay_text_color",
+        "label": "Overlay text color",
+        "options": [
+            { "value": "primary", "label": "Primary text"},
+            { "value": "secondary", "label": "Secondary text"},
+            { "value": "tertiary", "label": "Tertiary text"},
+            { "value": "white", "label": "White"},
+            { "value": "black", "label": "Black"}
+        ],
+        "default":   "white"
+      }
+    ]
+  }
+{% endschema %}

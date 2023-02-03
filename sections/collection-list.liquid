@@ -1,0 +1,261 @@
+{%- liquid
+  assign section_color = section.settings.color_scheme
+  assign heading_size_class = section.settings.heading_size
+  assign padding_top = section.settings.padding_top
+  assign padding_top_desktop = section.settings.padding_top_desktop
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_bottom_desktop = section.settings.padding_bottom_desktop
+  assign section_y_padding = padding_top | append: ' ' | append: padding_top_desktop | append: ' ' | append: padding_bottom | append: ' ' | append: padding_bottom_desktop
+-%}
+<section class="relative bg-{{ section_color }}-background text-{{ section_color }}-text {{ section_y_padding }}" data-section-type="slideshow" data-section-id="{{ section.id }}" data-slide-speed="{{ section.settings.slide_speed }}" {% if section.settings.auto_rotate %}data-auto-rotate="true"{% endif %}>
+  {% if section.settings.title != '' %}
+  {%- render 'section-title',
+    title: section.settings.title,
+    section_color: section_color
+  -%}
+  {% endif %}
+
+  <div class="splide" data-splide='{ "perPage": 5, "perMove": 1 }'>
+    <button class="splide__autoplay-control absolute top-0 left-0 z-10 p-2 opacity-0 transition-opacity"
+            aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+            data-play="{{ 'sections.slideshow.rotate_slideshow' | t }}"
+            data-pause="{{ 'sections.slideshow.pause_slideshow' | t }}">
+      <span class="flex items-center justify-center relative">
+        <span class="splide__pause inline-block w-6">{% render 'icon-pause' %}</span>
+        <span class="splide__play inline-block w-6">{% render 'icon-play' %}</span>
+      </span>
+    </button>
+    <div class="splide__track {% if settings.fill_image_to_border_edge  %}border-b-grid border-grid-color{% endif %}">
+      <div class="splide__list">
+        {% for block in section.blocks %}
+          {%- liquid
+            assign ratio = section.settings.crop | plus: 0
+            assign text_size_class = block.settings.text_size
+            assign content_position = block.settings.content_position
+            assign text_color = block.settings.text_color
+            assign collection = collections[block.settings.collection]
+          -%}
+          <div class="splide__slide" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            <a class="group h-full block relative hover:underline" href="{{ collection.url }}">
+              {%- assign image = collection.image | default: collection.products.first.featured_image -%}
+              <div class="group-hover:opacity-80 transition-opacity">
+              {% render 'image-crop' with
+                image: image,
+                ratio: ratio,
+                crop: section.settings.crop
+              %}
+              </div>
+              {%- assign text_size_class = section.settings.text_size -%}
+              <div class="py-4 px-4 section-x-padding flex {{ content_position }}">
+                <div class="text-{{ text_color }}-text {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %} break-words w-full">
+                  <div class="text-md uppercase">
+                    {% if collection.title == blank %}
+                      {{ 'homepage.onboarding.collection_title' | t }}
+                    {% else %}
+                      {{ collection.title }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="js-enabled splide__arrows hidden lg:block right-0 text-{{ section_color }}-text {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-4 mt-2 lg:m-0 text-right">
+      <button class="splide__arrow splide__arrow--prev lg:absolute top-0 pb-theme lg:grid lg:h-full lg:left-2 hover:text-primary-accent">
+        <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
+        <span class="block self-center w-8 lg:w-12 lg:h-12 rounded-full bg-primary-background mx-auto">{% render 'icon-previous' %}</span>
+      </button>
+      <button class="splide__arrow splide__arrow--next lg:absolute top-0 pb-theme lg:grid lg:h-full lg:right-2 hover:text-primary-accent">
+        <span class="visually-hidden">{{ 'sections.slideshow.next_slide' | t }}</span>
+        <span class="block self-center w-8 lg:w-12 lg:h-12 rounded-full bg-primary-background mx-auto">{% render 'icon-next' %}</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Collection list",
+  "class": "has-full-screen-setting",
+  "max_blocks": 10,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text size",
+      "options": [
+        { "value": "text-sm", "label": "S"},
+        { "value": "text-base", "label": "M"},
+        { "value": "text-lg", "label": "L"},
+        { "value": "text-xl", "label": "XL"},
+        { "value": "text-2xl", "label": "2XL"},
+        { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
+        { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
+        { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL"}
+      ],
+      "default":   "text-2xl"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+          { "value": "primary", "label": "Primary"},
+          { "value": "secondary", "label": "Secondary"},
+          { "value": "tertiary", "label": "Tertiary"}
+      ],
+      "default":   "primary"
+    },
+    {
+    "type": "select",
+    "id": "crop",
+    "label": "Crop images",
+    "options": [
+      {
+      "value": "0",
+      "label": "No crop"
+      },
+      {
+      "value": "1.3",
+      "label": "Landscape"
+      },
+      {
+      "value": "1",
+      "label": "Square"
+      },
+      {
+      "value": "0.8",
+      "label": "Portrait"
+      }
+    ],
+    "default": "0.8"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_desktop",
+      "options": [
+        { "value": "lg:pt-2px", "label": "None" },
+        { "value": "lg:pt-theme-half", "label": "Half" },
+        { "value": "lg:pt-theme", "label": "Standard" },
+        { "value": "lg:pt-theme-double", "label": "Double" }
+      ],
+      "label": "Top padding desktop",
+      "default": "lg:pt-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_desktop",
+      "options": [
+        { "value": "lg:pb-2px", "label": "None" },
+        { "value": "lg:pb-theme-half", "label": "Half" },
+        { "value": "lg:pb-theme", "label": "Standard" },
+        { "value": "lg:pb-theme-double", "label": "Double" }
+      ],
+      "label": "Bottom padding desktop",
+      "default": "lg:pb-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "options": [
+        { "value": "pt-2px", "label": "None" },
+        { "value": "pt-theme-half", "label": "Half" },
+        { "value": "pt-theme", "label": "Standard" },
+        { "value": "pt-theme-double", "label": "Double" }
+      ],
+      "label": "Top padding mobile",
+      "default": "pt-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "options": [
+        { "value": "pb-2px", "label": "None" },
+        { "value": "pb-theme-half", "label": "Half" },
+        { "value": "pb-theme", "label": "Standard" },
+        { "value": "pb-theme-double", "label": "Double" }
+      ],
+      "label": "Bottom padding mobile",
+      "default": "pb-theme"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "label": "Collection",
+          "id": "collection",
+          "type": "collection"
+        },
+        {
+          "type": "checkbox",
+          "id": "indent_image",
+          "label": "Indent image",
+          "default": false
+        },
+        {
+          "type":      "header",
+          "content":   "Content"
+        },
+        {
+          "type": "select",
+          "id": "content_position",
+          "label": "Content position",
+          "options": [
+              { "value": "justify-start items-start text-left", "label": "Top left"},
+              { "value": "justify-center items-start text-center", "label": "Top center"},
+              { "value": "justify-end items-start text-right", "label": "Top right"},
+              { "value": "justify-start items-center text-left", "label": "Left"},
+              { "value": "justify-center items-center text-center", "label": "Center"},
+              { "value": "justify-end items-center text-right", "label": "Right"},
+              { "value": "justify-start items-end text-left", "label": "Bottom left"},
+              { "value": "justify-center items-end text-center", "label": "Bottom center"},
+              { "value": "justify-end items-end text-right", "label": "Bottom right"}
+          ],
+          "default":   "justify-center items-center text-center"
+        },
+        {
+          "type": "select",
+          "id": "text_color",
+          "label": "Text color",
+          "options": [
+              { "value": "primary", "label": "Primary"},
+              { "value": "secondary", "label": "Secondary"},
+              { "value": "tertiary", "label": "Tertiary"},
+              { "value": "white", "label": "White"},
+              { "value": "black", "label": "Black"}
+          ],
+          "default":   "primary"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection list",
+      "category": "Collection",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

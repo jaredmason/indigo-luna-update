@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-gift-card",
+      "settings": {
+        "enable_descriptions": true,
+        "color_scheme": "primary"
+      }
+    },
+    "5e7e8afc-c645-489e-91d2-831c6b1cf1bf": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>The perfect gift is letting them choose for themselves.<br\/><br\/>E-Gift vouchers are used for online purchases and in store at our HQ.<br\/><br\/><\/p><ul><li>You can have the card sent directly to your loved one, write your personal message and choose a delivery date that you wish the gift card to be received.<\/li><li>Making it so easy for you and for your loved one to get something they will love and cherish.<\/li><li>Vouchers hold a balance, which can be spent over more than one order.<\/li><\/ul><p>*Gift Vouchers will be exempt from discounts<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "half",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "5e7e8afc-c645-489e-91d2-831c6b1cf1bf"
+  ]
+}

@@ -1,0 +1,50 @@
+{%- assign section_color = settings.cart_color_scheme -%}
+<section x-data="ThemeSection_sizeGuideDrawer()" data-section-id="{{ section.id }}" data-section-type="size-guide-drawer" data-size-guide-drawer x-cloak>
+  <div id="sizeGuideContainer"
+	  class="max-h-full flex flex-col z-60 fixed top-0 right-0 bottom-0 left-0 w-full lg:max-w-modal mx-auto lg:my-theme-double bg-{{ section_color }}-background text-{{ section_color }}-text transition-opacity"
+	  x-show="$store.drawer.sizeGuideDrawerOpen"
+	  x-transition:enter="transition ease"
+	  x-transition:enter-start="opacity-0"
+	  x-transition:enter-end="opacity-100"
+	  x-transition:leave="transition ease"
+	  x-transition:leave-end="opacity-0"
+	  @click.away.prevent="$store.drawer.sizeGuideDrawerOpen = false"
+	  role="dialog"
+	  aria-modal="true"
+	  data-sizeGuide-drawer
+	  >
+	  <button class="bg-secondary-accent fixed lg:absolute right-2 lg:-right-4 top-2 lg:-top-4 inline-block font-heading uppercase p-4 w-12 rounded-full"
+			  @click.prevent="$store.drawer.sizeGuideDrawerOpen = false"
+		  >
+		  <span class="visually-hidden">{{ 'general.accessibility.close_modal' | t }}</span>
+		  {% render 'icon-close' %}
+	  </button>
+	<div class="size-guide-wrapper lg:max-h-screen section-x-padding py-theme-half overflow-hidden" {% if product.metafields.custom.fit_graphic != blank %}x-data="{ tab: 'measurements' }"{% else %}x-data="{ tab: 'size-guide' }"{% endif %}>
+		<div class="flex items-center text-{{ section_color }}-accent border-b-text border-secondary-accent">
+			<button class="font-heading lg:text-lg p-2 lg:px-4 -mb-1px border-b-text border-transparent" :class="{ 'border-{{ section_color }}-accent': tab === 'size-guide' }" @click="tab = 'size-guide'">
+			  Size guide
+			</button>
+			{%- if product.metafields.custom.fit_graphic != blank -%}
+			<button class="font-heading lg:text-lg p-2 lg:px-4 -mb-1px border-b-text border-transparent" :class="{ 'border-{{ section_color }}-accent': tab === 'measurements' }" @click="tab = 'measurements'">
+			  Measurements
+			</button>
+			{%- endif -%}
+		</div>
+	    <div class="flex flex-col lg:items-start justify-center h-full overflow-y-auto" x-show="tab === 'size-guide'">
+			<div class="size-guide-table relative py-4 lg:py-8 mb-8 overflow-x-auto">
+				<p class="lg:hidden flex items-center justify-end mb-2 text-{{ section_color }}-accent text-right"><span class="mr-2">Swipe to view more</span> {% render 'icon-next' %}</p>
+		  	{% if product.metafields.custom.size_guide %}
+				{{ pages[product.metafields.custom.size_guide].content }}
+		  	{% else %}
+				{{ pages.size-guide.content }}
+		  	{% endif %}
+			</div>
+	    </div>
+		{%- if product.metafields.custom.fit_graphic != blank -%}
+		<div class="flex flex-col lg:items-start justify-center h-full overflow-y-auto" x-show="tab === 'measurements'">
+			{{ product.metafields.custom.fit_graphic | metafield_tag }}
+		</div>
+		{%- endif -%}
+	</div>
+  </div>
+</section>

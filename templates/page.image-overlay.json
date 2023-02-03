@@ -1,0 +1,40 @@
+{
+  "sections": {
+    "1643780871df2c8a52": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/RETURNS-COVER-1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/RETURNS-PHONE1.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "",
+        "padding_bottom": "pb-theme",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "main": {
+      "type": "main-page-overlay-image",
+      "settings": {
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    }
+  },
+  "order": [
+    "1643780871df2c8a52",
+    "main"
+  ]
+}

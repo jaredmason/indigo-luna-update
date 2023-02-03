@@ -1,0 +1,76 @@
+<div class="additional-checkout-fields" style="display:none">
+  <div class="section__header content-box">
+   <div class="content-box__row">
+     <div class="field--show-floating-label"><div class="checkbox-wrapper">
+        <div class="checkbox__input">
+          <input name="checkout[buyer_add_wrapping]" type="hidden" value="0" autocomplete="off">
+          <input class="input-checkbox" data-backup="buyer_add_wrapping" type="checkbox" value="1" name="checkout[buyer_add_wrapping]" id="checkout_buyer_add_wrapping">
+        </div>
+        <label class="checkbox__label" for="checkout_buyer_add_wrapping">
+          {{ settings.gift_wrapping_text }}
+        </label>
+      </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+if (window.jQuery) {
+    jquery = window.jQuery;
+} else if (window.Checkout && window.Checkout.$) {
+    jquery = window.Checkout.$;
+}
+
+jquery(function() {
+    if (jquery('.section--shipping-address .section__content').length) {
+        var addType = jquery('.additional-checkout-fields').html();
+        jquery('.section--shipping-address').prepend(addType);
+
+        // Get saved data from sessionStorage
+        let savedGiftWrapping = sessionStorage.getItem('gift_wrapping');
+
+        // if some value exist in sessionStorage
+        if (savedGiftWrapping !== null) {
+          jquery('input[name="checkout[buyer_add_wrapping]"][value=' + savedGiftWrapping + ']').prop("checked", true);
+        } else {
+          jquery('input[name="checkout[buyer_add_wrapping]"][value=' + savedGiftWrapping + ']').prop("checked", false);
+        }
+
+        // Listen to change event on checkbox
+        jquery('input[name="checkout[buyer_add_wrapping]"]').change(function() {
+            if (this.value !== savedGiftWrapping) {
+                savedGiftWrapping = this.value;
+                sessionStorage.setItem('gift_wrapping', savedGiftWrapping);
+            } else {
+              savedGiftWrapping = null;
+              sessionStorage.setItem('gift_wrapping', savedGiftWrapping);
+              
+            }
+
+            if (this.checked) {
+              // jQuery.post(window.location.origin + 'cart/update.js', "attributes[Gift wrapping]=Yes");
+              jQuery.post(window.location.origin + '/cart/add.js', {quantity: 1, id: 39909027250247}, function() {
+              }, 'json');
+            
+              setTimeout( 
+                function() {
+                  window.location.reload(true);
+              }, 800);
+          
+            } else {
+              jQuery.post(window.location.origin + '/cart/update.js', {updates: { 39909027250247: 0 }}, function() {
+              }, 'json');
+              
+              setTimeout( 
+                function() {
+                  window.location.reload(true);
+              }, 800);
+            }
+          
+        });
+
+    }
+}); 
+</script>

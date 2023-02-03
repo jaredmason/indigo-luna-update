@@ -1,0 +1,166 @@
+{
+  "sections": {
+    "1643720224908490a7": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Contact-us.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/IMG_1309.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "main": {
+      "type": "main-page-contact",
+      "settings": {
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "16493007734f2d6a66": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>OUR STORES<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-4xl",
+        "font": "heading",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "16492963362dae9a4c": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3129.7296393735046!2d144.32322845195475!3d-38.332091171554076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad46f3ed752e3af%3A0x15a825217e9ecd54!2sIndigo%20Luna%20Store%20-%20Torquay%20Store!5e0!3m2!1sen!2sid!4v1651820860019!5m2!1sen!2sid",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/Torquay-indigo-luna-store.jpg",
+        "title": "TORQUAY STORE",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p><em>26\/10 Cylinders Drive<\/em>, Torquay VIC 3228, Australia<\/p><p><\/p><p><strong>WEEKLY HOURS<\/strong><\/p><p>10 AM - 3 PM<\/p><p><strong>WEEKEND HOURS<\/strong><\/p><p>10 AM - 2 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+61490227851<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-start",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-double",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "16492966948f541077": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3944.393997016533!2d115.12986661597441!3d-8.654026190434212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239d62b0da561%3A0x7dad164369b66d06!2sIndigo%20Luna%20Store!5e0!3m2!1sen!2sid!4v1651821318504!5m2!1sen!2sid",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/Batu_bolong_Store1.jpg",
+        "title": "FlagShip Store - BALI, canggu",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p>Jl. Pantai Batu Bolong No.81, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80361<\/p><p><\/p><p><strong>HOURS<\/strong><\/p><p>9AM - 8 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+628998445499<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-start",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-double",
+        "padding_top": "pt-theme-double",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "1649300256c443be1e": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3944.491059659375!2d115.13454931597428!3d-8.644757690310122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239951d4f236b%3A0x6995836b584c13a0!2sIndigo%20Luna%20Store!5e0!3m2!1sen!2sid!4v1651821395373!5m2!1sen!2sid",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/Canggu_Store.png",
+        "title": "BALI - CANGGU",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p>Jl. Padang Linjong No.44, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80351<\/p><p><\/p><p><strong>HOURS<\/strong><\/p><p>9AM - 7 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+628998445499<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-start",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-double",
+        "padding_top": "pt-theme-double",
+        "padding_bottom": "pb-theme-double",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "1664859328b0c51476": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3184.7027690436657!2d115.26074706587184!3d-8.508171275207086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d23bd6c3da7%3A0x83e65edea193c9c3!2sIndigo%20Luna%20Store%20-%20Ubud%20Store!5e0!3m2!1sen!2sid!4v1661318061296!5m2!1sen!2sid\" width=\"1000\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/UBUD_SHOP_33.jpg",
+        "title": "ubud store",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p>Jl. Monkey Forest No.10, Ubud, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571<\/p><p><\/p><p><strong>HOURS<\/strong><\/p><p>9AM - 9 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+628998445499<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    }
+  },
+  "order": [
+    "1643720224908490a7",
+    "main",
+    "16493007734f2d6a66",
+    "16492963362dae9a4c",
+    "16492966948f541077",
+    "1649300256c443be1e",
+    "1664859328b0c51476"
+  ]
+}

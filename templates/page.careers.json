@@ -1,0 +1,153 @@
+{
+  "sections": {
+    "16466388799c80624a": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "title": "Image with text overlay",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "165752138069601b78": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Careers",
+        "text": "<p>We currently don't have any positions available<\/p>",
+        "text_size_mobile": "text-lg",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "lg:w-1\/2",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "16466404719885201f": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16466404719187d94a-0": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Marketing.jpg",
+            "title": "MARKETING COORDINATOR",
+            "text": "",
+            "cta_link": "shopify:\/\/pages\/marketing-coordinator",
+            "color_scheme": "primary"
+          }
+        },
+        "16466404719187d94a-1": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "cta_link": "",
+            "color_scheme": "primary"
+          }
+        },
+        "16466404719187d94a-2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "cta_link": "",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "16466404719187d94a-0",
+        "16466404719187d94a-1",
+        "16466404719187d94a-2"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "1",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme"
+      }
+    },
+    "1646637243390eb7fa": {
+      "type": "text-columns",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "<p>Job opportunity 1<\/p><p>Customer Care<\/p><p><\/p><p>Job opportunity 2<\/p><p>x<\/p><p>Job opportunity 3<\/p><p>x<\/p>",
+        "desktop_columns": "lg:col-count-3",
+        "text_alignment": "text-center",
+        "desktop_text_size": "lg:text-base",
+        "color_scheme": "primary"
+      }
+    },
+    "16466374993c7de062": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>Thank you for your interest in working with us 🌿<\/p><p><\/p><p>WITH LOVE <\/p><p>INDIGO LUNA<\/p><p><\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "16466388799c80624a",
+    "165752138069601b78",
+    "main",
+    "16466404719885201f",
+    "1646637243390eb7fa",
+    "16466374993c7de062"
+  ]
+}

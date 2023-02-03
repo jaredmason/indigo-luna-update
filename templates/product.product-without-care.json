@@ -1,0 +1,140 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "enable_collapsible_tabs": false,
+            "truncate_description": false
+          }
+        },
+        "color_picker": {
+          "type": "color_picker",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": false
+          }
+        },
+        "d76e4f8e-90bd-4971-bbd5-822e67ee6334": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_form",
+            "heading": "Fabric",
+            "heading_text_style": "body",
+            "content": "<p>{{ product.metafields.custom.fabric | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "e5054095-4281-4bae-85a9-40ee7e5091b4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_form",
+            "heading": "Fit",
+            "heading_text_style": "body",
+            "content": "<p>{{ product.metafields.custom.size_and_fit | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "470f89c1-daba-4ccc-8a1b-4cdf4af4c994": {
+          "type": "collapsible_tab",
+          "settings": {
+            "position": "product_form",
+            "heading": "Returns & Shipping",
+            "heading_text_style": "body",
+            "content": "<p>We just ask that you please return your items\/s in an original, unworn and re-sellable condition within 14 days of delivery. Please let our Customer Service team know if you are wanting to exchange these pieces or alternatively, if you would like a 110% store credit or refund and we will process this as soon as your return arrives. Please note that there is No Refund or Exchange on Clearance Items.<br\/><br\/><br\/><strong>Australia returns<\/strong><br\/><br\/>You can use our Australia Post Portal <a href=\"https:\/\/return.auspost.com.au\/INDIGO_LUNA\">here<\/a> for fast and easy express returns within Australia. Simply enter your order number and email address and follow the steps to generate your shipping label. You can present this label at your local Australia Post so that they can print this for you and fix the label to your return. (We would love for you to use your original packaging!)<br\/><br\/>Please note that for exchanges or changes of mind you will be responsible for paying for return shipping costs. Please understand that we are not liable for any lost garments that are sent through alternative couriers.<br\/><br\/><br\/><strong>International returns<\/strong><br\/><br\/>You can use our DHL returns portal <a href=\"https:\/\/www.dhl-returns.com\/indigoluna\">here<\/a> for easy express returns at a flat rate shipping cost of $35 AUD. Simply enter your order number and email address and follow the steps to arrange a time for DHL to collect your parcel.<br\/><br\/>Please note that for exchanges or changes of mind you will be responsible for paying for return shipping costs. Please understand that we are not liable for any lost garments that are sent through alternative couriers.<br\/><br\/>What about if the garments are faulty?<br\/>As we are an ethical slow fashion brand our products are all cut, sewn and dyed by loving hands, and as humans we sometimes make mistakes! If there has been something that we have missed in our quality control, please contact our Customer Service team with your order number, images of the damage, defect or fault so that we can resolve this for you as soon as possible. We have a 5-week faulty claims period (please note: this excludes general wear and tear or garments that have not been cared for correctly). <br\/><br\/><br\/><strong>When will I get my refund?  <\/strong><\/p><p>Please allow 1-2 business days for our Customer Service team to process your return. Your refund will only be credited back to the original payment method. If you have used store credit or gift cards to pay for the full price, we will only reinstate the original amount of store credit. If you have used a store credit or gift cards to pay for part of the price, we will reinstate the original amount of store credit and process the remaining amount as a refund.<br\/> Please note that we will not refund any delivery fees or duties and taxes that you have paid at the time of purchase to have your order shipped to you. Our Customer Service team will be in touch to let you know as soon as your refund has been processed.  <br\/>We will not accept any refunds or exchanges for garments that we believe have not been cared for correctly. Please take time to read the care tab for each product.<br\/><br\/><br\/>Indigo Luna<br\/>xo<\/p>",
+            "page": "",
+            "icon": "none"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "color_picker",
+        "variant_picker",
+        "buy_buttons",
+        "d76e4f8e-90bd-4971-bbd5-822e67ee6334",
+        "e5054095-4281-4bae-85a9-40ee7e5091b4",
+        "470f89c1-daba-4ccc-8a1b-4cdf4af4c994"
+      ],
+      "settings": {
+        "desktop_image_height": 90,
+        "variant_image_behaviour": "swap",
+        "app_block_area": "product_form",
+        "enable_video_looping": true,
+        "color_scheme": "primary"
+      }
+    },
+    "product-style-with": {
+      "type": "product-style-with",
+      "settings": {
+        "show_style_with": true,
+        "style_with_heading": "Style with",
+        "limit": "4",
+        "products_per_row_desktop": "4",
+        "products_per_row_mobile": "2",
+        "color_scheme": "primary"
+      }
+    },
+    "1643706149ebf0e775": {
+      "type": "apps",
+      "blocks": {
+        "f2fa8ff7-e7b0-4306-b2e9-3dfcd80f5264": {
+          "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/reviews-widget\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+          "settings": {
+            "product": "{{ product }}",
+            "widget_type": "reviews_widget"
+          }
+        }
+      },
+      "block_order": [
+        "f2fa8ff7-e7b0-4306-b2e9-3dfcd80f5264"
+      ],
+      "settings": {
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "You may also like",
+        "products_per_row_desktop": "4",
+        "products_per_row_mobile": "2",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-style-with",
+    "1643706149ebf0e775",
+    "product-recommendations"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "crop": "4.0",
+        "image_width_desktop": "full",
+        "indent_image": false,
+        "show_author": false,
+        "show_date": false,
+        "show_share_buttons": false,
+        "show_tags": false,
+        "show_next_previous_links": false,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "1646628435266193bf": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Indigo Luna x AGCF",
+        "collection": "australian-gynaecological-cancer-foundation-collaboration",
+        "limit": 4,
+        "crop": "0.8",
+        "show_view_all": false,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1651807729bb64418f": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "9f5a6ee6-c941-4a21-a074-88e49191ed94": {
+          "type": "collection",
+          "settings": {
+            "collection": "flare-yoga-pants-and-yoga-top",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "11b92258-5b9e-469e-a621-9006fdf7e140": {
+          "type": "collection",
+          "settings": {
+            "collection": "knitwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "165180772909410997-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "layla-sustainable-intimates",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "e948cfc7-ddbb-45fa-b9d9-b0f139fdd5ca": {
+          "type": "collection",
+          "settings": {
+            "collection": "agni-yoga-collection",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "165180772909410997-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "plant-dyed-intimates",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "24e1280a-3738-47dc-88bb-d1a5e35d9ef7": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewellery",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "03c2d82c-fd94-48f9-99b7-fa3d7a562b00": {
+          "type": "collection",
+          "settings": {
+            "collection": "organic-ananda-yoga",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "9f5a6ee6-c941-4a21-a074-88e49191ed94",
+        "11b92258-5b9e-469e-a621-9006fdf7e140",
+        "165180772909410997-1",
+        "e948cfc7-ddbb-45fa-b9d9-b0f139fdd5ca",
+        "165180772909410997-0",
+        "24e1280a-3738-47dc-88bb-d1a5e35d9ef7",
+        "03c2d82c-fd94-48f9-99b7-fa3d7a562b00"
+      ],
+      "settings": {
+        "title": "EXPLORE OUR COLLECTIONS",
+        "text_size": "text-2xl",
+        "color_scheme": "primary",
+        "crop": "0.8",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1646628435266193bf",
+    "1651807729bb64418f"
+  ]
+}

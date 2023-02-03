@@ -1,0 +1,175 @@
+{%- liquid
+  assign section_color = section.settings.color_scheme
+  assign products_per_row = section.settings.products_per_row_desktop | plus: 0
+  assign products_per_row_mobile = section.settings.products_per_row_mobile | plus: 0
+  assign grid_cols = 12
+  assign desktop_grid_class = 'lg:grid-cols-' | append: grid_cols
+
+  case products_per_row
+	when 2
+	  assign desktop_col_span = 'lg:col-span-6'
+	when 3
+	  assign desktop_col_span = 'lg:col-span-4'
+	when 4
+	  assign desktop_col_span = 'lg:col-span-3'
+  endcase
+
+  case products_per_row_mobile
+	when 1
+	  assign mobile_col_span = 'col-span-2'
+	when 2
+	  assign mobile_col_span = 'col-span-1'
+  endcase
+-%}
+{%- if section.settings.show_style_with -%}
+    {%- if product.metafields.custom.style_with_1 != blank -%}
+		<div class="section-x-padding">
+	  	{% if section.settings.style_with_heading != '' %}
+			{%- render 'section-title',
+		  	title: section.settings.style_with_heading,
+		  	section_color: section_color
+			-%}
+	  	{% endif %}
+	  		<ul class="grid grid-cols-2 {{ desktop_grid_class }} gap-gutter">
+				{%- liquid
+	  			assign style_1 = product.metafields.custom.style_with_1.value
+				assign style_2 = product.metafields.custom.style_with_2.value
+				assign style_3 = product.metafields.custom.style_with_3.value
+				assign style_4 = product.metafields.custom.style_with_4.value
+				-%}
+				{% unless style_1 == blank %}
+				<li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-{{ section_color }}-background text-{{ section_color }}-text">
+				{%- render 'product-grid-item',
+				product: style_1,
+				section_color: section_color,
+				products_per_row: products_per_row,
+				products_per_row_mobile: products_per_row_mobile,
+				responsive_image_counter: forloop.index
+				-%}
+				</li>
+				{% endunless %}
+				{% unless style_2 == blank %}
+				<li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-{{ section_color }}-background text-{{ section_color }}-text">
+				{%- render 'product-grid-item',
+					product: style_2,
+					section_color: section_color,
+					products_per_row: products_per_row,
+					products_per_row_mobile: products_per_row_mobile,
+					responsive_image_counter: forloop.index
+				-%}
+				</li>
+				{% endunless %}
+				{% unless style_3 == blank %}
+				<li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-{{ section_color }}-background text-{{ section_color }}-text">
+				{%- render 'product-grid-item',
+					product: style_3,
+					section_color: section_color,
+					products_per_row: products_per_row,
+					products_per_row_mobile: products_per_row_mobile,
+					responsive_image_counter: forloop.index
+				-%}
+				</li>
+				{% endunless %}
+				{% unless style_4 == blank %}
+				<li class="{{ mobile_col_span }} {{ desktop_col_span }} bg-{{ section_color }}-background text-{{ section_color }}-text">
+					{%- render 'product-grid-item',
+						product: style_4,
+						section_color: section_color,
+						products_per_row: products_per_row,
+						products_per_row_mobile: products_per_row_mobile,
+						responsive_image_counter: forloop.index
+					-%}
+				</li>
+				{% endunless %}
+	  		</ul>
+		</div>
+	{% endif %}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Product Style with",
+  "settings": [
+	{
+	  "type": "checkbox",
+	  "id": "show_style_with",
+	  "label": "Show Style with section",
+	  "info": "Products show are linked via Style with metafields",
+	  "default": true
+	},
+	{
+	  "type": "text",
+	  "id": "style_with_heading",
+	  "label": "Heading",
+	  "default": "Style with"
+	},
+	{
+	  "type": "select",
+	  "id": "limit",
+	  "label": "Number of recommendations",
+	  "default": "4",
+	  "options": [
+		{
+		  "value": "2",
+		  "label": "2"
+		},
+		{
+		  "value": "3",
+		  "label": "3"
+		},
+		{
+		  "value": "4",
+		  "label": "4"
+		}
+	  ]
+	},
+	{
+	  "type": "select",
+	  "id": "products_per_row_desktop",
+	  "label": "Products per row - desktop",
+	  "default": "4",
+	  "options": [
+		{
+		  "value": "2",
+		  "label": "2"
+		},
+		{
+		  "value": "3",
+		  "label": "3"
+		},
+		{
+		  "value": "4",
+		  "label": "4"
+		}
+	  ]
+	},
+	{
+	  "type": "select",
+	  "id": "products_per_row_mobile",
+	  "label": "Products per row - mobile",
+	  "default": "2",
+	  "options": [
+		{
+		  "value": "1",
+		  "label": "1"
+		},
+		{
+		  "value": "2",
+		  "label": "2"
+		}
+	  ]
+	},
+	{
+	  "type": "select",
+	  "id": "color_scheme",
+	  "label": "Color scheme",
+	  "options": [
+		  { "value": "primary", "label": "Primary"},
+		  { "value": "secondary", "label": "Secondary"},
+		  { "value": "tertiary", "label": "Tertiary"}
+	  ],
+	  "default":   "primary"
+	}
+  ]
+}
+{% endschema %}

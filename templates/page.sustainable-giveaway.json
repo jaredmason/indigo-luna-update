@@ -1,0 +1,32 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "lg:w-1\/2",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "16637411810b454003": {
+      "type": "newsletter",
+      "disabled": true,
+      "settings": {
+        "section_title": "",
+        "subheading": "<p>Receive special offers and first look at new products.<\/p>",
+        "text_size": "text-base",
+        "customer_tag": "",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16637411810b454003"
+  ]
+}

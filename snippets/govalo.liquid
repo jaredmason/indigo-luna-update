@@ -1,0 +1,20 @@
+{% if template.suffix == 'gift-card' %}
+    <script>
+        window.ObsidianConfig = {
+          addToCartSelector: '.gvlo-button'
+        };
+    </script>
+    <script>
+        window.addEventListener("govalo:toggleModal", (e) => {
+            const addBtns = document.querySelectorAll(".gvlo-button");
+            addBtns.forEach((btn) => {
+                btn.addEventListener("click", (e) => {
+                    document.dispatchEvent(
+                        new CustomEvent('obsidian:upsell:open')
+                    );
+                    document.dispatchEvent(new CustomEvent('obsidian:upsell:refresh'));
+                });
+            });
+        });
+    </script>
+{% endif %}

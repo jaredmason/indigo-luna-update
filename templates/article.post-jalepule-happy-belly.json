@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "crop": "4.0",
+        "image_width_desktop": "full",
+        "indent_image": false,
+        "show_author": false,
+        "show_date": false,
+        "show_share_buttons": false,
+        "show_tags": false,
+        "show_next_previous_links": false,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "d52e5860-0b8e-4d96-8036-4c4837d9a219": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Shop Myra's Looks",
+        "text": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "49411387-e7cc-49c7-9407-0919ec01872d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Agni_Cross_Top_Forest.jpg",
+            "title": "Agni Cross Top Forest",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/agni-cross-top-forest",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Ananda_Shorts_Juniper.png",
+            "title": "Ananda Shorts Juniper",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/ananda-shorts-juniper",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Ayurvedic-teacher-Myra-doing-a-meditation.jpg",
+            "title": "Agni Wrap Top Off White",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/agni-wrap-top-off-white",
+            "color_scheme": "primary"
+          }
+        },
+        "6a5f3164-7b9f-489c-b351-749f34e724fb": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Kundalini-Banner-Mvl-1_109f7ba4-7650-4fbf-8d05-e9a5ae8770e1.jpg",
+            "title": "Kundalini Pants",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/kundalini-yoga-pants",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-0",
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-2",
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-1",
+        "6a5f3164-7b9f-489c-b351-749f34e724fb"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d52e5860-0b8e-4d96-8036-4c4837d9a219",
+    "49411387-e7cc-49c7-9407-0919ec01872d"
+  ]
+}

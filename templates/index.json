@@ -1,0 +1,643 @@
+{
+  "sections": {
+    "b176a691-81f8-4429-b18f-06b72bd1e1a3": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AGNI_2.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Agni-Yoga-Collection_65b7eec3-50f2-4acc-96bd-840760c1c0e9.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "title": "Created for you to feel held and nurtured through all stages of life",
+        "heading_size": "text-lg",
+        "text": "",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-1\/2",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/collections\/best-sellers",
+        "cta_text": "Agni Collection",
+        "cta_style": "button_transparent"
+      }
+    },
+    "16553650160f2e05e8": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/New-in-Moon-Collection.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/New-In-Moon-Collection-available-full-size-range.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "title": "MOON COLLECTION",
+        "heading_size": "text-lg",
+        "text": "<p>Eco-conscious yogawear for everyday magic<\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-full",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/collections\/moon-collection",
+        "cta_text": "Shop NEW",
+        "cta_style": "button_transparent"
+      }
+    },
+    "16644193840b92fec2": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1664419384181ab577-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Kundalini-collection-Restock.jpg",
+            "title": "Kundalini Capsule",
+            "text": "",
+            "cta_link": "shopify:\/\/collections\/kundalini-yoga-clothing",
+            "color_scheme": "primary"
+          }
+        },
+        "1664419384181ab577-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Agni-Wrap-Top_88f4a5f1-7db1-4577-96c9-e4ea1609ee03.jpg",
+            "title": "Wrap Tops",
+            "text": "",
+            "cta_link": "shopify:\/\/collections\/wrap-tops",
+            "color_scheme": "primary"
+          }
+        },
+        "1664419384181ab577-0": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Agni-cross-yoga-top-carob-full-size-range-availabe-indigoluna-store.jpg",
+            "title": "Agni Yoga Collection",
+            "text": "",
+            "cta_link": "shopify:\/\/collections\/agni-yoga-collection",
+            "color_scheme": "primary"
+          }
+        },
+        "9da00941-1033-47a4-a559-e13b77a5e887": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Tuula-Poncho-Almond-Garden.jpg",
+            "title": "Tuula Poncho",
+            "text": "",
+            "cta_link": "shopify:\/\/collections\/tuula-poncho",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "1664419384181ab577-2",
+        "1664419384181ab577-1",
+        "1664419384181ab577-0",
+        "9da00941-1033-47a4-a559-e13b77a5e887"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "dd532e80-130c-4467-8a8d-b9dbd1eb0e72": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Moon-top-with-kundalini-pants.jpg",
+        "image_position": "right",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": false,
+        "background_color": "primary",
+        "title": "New Looks for Summer",
+        "richtext": "<p>Look and feel like a dream in these must have sustainable staples. <strong>The perfect pieces for your summer eco-conscious wardrobe <\/strong>you won't want to take off.<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "shopify:\/\/collections\/summer-essentials",
+        "cta_text": "EXPLORE SUMMER ESSENTIALS",
+        "cta_style": "button_transparent",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "ba300623-ce3b-4768-82d2-f6c2cc8c5a4a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New in",
+        "collection": "new-in",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "0479027a-fd14-4a4d-a5ba-2635560afb99": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "eco-knitwear",
+        "collection": "knitwear",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": false,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "5cb893c7-1dfa-40fe-96c4-6e5deb8cc2d9": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Tuula_Poncho.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/pnch.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme-half",
+        "padding_bottom": "",
+        "title": "sustainable knitwear",
+        "heading_size": "text-xl",
+        "text": "<p>Thoughtfully designed for wholeness and to feel lovingly held in softness.<\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/collections\/knitwear",
+        "cta_text": "Explore Collection",
+        "cta_style": "link"
+      }
+    },
+    "64ba3004-5775-4ef2-9c0f-7c385218b5c5": {
+      "type": "image-split",
+      "settings": {
+        "image_size": "half",
+        "indent_image": false,
+        "image_1": "shopify:\/\/shop_images\/IMG_3005_cee4261a-9611-4541-9fea-400708b113e3.jpg",
+        "crop": "0.8",
+        "color_scheme_1": "primary",
+        "title_1": "Eco-Friendly Intimates",
+        "heading_size_1": "text-lg",
+        "text_1": "<p>Designed for you to embrace your femininity from the inside out.<\/p>",
+        "content_position_mobile_1": "justify-center items-end text-center",
+        "content_position_desktop_1": "lg:justify-center lg:items-end lg:text-center",
+        "text_color_1": "white",
+        "cta_link_1": "shopify:\/\/collections\/womens-underwear",
+        "cta_text_1": "SHOP NOW",
+        "cta_style_1": "link",
+        "image_2": "shopify:\/\/shop_images\/One-Piece-Swimwear-available-online-indigo-luna.jpg",
+        "preserve_ratio_2": false,
+        "color_scheme_2": "secondary",
+        "title_2": "Sustainable Swimwear",
+        "heading_size_2": "text-lg",
+        "text_2": "<p>Flattering and Sustainable swimwear <strong>made from recycled materials.<\/strong><\/p>",
+        "content_position_mobile_2": "justify-center items-end text-center",
+        "content_position_desktop_2": "lg:justify-center lg:items-end lg:text-center",
+        "text_alignment_2": "text-left",
+        "text_color_2": "white",
+        "cta_link_2": "shopify:\/\/collections\/sustainable-swimwear",
+        "cta_text_2": "SHOP NOW",
+        "cta_style_2": "link",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "d63ff4f6-9411-4b64-8489-4655c267cf05": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Buy Less<br>Choose Well<br>Make It Last",
+        "text": "<p>We are a small, family run brand ensuring quality, transparency, eco-consciousness and sustainable manufacturing practices.<\/p><p>We are dedicated to thoughtful slow creation. Reducing unnecessary impact on other beings and our planet while providing an alternative to mass production and fast fashion.<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme-half",
+        "color_scheme": "primary"
+      }
+    },
+    "1652152708c1504f20": {
+      "type": "video",
+      "settings": {
+        "cover_image": "shopify:\/\/shop_images\/Indigo_dying.jpg",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=KxTO28kgJRI",
+        "video_style": "widescreen",
+        "video_style_desktop": "widescreen",
+        "title": "",
+        "heading_size": "text-2xl lg:text-3xl",
+        "text": "<p><\/p>",
+        "content_position": "justify-center items-center text-center",
+        "content_width_desktop": "lg:w-1\/3",
+        "text_color": "white",
+        "cta_link": "",
+        "cta_text": "Learn more",
+        "cta_style": "button_transparent",
+        "indent_video": false,
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme-half",
+        "color_scheme": "primary"
+      }
+    },
+    "075c305b-8ee3-4bb1-b63b-ff524a4192cc": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14260018839623__075c305b-8ee3-4bb1-b63b-ff524a4192cc-1668743549f4512150-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/ethical-manufacturing_a3fb3a47-07bb-4d99-ba27-9062fc203bae.jpg",
+            "title": "",
+            "text": "<p>We ensure quality, transparency and sustainable manufacturing practices<\/p>",
+            "cta_link": "shopify:\/\/blogs\/news\/the-story-behind-our-knitwear",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14260018839623__075c305b-8ee3-4bb1-b63b-ff524a4192cc-1668743549f4512150-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Natural-fabrics.jpg",
+            "title": "",
+            "text": "<p>We make our clothing in small runs from sustainable, organic or recycled fabrics<\/p>",
+            "cta_link": "shopify:\/\/pages\/shop-all",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14260018839623__075c305b-8ee3-4bb1-b63b-ff524a4192cc-1668743549f4512150-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Indigo-plant-dyes.jpg",
+            "title": "",
+            "text": "<p>Our plant dyes ensure that all waste and runoff is 100% organic and compostable<\/p>",
+            "cta_link": "shopify:\/\/blogs\/news\/plant-dyes-indigo",
+            "color_scheme": "primary"
+          }
+        },
+        "3e3feb8b-b15b-4dee-aa24-2d26678feeb2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/about-us-indi-luna-plastic-free-packaging.jpg",
+            "title": "",
+            "text": "<p>World wide shipping in plastic free packaging made from Cassava starch<\/p>",
+            "cta_link": "shopify:\/\/blogs\/news\/we-say-no-to-plastic",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--14260018839623__075c305b-8ee3-4bb1-b63b-ff524a4192cc-1668743549f4512150-0",
+        "template--14260018839623__075c305b-8ee3-4bb1-b63b-ff524a4192cc-1668743549f4512150-1",
+        "template--14260018839623__075c305b-8ee3-4bb1-b63b-ff524a4192cc-1668743549f4512150-2",
+        "3e3feb8b-b15b-4dee-aa24-2d26678feeb2"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "1",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme"
+      }
+    },
+    "515d9468-dc1e-4d5d-ae08-99d1433a3faa": {
+      "type": "image-split",
+      "disabled": true,
+      "settings": {
+        "image_size": "half",
+        "indent_image": false,
+        "image_1": "shopify:\/\/shop_images\/Shop-light-tones-Yoga-Clothes.jpg",
+        "crop": "0.8",
+        "color_scheme_1": "primary",
+        "title_1": "Earthy light tones",
+        "heading_size_1": "text-base",
+        "text_1": "<p>Explore best sellers in the white family <\/p>",
+        "content_position_mobile_1": "justify-center items-end text-center",
+        "content_position_desktop_1": "lg:justify-center lg:items-end lg:text-center",
+        "text_color_1": "white",
+        "cta_link_1": "shopify:\/\/collections\/light-tones",
+        "cta_text_1": "SHOP NOW",
+        "cta_style_1": "link",
+        "image_2": "shopify:\/\/shop_images\/Black-yoga-clothes-indigoluna.jpg",
+        "preserve_ratio_2": false,
+        "color_scheme_2": "secondary",
+        "title_2": "Black everyday staples",
+        "heading_size_2": "text-base",
+        "text_2": "<p>Your favourite staple shapes in forever favourite black<\/p>",
+        "content_position_mobile_2": "justify-center items-end text-center",
+        "content_position_desktop_2": "lg:justify-center lg:items-end lg:text-center",
+        "text_alignment_2": "text-center",
+        "text_color_2": "white",
+        "cta_link_2": "shopify:\/\/collections\/all-black",
+        "cta_text_2": "SHOP NOW",
+        "cta_style_2": "link",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "163868052801b10863": {
+      "type": "marquee",
+      "settings": {
+        "text": "Join our family · Join our family · Join our family",
+        "link": "",
+        "text_size": "text-2xl lg:text-3xl",
+        "font": "heading",
+        "speed": 200,
+        "direction": "",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "secondary"
+      }
+    },
+    "16386806071a4eaf3c": {
+      "type": "newsletter",
+      "settings": {
+        "section_title": "",
+        "subheading": "<p>Sign up for the chance to win $200 every month!<\/p><p>Be the first to find out about new releases, discounts, restocks and more.<\/p>",
+        "text_size": "text-base",
+        "customer_tag": "EMBED",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme-half",
+        "color_scheme": "secondary"
+      }
+    },
+    "0e819bb9-d40e-4348-a991-d2dc6407bcb0": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/GIFT-CARD-OK3.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/PHONE2.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "title": "New customizable gift cards",
+        "heading_size": "text-lg",
+        "text": "<p>Choose a design, write a nice message and send them to your loved ones<\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/collections\/gift-cards",
+        "cta_text": "CREATE A GIFT CARD",
+        "cta_style": "button_accent_opacity"
+      }
+    },
+    "2493a0b7-6d87-4ee8-bd87-dbc8020b5295": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Christmas-gift-guide.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Christmas-gift-guide-indigo-luna.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "<p>Your favourite Eco-staple shapes <\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/pages\/shop-all",
+        "cta_text": "SHOP BEST SELLERS",
+        "cta_style": "link"
+      }
+    },
+    "5ce8a235-7e39-4785-acd1-7ded792a2d03": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "<p>Feel the softness of our organic and recycled fabrics. Flattering garments thoughtfully created to celebrate the female form<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-theme-half",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16542313792068a15d": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Clearance",
+        "collection": "clearance",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1638679901df921331": {
+      "type": "collection-list",
+      "blocks": {
+        "515147a3-445d-4134-bfc9-43752fe4d55d": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-in",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "3bbecd49-d4d8-4344-8f4a-21e5811a3585": {
+          "type": "collection",
+          "settings": {
+            "collection": "linen-cotton",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "b625272f-8ac0-4e33-b301-9a2bc83e48ab": {
+          "type": "collection",
+          "settings": {
+            "collection": "sarongs",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "07dc654e-05f9-4c4c-9086-8148567d62c1": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-clothing",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "10b217b9-0d73-487d-9ffe-a3a34c926ef1": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "organic-ananda-yoga",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "f0cb8d85-7571-4652-8748-203311d3fc1c": {
+          "type": "collection",
+          "settings": {
+            "collection": "kundalini-yoga-clothing",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "b239d54f-57eb-4eef-b601-0514a451c31e": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "sustainable-swimwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "ecc92295-c3d4-4e5a-a6b0-4b04730c76c2": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewellery",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "a4e73a70-ce3d-41f4-b083-b08d72337415": {
+          "type": "collection",
+          "settings": {
+            "collection": "gift-cards",
+            "indent_image": false,
+            "content_position": "justify-center items-end text-center",
+            "text_color": "primary"
+          }
+        },
+        "7bc1fa2c-22b7-4380-a2df-10a813f1cadf": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "515147a3-445d-4134-bfc9-43752fe4d55d",
+        "3bbecd49-d4d8-4344-8f4a-21e5811a3585",
+        "b625272f-8ac0-4e33-b301-9a2bc83e48ab",
+        "07dc654e-05f9-4c4c-9086-8148567d62c1",
+        "10b217b9-0d73-487d-9ffe-a3a34c926ef1",
+        "f0cb8d85-7571-4652-8748-203311d3fc1c",
+        "b239d54f-57eb-4eef-b601-0514a451c31e",
+        "ecc92295-c3d4-4e5a-a6b0-4b04730c76c2",
+        "a4e73a70-ce3d-41f4-b083-b08d72337415",
+        "7bc1fa2c-22b7-4380-a2df-10a813f1cadf"
+      ],
+      "settings": {
+        "title": "Shop by collection",
+        "text_size": "text-lg",
+        "color_scheme": "primary",
+        "crop": "0.8",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    }
+  },
+  "order": [
+    "b176a691-81f8-4429-b18f-06b72bd1e1a3",
+    "16553650160f2e05e8",
+    "16644193840b92fec2",
+    "dd532e80-130c-4467-8a8d-b9dbd1eb0e72",
+    "ba300623-ce3b-4768-82d2-f6c2cc8c5a4a",
+    "0479027a-fd14-4a4d-a5ba-2635560afb99",
+    "5cb893c7-1dfa-40fe-96c4-6e5deb8cc2d9",
+    "64ba3004-5775-4ef2-9c0f-7c385218b5c5",
+    "d63ff4f6-9411-4b64-8489-4655c267cf05",
+    "1652152708c1504f20",
+    "075c305b-8ee3-4bb1-b63b-ff524a4192cc",
+    "515d9468-dc1e-4d5d-ae08-99d1433a3faa",
+    "163868052801b10863",
+    "16386806071a4eaf3c",
+    "0e819bb9-d40e-4348-a991-d2dc6407bcb0",
+    "2493a0b7-6d87-4ee8-bd87-dbc8020b5295",
+    "5ce8a235-7e39-4785-acd1-7ded792a2d03",
+    "16542313792068a15d",
+    "1638679901df921331"
+  ]
+}

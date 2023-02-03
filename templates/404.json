@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+      }
+    },
+    "164454737657fde8be": {
+      "type": "collection-list",
+      "blocks": {
+        "5d3306fb-e8fa-4349-87bb-9f4089e33f63": {
+          "type": "collection",
+          "settings": {
+            "collection": "women-yoga-clothes",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "1e084760-91f9-49f8-b6b7-c6294e043759": {
+          "type": "collection",
+          "settings": {
+            "collection": "new-in",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "41e2ce40-0d9a-4bf4-b608-e8f380f17187": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "1644547376812e2e20-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-clothing",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "000e02d9-b157-4da8-8d13-cf010ad81a33": {
+          "type": "collection",
+          "settings": {
+            "collection": "knitwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "493a85fa-e1d1-4753-bd8f-1dd105ee33cc": {
+          "type": "collection",
+          "settings": {
+            "collection": "sustainable-swimwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "1644547376812e2e20-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-underwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "e24489f0-7eae-4419-96d5-62e3bcc92442": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewellery",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "a23fa4f9-7c6c-4d3f-b840-079814055a25": {
+          "type": "collection",
+          "settings": {
+            "collection": "clearance",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "797b1a36-7f36-4032-b4d3-d2af2a23db8d": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "vayu",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "5d3306fb-e8fa-4349-87bb-9f4089e33f63",
+        "1e084760-91f9-49f8-b6b7-c6294e043759",
+        "41e2ce40-0d9a-4bf4-b608-e8f380f17187",
+        "1644547376812e2e20-0",
+        "000e02d9-b157-4da8-8d13-cf010ad81a33",
+        "493a85fa-e1d1-4753-bd8f-1dd105ee33cc",
+        "1644547376812e2e20-1",
+        "e24489f0-7eae-4419-96d5-62e3bcc92442",
+        "a23fa4f9-7c6c-4d3f-b840-079814055a25",
+        "797b1a36-7f36-4032-b4d3-d2af2a23db8d"
+      ],
+      "settings": {
+        "title": "",
+        "text_size": "text-2xl",
+        "color_scheme": "primary",
+        "crop": "0.8",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164454737657fde8be"
+  ]
+}

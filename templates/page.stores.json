@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "lg:w-1\/2",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "16480872314332b641": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2591.7952218010055!2d144.31613106348246!3d-38.31060207344478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad46ee398a67e17%3A0x4562a0cedc755221!2s26%2F10%20Cylinders%20Dr%2C%20Torquay%20VIC%203228%2C%20Australia!5e0!3m2!1sen!2sid!4v1662007309307!5m2!1sen!2sid\" width=\"1000\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/Torquay-indigo-luna-store.jpg",
+        "title": "Torquay Store",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p><em>26\/10 Cylinders Drive<\/em>, Torquay VIC 3228, Australia<\/p><p><strong>WEEKLY HOURS<\/strong><\/p><p>10 AM - 3 PM<\/p><p><strong>WEEKEND HOURS<\/strong><\/p><p>10 AM - 2 PM<strong> <\/strong><\/p><p><strong>PHONE<\/strong><\/p><p>+61490227851<\/p><p><\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-start",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-double",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "164808772280d9e4f1": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3944.393997016533!2d115.12986661597436!3d-8.65402619043421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239d62b0da561%3A0x7dad164369b66d06!2sIndigo%20Luna%20Store!5e0!3m2!1sen!2sid!4v1651821936570!5m2!1sen!2sid",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/Batu_bolong_Store1.jpg",
+        "title": "Flagship Store - Bali, Canggu",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p>Jl. Pantai Batu Bolong No.81, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80361<\/p><p><\/p><p><strong>HOURS<\/strong><\/p><p>9AM - 9 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+628998445499<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-double",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "1648087234088df83d": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3944.491059659375!2d115.13454931597428!3d-8.644757690310122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd239951d4f236b%3A0x6995836b584c13a0!2sIndigo%20Luna%20Store!5e0!3m2!1sen!2sid!4v1651821395373!5m2!1sen!2sid",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/Canggu_Store.png",
+        "title": "Outlet Store - Bali - Canggu",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p>Jl. Padang Linjong No.44, Canggu, Kec. Kuta Utara, Kabupaten Badung, Bali 80351<\/p><p><\/p><p><strong>HOURS<\/strong><\/p><p>8AM - 8 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+628998445499<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-double",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme-double",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "166131492249656565": {
+      "type": "map",
+      "settings": {
+        "map_url": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3184.7027690436657!2d115.26074706587184!3d-8.508171275207086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d23bd6c3da7%3A0x83e65edea193c9c3!2sIndigo%20Luna%20Store%20-%20Ubud%20Store!5e0!3m2!1sen!2sid!4v1661318061296!5m2!1sen!2sid\" width=\"1000\" height=\"600\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade",
+        "map_position": "right",
+        "map_size": "two_thirds",
+        "indent_map": false,
+        "background_color": "primary",
+        "image": "shopify:\/\/shop_images\/UBUD_SHOP_33.jpg",
+        "title": "ubud store",
+        "richtext": "<p><strong>LOCATION<\/strong><\/p><p>Jl. Monkey Forest No.10, Ubud, Kecamatan Ubud, Kabupaten Gianyar, Bali 80571<\/p><p><\/p><p><strong>HOURS<\/strong><\/p><p>9AM - 9 PM<\/p><p><\/p><p><strong>PHONE<\/strong><\/p><p>+628998445499<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16480872314332b641",
+    "164808772280d9e4f1",
+    "1648087234088df83d",
+    "166131492249656565"
+  ]
+}

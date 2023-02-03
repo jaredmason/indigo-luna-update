@@ -1,0 +1,360 @@
+{%- liquid
+  assign section_color = section.settings.color_scheme
+  assign image_background_color = section.settings.background_color
+  assign image_position = section.settings.image_position
+  assign text_size_class = section.settings.text_size
+  assign text_align = section.settings.text_alignment
+  assign text_position = section.settings.text_position
+  assign cta_link = section.settings.cta_link
+  assign cta_text = section.settings.cta_text
+  assign fill_image = section.settings.fill_image
+  assign indent_image = section.settings.indent_image
+  assign font = section.settings.font
+
+  case section.settings.image_size
+    when 'third'
+      assign text_width_desktop = 'lg:col-span-8'
+      if image_position == 'right'
+        assign image_width_desktop = 'lg:col-start-9 lg:col-end-13'
+      else
+        assign image_width_desktop = 'lg:col-span-4'
+      endif
+    when 'half'
+      assign text_width_desktop = 'lg:col-span-6'
+      if image_position == 'right'
+        assign image_width_desktop = 'lg:col-start-7 lg:col-end-13'
+      else
+        assign image_width_desktop = 'lg:col-span-6'
+      endif
+    when 'two_thirds'
+      assign text_width_desktop = 'lg:col-span-4'
+      if image_position == 'right'
+        assign image_width_desktop = 'lg:col-start-5 lg:col-end-13'
+      else
+        assign image_width_desktop = 'lg:col-span-8'
+      endif
+  endcase
+
+  assign padding_top = section.settings.padding_top
+  assign padding_top_desktop = section.settings.padding_top_desktop
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_bottom_desktop = section.settings.padding_bottom_desktop
+  assign section_y_padding = padding_top | append: ' ' | append: padding_top_desktop | append: ' ' | append: padding_bottom | append: ' ' | append: padding_bottom_desktop
+-%}
+
+<section class="grid grid-cols-1 lg:grid-cols-12 grid-flow-row-dense gap-gutter overflow-hidden {{ section_y_padding }}">
+  <div class="bg-{{ image_background_color }}-background {{ image_width_desktop }} px-2px {% if indent_image %}p-8 lg:p-16{% endif %}">
+    <div class="relative min-h-full">
+      {%- if section.settings.image != blank -%}
+        {%- assign image = section.settings.image -%}
+        {%- if fill_image -%}
+          <div class="hidden lg:block">
+            {% render 'image-object' with
+              image: image
+            %}
+          </div>
+          <div class="block lg:hidden">
+            {% render 'responsive-image' with image: image %}
+          </div>
+        {%- else -%}
+          {% render 'responsive-image' with image: image %}
+        {%- endif -%}
+      {%- else -%}
+        <div class="bg-placeholder-bg w-full">
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg w-full h-full text-text fill-current' }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="{{ text_width_desktop }} bg-{{ section_color }}-background text-{{ section_color }}-text relative section-x-padding py-theme flex {{ text_position }}">
+    <div class="{{ text_align }} break-words w-full">
+      {%- if section.settings.title != blank -%}
+        <h2 class="font-heading {{ settings.base_heading_size }}">{{ section.settings.title }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.richtext != blank -%}
+      <div class="rte {{ text_size_class }} {% if section.settings.title != '' %}mt-8{% endif %} font-{{ font }}">
+        {{ section.settings.richtext }}
+      </div>
+      {%- endif -%}
+
+      {%- if cta_link != blank and cta_text != '' -%}
+      <div class="mt-8 text-0">
+        {%- case section.settings.cta_style -%}
+        {%- when 'link' -%}
+          {%- render 'link-underline',
+            section_color: section_color,
+            text: cta_text,
+            link: cta_link,
+          -%}
+        {%- when 'button_transparent' -%}
+          <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-transparent text-{{ section_color }}-text border-text border-{{ section_color }}-text hover:bg-{{ section_color }}-text hover:text-{{ section_color }}-text-overlay transition">
+            <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </a>
+        {%- when 'button_primary' -%}
+          <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-white text-primary-text hover:bg-primary-text hover:text-white-accent transition">
+            <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </a>
+        {%- when 'button_accent' -%}
+          <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-white text-primary-accent hover:bg-primary-accent hover:text-white-accent transition">
+            <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </a>
+        {%- when 'button_primary_opacity' -%}
+          <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-primary-text text-white hover:opacity-80 transition-opacity">
+            <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </a>
+        {%- when 'button_accent_opacity' -%}
+          <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-primary-accent text-white hover:opacity-80 transition-opacity">
+            <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </a>
+        {%- endcase -%}
+      </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+</section>
+
+{% schema %}
+{
+  "name": "Image with text",
+  "settings": [
+    {
+      "type":      "header",
+      "content":   "Content"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position on desktop",
+      "default": "right",
+      "options": [
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "left",
+          "label": "Left"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "image_size",
+      "label": "Image size on desktop",
+      "default": "half",
+      "options": [
+        {
+          "value": "third",
+          "label": "One third"
+        },
+        {
+          "value": "half",
+          "label": "One half"
+        },
+        {
+          "value": "two_thirds",
+          "label": "Two thirds"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "indent_image",
+      "label": "Indent image",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "fill_image",
+      "label": "Fit image to text",
+      "default": false,
+      "info": "This setting will crop the image on desktop"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "Background color",
+      "options": [
+          { "value": "primary", "label": "Primary background"},
+          { "value": "secondary", "label": "Secondary background"},
+          { "value": "tertiary", "label": "Tertiary background"}
+      ],
+      "default":   "primary"
+    },
+    {
+      "type":      "header",
+      "content":   "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "richtext",
+      "label": "Text",
+      "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Text size",
+      "options": [
+        { "value": "text-sm", "label": "S"},
+        { "value": "text-base", "label": "M"},
+        { "value": "text-lg", "label": "L"},
+        { "value": "text-xl", "label": "XL"},
+        { "value": "text-2xl", "label": "2XL"},
+        { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
+        { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
+        { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL"}
+      ],
+      "default":   "text-base"
+    },
+    {
+      "type": "select",
+      "id": "font",
+      "label": "Font",
+      "options": [
+        {
+          "value": "heading",
+          "label": "Heading"
+        },
+        {
+          "value": "body",
+          "label": "Body"
+        }
+      ],
+      "default": "body"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "text-left", "label": "Left"},
+        { "value": "text-center", "label": "Center"},
+        { "value": "text-right", "label": "Right"}
+      ],
+      "default":   "text-left"
+    },
+    {
+      "type": "select",
+      "id": "text_position",
+      "label": "Text position",
+      "options": [
+        { "value": "items-start", "label": "Top"},
+        { "value": "items-center", "label": "Middle"},
+        { "value": "items-end", "label": "Bottom"}
+      ],
+      "default":   "items-center"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+          { "value": "primary", "label": "Primary"},
+          { "value": "secondary", "label": "Secondary"},
+          { "value": "tertiary", "label": "Tertiary"}
+      ],
+      "default":   "primary"
+    },
+    {
+      "type":      "header",
+      "content":   "Call to action"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Link"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "cta_style",
+      "label": "Style",
+      "options": [
+        { "value": "link", "label": "Link" },
+        { "value": "button_transparent", "label": "Button transparent/white" },
+        { "value": "button_primary", "label": "Button white/primary" },
+        { "value": "button_accent", "label": "Button white/accent" },
+        { "value": "button_primary_opacity", "label": "Button primary/opacity" },
+        { "value": "button_accent_opacity", "label": "Button accent/opacity" }
+      ],
+      "default":   "link"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_desktop",
+      "options": [
+        { "value": "lg:pt-2px", "label": "None" },
+        { "value": "lg:pt-theme-half", "label": "Half" },
+        { "value": "lg:pt-theme", "label": "Standard" },
+        { "value": "lg:pt-theme-double", "label": "Double" }
+      ],
+      "label": "Top padding desktop",
+      "default": "lg:pt-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_desktop",
+      "options": [
+        { "value": "lg:pb-2px", "label": "None" },
+        { "value": "lg:pb-theme-half", "label": "Half" },
+        { "value": "lg:pb-theme", "label": "Standard" },
+        { "value": "lg:pb-theme-double", "label": "Double" }
+      ],
+      "label": "Bottom padding desktop",
+      "default": "lg:pb-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "options": [
+        { "value": "pt-2px", "label": "None" },
+        { "value": "pt-theme-half", "label": "Half" },
+        { "value": "pt-theme", "label": "Standard" },
+        { "value": "pt-theme-double", "label": "Double" }
+      ],
+      "label": "Top padding mobile",
+      "default": "pt-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "options": [
+        { "value": "pb-2px", "label": "None" },
+        { "value": "pb-theme-half", "label": "Half" },
+        { "value": "pb-theme", "label": "Standard" },
+        { "value": "pb-theme-double", "label": "Double" }
+      ],
+      "label": "Bottom padding mobile",
+      "default": "pb-theme"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "16442102347cf74a1c": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "<p><strong>See our collection of gift ideas for your self love valentines<\/strong><\/p>",
+        "text_size_mobile": "text-lg",
+        "text_size_desktop": "lg:text-2xl",
+        "font": "heading",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "two_thirds",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "164420917309f6ec7e": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Gift ideas for your self love valentines",
+        "text": "<p><em>\"Fall in love with taking care of yourself. Fall in love with the path of deep healing. Fall in love with becoming the best version of yourself, but with patience, with compassion and respect to your own journey.”<\/em><\/p><p><em>- S. Mcnutt<\/em><\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "hide_title": false,
+        "description_position": "under_title",
+        "description_color_scheme": "primary",
+        "grid": 4,
+        "rows": 40,
+        "grid_mobile": "2",
+        "gift_cards": "",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "linklist": "",
+        "capitalize_filters": true,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "1644208919a3458f43": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "ADORNE YOURSELF",
+        "collection": "jewellery",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": false,
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "1644208900f5519e89": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "TAKE CARE OF YOUR SKIN",
+        "collection": "organic-deodorant",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": false,
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "16442098303c1ac359": {
+      "type": "marquee",
+      "settings": {
+        "text": "YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED ·",
+        "link": "",
+        "text_size": "text-2xl",
+        "font": "heading",
+        "speed": 160,
+        "direction": "",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "tertiary"
+      }
+    }
+  },
+  "order": [
+    "16442102347cf74a1c",
+    "164420917309f6ec7e",
+    "main",
+    "1644208919a3458f43",
+    "1644208900f5519e89",
+    "16442098303c1ac359"
+  ]
+}

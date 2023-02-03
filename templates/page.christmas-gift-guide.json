@@ -1,0 +1,642 @@
+{
+  "sections": {
+    "ccb38f72-4dfa-46d7-97d0-b9b21ec02c93": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Christmas-gift-guide.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Christmas-gift-guide-indigo-luna.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "title": "OUR CHRISTMAS GIFT GUIDE",
+        "heading_size": "text-lg",
+        "text": "<p>Find the perfect Christmas gift for your loved ones<\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "lg:w-1\/2",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "677e8695-a4a7-4867-ab9b-1b03be498bcf": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/CHRISTMAS-GIFT-GUIDE_a37c66f1-4e74-4f5a-b93b-1eb916a98aef.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/GGM_97fc071e-039e-4e43-8e8f-09512d14bc6f.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "<p><\/p>",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "1656042417724ebda6": {
+      "type": "rich-text",
+      "settings": {
+        "title": "TIME OF THE YEAR FOR PRESENCE & LOVE",
+        "text": "<p>In the spirit of love and giving, we’ve written down some specific gift ideas. We hope you get inspired and find the perfect sustainable present.<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "half",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "ecaf818e-130c-407b-976d-9c96b16c248c": {
+      "type": "marquee",
+      "settings": {
+        "text": "YOU ARE LOVED · YOU ARE LOVED YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED ·",
+        "link": "",
+        "text_size": "text-sm",
+        "font": "heading",
+        "speed": 20,
+        "direction": "",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "secondary"
+      }
+    },
+    "099aeb75-dd79-4a36-a9e9-84bd329c6fb2": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>SHOP BY PRICE<\/p>",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "default",
+        "font": "heading",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "02e7c984-ec80-439b-b3aa-4fa1676539e4": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14500159946823__02e7c984-ec80-439b-b3aa-4fa1676539e4-1669350055f31e7033-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/sarong1.jpg",
+            "title": "UNDER $25",
+            "text": "<p><\/p>",
+            "cta_link": "shopify:\/\/collections\/under-25",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14500159946823__02e7c984-ec80-439b-b3aa-4fa1676539e4-1669350055f31e7033-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/underw_084adaba-32e4-4c25-941a-dff11e1dad0c.jpg",
+            "title": "UNDER $50",
+            "text": "<p><\/p>",
+            "cta_link": "shopify:\/\/collections\/under-50",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14500159946823__02e7c984-ec80-439b-b3aa-4fa1676539e4-1669350055f31e7033-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/fl.jpg",
+            "title": "UNDER $100",
+            "text": "<p><\/p>",
+            "cta_link": "shopify:\/\/collections\/under-100",
+            "color_scheme": "primary"
+          }
+        },
+        "872eba9b-7709-4960-ba5f-467facb643d1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/pnch.jpg",
+            "title": "UNDER $150",
+            "text": "<p><\/p>",
+            "cta_link": "shopify:\/\/collections\/under-150",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--14500159946823__02e7c984-ec80-439b-b3aa-4fa1676539e4-1669350055f31e7033-0",
+        "template--14500159946823__02e7c984-ec80-439b-b3aa-4fa1676539e4-1669350055f31e7033-1",
+        "template--14500159946823__02e7c984-ec80-439b-b3aa-4fa1676539e4-1669350055f31e7033-2",
+        "872eba9b-7709-4960-ba5f-467facb643d1"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme-half",
+        "padding_bottom": "pb-theme"
+      }
+    },
+    "0fbe41c0-2ef1-40d2-a333-98296acf79d2": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/GIFT-CARD-OK3.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/PHONE2.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "title": "NEW CUSTOMISABLE GIFT CARDS",
+        "heading_size": "text-lg",
+        "text": "<p>In case you want to give the gift of choice.<br\/><br\/>You will be able to choose a design, write a nice message and select a specific date they will receive it.<\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-1\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/collections\/gift-cards",
+        "cta_text": "Create a gift card",
+        "cta_style": "button_accent_opacity"
+      }
+    },
+    "7732f58d-01c3-465a-ab1f-1686d3ea3651": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/green-deskt.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/sq.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "title": "",
+        "heading_size": "text-2xl",
+        "text": "<p><strong>HOLIDAY SHIPPING<br\/><\/strong><br\/>Make sure you place your order before the <strong>16th of December<\/strong> (for Australia and the Rest of the world) to ensure the pieces arrive before Christmas.<\/p><p>----<\/p><p><strong>EXTENDED RETURNS AND EXCHANGES<\/strong><br\/><br\/>To make sure you or your loved ones get exactly what they love this year, all purchases this <strong>December<\/strong> will have an <strong>extended exchange and return date until January 31st.<\/strong><\/p>",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "53b6eaa9-83a3-4a81-8a9a-2da84238813f": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>GET INSPIRED<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme-double",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme-double",
+        "padding_bottom": "pb-theme-half",
+        "color_scheme": "primary"
+      }
+    },
+    "227e8819-c847-4081-980c-cbc0233c84d4": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "4fe84092-6d8f-47f7-bc34-c450b1fc500c": {
+          "type": "text",
+          "settings": {
+            "text": "Customizable gift cards in case you want to gift the gift of choice.",
+            "font": "body",
+            "text_size": "text-base",
+            "icon": "none"
+          }
+        },
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-2": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": false
+          }
+        },
+        "a1a241d2-ef4a-446e-aa72-5ee3043bd25c": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": true
+          }
+        }
+      },
+      "block_order": [
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-0",
+        "4fe84092-6d8f-47f7-bc34-c450b1fc500c",
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-1",
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-2",
+        "a1a241d2-ef4a-446e-aa72-5ee3043bd25c",
+        "template--14500159946823__227e8819-c847-4081-980c-cbc0233c84d4-1669350055bd1d6ad1-3"
+      ],
+      "settings": {
+        "product": "gift-card",
+        "desktop_image_width": "one-half",
+        "desktop_image_position": "left",
+        "desktop_content_position": "items-center",
+        "color_scheme": "primary",
+        "enable_video_looping": false
+      }
+    },
+    "2d16aac1-c957-4fa0-b245-ed4941b1f917": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/yoga1.jpg",
+        "image_position": "left",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": false,
+        "background_color": "primary",
+        "title": "Yoga essentials",
+        "richtext": "<p>Flares, leggings, crops... Find the right shape in the right colour to support her feminine flow.<\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "shopify:\/\/collections\/yoga-clothes",
+        "cta_text": "Explore yoga",
+        "cta_style": "button_accent_opacity",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-theme-half"
+      }
+    },
+    "a87310d6-3ee3-4ed7-8537-1d37daa170bd": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/cozzzy.jpg",
+        "image_position": "right",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": false,
+        "background_color": "primary",
+        "title": "cozy gifts",
+        "richtext": "<p>The comfiest garments we offer. She will live in these. <\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "shopify:\/\/collections\/knitwear",
+        "cta_text": "explore the coziest",
+        "cta_style": "button_accent_opacity",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "7ceccab6-ba40-4eee-801b-9a6c5af7de4c": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/stuffing.jpg",
+        "image_position": "left",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": false,
+        "background_color": "primary",
+        "title": "Stocking stuffers",
+        "richtext": "<p>Essential oils, incense, palo santo, ceremonial cacao, and other sustainable accessories to not forget about anyone you love. <\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "shopify:\/\/collections\/accessories",
+        "cta_text": "explore accessories",
+        "cta_style": "button_accent_opacity",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "2d17a921-85de-4a2d-a75c-dd121ba06d16": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Sustainable-giftwrapping.jpg",
+        "image_position": "right",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": false,
+        "background_color": "primary",
+        "title": "SUSTAINABLE GIFT WRAPPING",
+        "richtext": "<p>We will wrap them up and include a card in the parcel for you to sign and place under the Christmas tree. <\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "button_accent_opacity",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "7e2ac403-6ee3-4af1-8432-937fabc3e453": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gift-wrapping-paper.png",
+        "image_mobile": "shopify:\/\/shop_images\/gift-wrappingg_b94030bb-ca7c-4d2b-a828-d1ddf755668d.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme-half",
+        "padding_top": "pt-theme-half",
+        "padding_bottom": "pb-theme",
+        "title": "Free Gift wrapping for this holiday season",
+        "heading_size": "text-lg",
+        "text": "<p>Our beautiful ladies will wrap your presents with love and you can place them straight under the Christmas tree. Just select ‘gift wrapping’ at checkout.<\/p>",
+        "content_position": "justify-center items-end text-center",
+        "content_position_desktop": "lg:justify-start lg:items-center lg:text-left",
+        "content_width_desktop": "lg:w-1\/2",
+        "text_color": "white",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "36792c48-10d1-4762-9a40-ad06018fb579": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Have any questions?",
+        "text": "<p>If you are not sure about the right size or have questions about the shipping and returns policy, please contact us and we will help you out.<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "shopify:\/\/pages\/contact-us",
+        "cta_text": "Contact us",
+        "cta_style": "button",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme-double",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "1a8694d3-b6f6-4e60-98b5-aea370a399b5": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/LOVEE_8b5b37e2-05ba-41fe-a606-4075edd54906.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/LOVEM_f510993d-6db2-4cab-82f5-496c514b349c.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "<p><\/p>",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "9bdd7e4f-1ffb-4dec-9e6f-3d42e22b5624": {
+      "type": "marquee",
+      "settings": {
+        "text": "YOU ARE LOVED · YOU ARE LOVED YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED · YOU ARE LOVED ·",
+        "link": "",
+        "text_size": "text-sm",
+        "font": "heading",
+        "speed": 20,
+        "direction": "",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme-half",
+        "color_scheme": "secondary"
+      }
+    },
+    "7f63ef8a-ad93-411c-beaf-21ffeece279c": {
+      "type": "collection-list",
+      "blocks": {
+        "a95b33c0-50ff-4140-ac16-85f1ab67caf4": {
+          "type": "collection",
+          "settings": {
+            "collection": "flare-yoga-pants-and-yoga-top",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "template--14500159946823__7f63ef8a-ad93-411c-beaf-21ffeece279c-1669771086fecd1dc4-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "agni-yoga-collection",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "0dd64f71-9b21-4e8b-98bf-b8a3bf23621f": {
+          "type": "collection",
+          "settings": {
+            "collection": "sighswoon",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "3261bb4c-eb87-496d-8d22-13205dd99d93": {
+          "type": "collection",
+          "settings": {
+            "collection": "knitwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "1e0db231-5aa9-4857-910c-311810130afc": {
+          "type": "collection",
+          "settings": {
+            "collection": "creator-capsule",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "template--14500159946823__7f63ef8a-ad93-411c-beaf-21ffeece279c-1669771086fecd1dc4-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "organic-ananda-yoga",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "8c1e6add-b22f-448b-b7de-82a6229a7a6d": {
+          "type": "collection",
+          "settings": {
+            "collection": "indo-pants",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "c315ac2e-5487-4223-a420-c2f3ca31d528": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewellery",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "a95b33c0-50ff-4140-ac16-85f1ab67caf4",
+        "template--14500159946823__7f63ef8a-ad93-411c-beaf-21ffeece279c-1669771086fecd1dc4-0",
+        "0dd64f71-9b21-4e8b-98bf-b8a3bf23621f",
+        "3261bb4c-eb87-496d-8d22-13205dd99d93",
+        "1e0db231-5aa9-4857-910c-311810130afc",
+        "template--14500159946823__7f63ef8a-ad93-411c-beaf-21ffeece279c-1669771086fecd1dc4-1",
+        "8c1e6add-b22f-448b-b7de-82a6229a7a6d",
+        "c315ac2e-5487-4223-a420-c2f3ca31d528"
+      ],
+      "settings": {
+        "title": "EXPLORE OTHER COLLECTIONS",
+        "text_size": "text-2xl",
+        "color_scheme": "primary",
+        "crop": "0.8",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "981bcc70-c95d-4f46-9afb-16d910b54372": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Under $50",
+        "collection": "under-50",
+        "limit": 8,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "ccb38f72-4dfa-46d7-97d0-b9b21ec02c93",
+    "main",
+    "677e8695-a4a7-4867-ab9b-1b03be498bcf",
+    "1656042417724ebda6",
+    "ecaf818e-130c-407b-976d-9c96b16c248c",
+    "099aeb75-dd79-4a36-a9e9-84bd329c6fb2",
+    "02e7c984-ec80-439b-b3aa-4fa1676539e4",
+    "0fbe41c0-2ef1-40d2-a333-98296acf79d2",
+    "7732f58d-01c3-465a-ab1f-1686d3ea3651",
+    "53b6eaa9-83a3-4a81-8a9a-2da84238813f",
+    "227e8819-c847-4081-980c-cbc0233c84d4",
+    "2d16aac1-c957-4fa0-b245-ed4941b1f917",
+    "a87310d6-3ee3-4ed7-8537-1d37daa170bd",
+    "7ceccab6-ba40-4eee-801b-9a6c5af7de4c",
+    "2d17a921-85de-4a2d-a75c-dd121ba06d16",
+    "7e2ac403-6ee3-4af1-8432-937fabc3e453",
+    "36792c48-10d1-4762-9a40-ad06018fb579",
+    "1a8694d3-b6f6-4e60-98b5-aea370a399b5",
+    "9bdd7e4f-1ffb-4dec-9e6f-3d42e22b5624",
+    "7f63ef8a-ad93-411c-beaf-21ffeece279c",
+    "981bcc70-c95d-4f46-9afb-16d910b54372"
+  ]
+}

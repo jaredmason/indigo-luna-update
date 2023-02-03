@@ -1,0 +1,192 @@
+{
+  "sections": {
+    "b6598372-1aac-4a4c-8734-91b48b52524b": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/NEW-LAYLA-SKIRT-FULL-RANGE-AVAILABLE-SHOP-ONLINE.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Layla-Skirt-and-boxy-crop_57bef971-4154-4b82-98fd-1b3fa438843f.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "",
+        "padding_bottom": "pb-theme-half",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "shopify:\/\/products\/layla-skirt-silver-grey",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "55d62145-1d9b-4fca-9fd2-1d7512c9d0f1": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "hide_title": true,
+        "description_position": "bottom",
+        "description_color_scheme": "primary",
+        "grid": 4,
+        "rows": 40,
+        "grid_mobile": "2",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "linklist": "",
+        "capitalize_filters": true,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "1644545617bf83b90e": {
+      "type": "collection-list",
+      "blocks": {
+        "cc68b4da-183b-40e2-971b-a052a8d250e4": {
+          "type": "collection",
+          "settings": {
+            "collection": "knitwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "16445456171a5a4b10-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "flare-yoga-pants-and-yoga-top",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "921b6059-d854-4dcd-9363-6584077a39bc": {
+          "type": "collection",
+          "settings": {
+            "collection": "agni-yoga-collection",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "63b916bb-48eb-4158-9cf8-7354bfaf7987": {
+          "type": "collection",
+          "settings": {
+            "collection": "best-sellers",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "72e517e6-a481-4a3b-8b5b-0b7eaac199ff": {
+          "type": "collection",
+          "settings": {
+            "collection": "organic-ananda-yoga",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "414259f4-952b-4b93-90a5-846df933d40b": {
+          "type": "collection",
+          "settings": {
+            "collection": "women-yoga-clothes",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "16445456171a5a4b10-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "womens-underwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "5863a2b8-9f41-4bf8-8d9a-985d15690f89": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "sustainable-swimwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "358ae7c9-6a88-401e-b860-8d6ef60c240d": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "vayu",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "32de5a14-d2c3-4b30-a2a0-0ddab44c9f9f": {
+          "type": "collection",
+          "settings": {
+            "collection": "indo-pants",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "cc68b4da-183b-40e2-971b-a052a8d250e4",
+        "16445456171a5a4b10-0",
+        "921b6059-d854-4dcd-9363-6584077a39bc",
+        "63b916bb-48eb-4158-9cf8-7354bfaf7987",
+        "72e517e6-a481-4a3b-8b5b-0b7eaac199ff",
+        "414259f4-952b-4b93-90a5-846df933d40b",
+        "16445456171a5a4b10-1",
+        "5863a2b8-9f41-4bf8-8d9a-985d15690f89",
+        "358ae7c9-6a88-401e-b860-8d6ef60c240d",
+        "32de5a14-d2c3-4b30-a2a0-0ddab44c9f9f"
+      ],
+      "settings": {
+        "title": "explore more collections",
+        "text_size": "text-2xl",
+        "color_scheme": "primary",
+        "crop": "0.8",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme"
+      }
+    }
+  },
+  "order": [
+    "b6598372-1aac-4a4c-8734-91b48b52524b",
+    "55d62145-1d9b-4fca-9fd2-1d7512c9d0f1",
+    "main",
+    "1644545617bf83b90e"
+  ]
+}

@@ -1,0 +1,48 @@
+{%- assign section_color = section.settings.color_scheme -%}
+<section class="page grid grid-cols-1 lg:grid-cols-2 gap-theme">
+
+  <div class="section-x-padding py-theme lg:py-theme-double text-{{ section_color }}-text bg-{{ section_color }}-background lg:flex {{ section.settings.content_position }}">
+    <div class="{%- if section.settings.content_position == 'lg:justify-center' -%}text-center{%- endif -%}">
+      <h1 class="font-heading {{ settings.template_heading_size }} break-words">{{ page.title }}</h1>
+    </div>
+  </div>
+
+  <div class="section-x-padding pb-theme lg:py-theme-double text-{{ section_color }}-text bg-{{ section_color }}-background">
+    <div class="rte mt-2 lg:max-w-reading">
+      {{ page.content }}
+    </div>
+  </div>
+</section>
+
+{%- if section.settings.override_header_footer_color_scheme -%}
+  {%- render 'header-footer-color-scheme-override', section_color: section_color -%}
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Pages - Overlay image",
+  "settings": [
+    {
+      "type":      "header",
+      "content":   "Color"
+    },
+    {
+       "type": "select",
+       "id": "color_scheme",
+       "label": "Color scheme",
+       "options": [
+          { "value": "primary", "label": "Primary"},
+          { "value": "secondary", "label": "Secondary"},
+          { "value": "tertiary", "label": "Tertiary"}
+       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "override_header_footer_color_scheme",
+      "label": "Use this color scheme for header and footer",
+      "info": "This will only apply to the contact page template",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

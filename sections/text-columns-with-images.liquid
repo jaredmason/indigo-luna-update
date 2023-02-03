@@ -1,0 +1,254 @@
+{%- liquid
+  assign section_color = 'primary'
+  assign text_align = section.settings.text_alignment
+  assign block_heading_level = 'h2'
+  assign ratio = section.settings.crop | plus: 0
+  assign divisible_by_four =  section.blocks.size | modulo: 4
+  assign divisible_by_three =  section.blocks.size | modulo: 3
+  if divisible_by_four == 0
+    assign col_span = 'col-span-1 lg:col-span-3'
+  elsif divisible_by_three == 0
+    assign col_span = 'col-span-2 lg:col-span-4'
+  else
+    assign col_span = 'col-span-2 lg:col-span-6'
+  endif
+  assign padding_top = section.settings.padding_top
+  assign padding_top_desktop = section.settings.padding_top_desktop
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_bottom_desktop = section.settings.padding_bottom_desktop
+  assign section_y_padding = padding_top | append: ' ' | append: padding_top_desktop | append: ' ' | append: padding_bottom | append: ' ' | append: padding_bottom_desktop
+-%}
+<section class="{{ section_y_padding }}">
+  {% if section.settings.title != '' %}
+    {%- assign block_heading_level = 'h3' -%}
+    {%- render 'section-title',
+      title: section.settings.title,
+      section_color: section_color
+    -%}
+  {% endif %}
+
+  <ul class="grid grid-cols-2 lg:grid-cols-12 gap-theme px-8">
+    {% for block in section.blocks %}
+      {%- assign block_color = block.settings.color_scheme -%}
+      <li class="{{ col_span }} bg-{{ block_color }}-background text-{{ block_color }}-text text-base {{ text_align }} " {{ shopify.block_attributes }}>
+        <a href="{{ block.settings.cta_link }}" class="group hover:underline">
+          {%- if block.settings.show_image -%}
+            {%- if block.settings.image != blank -%}
+            <div class="bg-{{ block_color }}-background p-4 lg:pt-8 lg:px-8 lg:pb-6 group-hover:opacity-80 transition-opacity">
+              <div class="relative">
+                {%- assign image = block.settings.image -%}
+                {% render 'image-crop' with
+                  image: image,
+                  ratio: ratio
+                %}
+              </div>
+            </div>
+            {%- else -%}
+            <div class="bg-{{ block_color }}-background pt-2 px-2 lg:pt-8 lg:px-8 lg:pb-6">
+              <div class="relative h-full w-full">
+                {%- if section.settings.crop == '0' -%}
+                  <div class="gallery-placeholder bg-placeholder-bg ">
+                    {%- if settings.fill_image_to_border_edge -%}
+                      {% assign placeholder_svg_tag = 'placeholder-svg placeholder-svg--no-border' %}
+                    {%- else -%}
+                      {% assign placeholder_svg_tag = 'placeholder-svg' %}
+                    {%- endif -%}
+                    {{ 'image' | placeholder_svg_tag: placeholder_svg_tag }}
+                  </div>
+                {%- else -%}
+                  <div class="gallery-placeholder--cropped relative bg-placeholder-bg "
+                    style="padding-top:{{ 1 | divided_by: ratio | times: 100 }}%;" >
+                    {%- if settings.fill_image_to_border_edge -%}
+                      {% assign placeholder_svg_tag = 'placeholder-svg fill-current gallery-placeholder--cropped__svg placeholder-svg--no-border' %}
+                    {%- else -%}
+                      {% assign placeholder_svg_tag = 'placeholder-svg fill-current  gallery-placeholder--cropped__svg' %}
+                    {%- endif -%}
+                    <span class="absolute top-0 left-0 right-0 bottom-0 text-text">{{ 'image' | placeholder_svg_tag: placeholder_svg_tag }}</span>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+            {%- endif -%}
+          {%- endif -%}
+
+          <div class="section-x-padding">
+            {% if block.settings.title != '' %}
+            <{{ block_heading_level }} class="text-md uppercase">{{ block.settings.title }}</{{ block_heading_level }}>
+            {% endif %}
+            <div class="rte {% if block.settings.title == '' %}pt-theme-half{% endif %}">{{ block.settings.text }}</div>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+  {
+    "name": "Text columns with images",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "crop",
+        "label": "Crop images",
+        "options": [
+          {
+            "value": "0",
+            "label": "No crop"
+          },
+          {
+            "value": "1.3",
+            "label": "Landscape"
+          },
+          {
+            "value": "1",
+            "label": "Square"
+          },
+          {
+            "value": "0.8",
+            "label": "Portrait"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "options": [
+          { "value": "text-left", "label": "Left"},
+          { "value": "text-center", "label": "Center"},
+          { "value": "text-right", "label": "Right"}
+        ],
+        "default":   "text-left"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_desktop",
+        "options": [
+          { "value": "lg:pt-2px", "label": "None" },
+          { "value": "lg:pt-theme-half", "label": "Half" },
+          { "value": "lg:pt-theme", "label": "Standard" },
+          { "value": "lg:pt-theme-double", "label": "Double" }
+        ],
+        "label": "Top padding desktop",
+        "default": "lg:pt-theme"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_desktop",
+        "options": [
+          { "value": "lg:pb-2px", "label": "None" },
+          { "value": "lg:pb-theme-half", "label": "Half" },
+          { "value": "lg:pb-theme", "label": "Standard" },
+          { "value": "lg:pb-theme-double", "label": "Double" }
+        ],
+        "label": "Bottom padding desktop",
+        "default": "lg:pb-theme"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "options": [
+          { "value": "pt-2px", "label": "None" },
+          { "value": "pt-theme-half", "label": "Half" },
+          { "value": "pt-theme", "label": "Standard" },
+          { "value": "pt-theme-double", "label": "Double" }
+        ],
+        "label": "Top padding mobile",
+        "default": "pt-theme"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "options": [
+          { "value": "pb-2px", "label": "None" },
+          { "value": "pb-theme-half", "label": "Half" },
+          { "value": "pb-theme", "label": "Standard" },
+          { "value": "pb-theme-double", "label": "Double" }
+        ],
+        "label": "Bottom padding mobile",
+        "default": "pb-theme"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "limit": 4,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "show_image",
+            "label": "Show image",
+            "default": true
+          },
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>"
+          },
+          {
+            "type":      "header",
+            "content":   "Call to action"
+          },
+          {
+            "type": "url",
+            "id": "cta_link",
+            "label": "Link"
+          },
+          {
+            "type":      "header",
+            "content":   "Color"
+          },
+          {
+            "type": "select",
+            "id": "color_scheme",
+            "label": "Color scheme",
+            "options": [
+                { "value": "primary", "label": "Primary"},
+                { "value": "secondary", "label": "Secondary"},
+                { "value": "tertiary", "label": "Tertiary"}
+            ],
+            "default":   "primary"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Text columns with images",
+        "category": "Text",
+        "blocks": [
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          },
+          {
+            "type": "column"
+          }
+        ]
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,160 @@
+{
+  "sections": {
+    "1643720224908490a7": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/CONTACT-DESKTOP1.png",
+        "image_mobile": "shopify:\/\/shop_images\/IMG_1309.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "",
+        "padding_bottom_desktop": "",
+        "padding_top": "",
+        "padding_bottom": "",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "1653964183ad097136": {
+      "type": "image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/WHOLESALE_1.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "165830234501af7ac7": {
+      "type": "text-columns",
+      "settings": {
+        "title": "",
+        "text": "<p><\/p><p><a href=\"\/pages\/wholesale\" title=\"Wholesale Inquiries\">Wholesale Inquiries<\/a><\/p><p><a href=\"\/pages\/wholesalers\" title=\"Indigo Luna Wholesalers\">Already wholesaler?<\/a><\/p>",
+        "desktop_columns": "lg:col-count-4",
+        "text_alignment": "text-center",
+        "desktop_text_size": "lg:text-base",
+        "color_scheme": "primary"
+      }
+    },
+    "1653960851b7ff5a2d": {
+      "type": "image-with-text",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/WHOLESALE_4.jpg",
+        "image_position": "left",
+        "image_size": "half",
+        "indent_image": true,
+        "fill_image": false,
+        "background_color": "primary",
+        "title": "Wholesale inquiries",
+        "richtext": "<p>We are always looking for like minded small businesses to share Indigo Luna with.<\/p><p><br\/>If you are the owner of a Yoga Studio or are a small retailer that shares our same values and would like to stock Indigo Luna, please send us an email with a brief description of your space and location to <a href=\"mailto:wholesale@indigoluna.store\" target=\"_blank\" title=\"mailto:wholesale@indigoluna.store\">wholesale@indigoluna.store<\/a>.<br\/><br\/>With our slow fashion principles we make sure to carefully select our wholesalers in order to make sure we are sticking with our values and can help retailers to suceed.<br\/><br\/><\/p>",
+        "text_size": "text-lg",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-theme"
+      }
+    },
+    "main": {
+      "type": "main-page-ws-contact",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "16557798091eca960f": {
+      "type": "text-columns-with-images",
+      "disabled": true,
+      "blocks": {
+        "165577980981406fd5-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/NAtional.jpg",
+            "title": "",
+            "text": "",
+            "cta_link": "https:\/\/wholesale.indigoluna.store\/products",
+            "color_scheme": "primary"
+          }
+        },
+        "165577980981406fd5-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/International.jpg",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "color_scheme": "primary"
+          }
+        },
+        "165577980981406fd5-2": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.<\/p>",
+            "cta_link": "",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "165577980981406fd5-0",
+        "165577980981406fd5-1",
+        "165577980981406fd5-2"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    }
+  },
+  "order": [
+    "1643720224908490a7",
+    "1653964183ad097136",
+    "165830234501af7ac7",
+    "1653960851b7ff5a2d",
+    "main",
+    "16557798091eca960f"
+  ]
+}

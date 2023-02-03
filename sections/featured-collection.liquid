@@ -1,0 +1,211 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available in the "Featured Collection" section in the theme editor.
+
+  Theme Store required settings
+  - Collection
+
+  Theme Store optional settings
+  - Heading: title of the featured collection section
+{%- endcomment -%}
+{%- liquid
+  assign section_color = section.settings.color_scheme
+  assign heading_size_class = section.settings.heading_size
+  assign collection = collections[section.settings.collection]
+  assign product_limit = section.settings.limit
+  assign show_view_all = section.settings.show_view_all
+  assign view_all_text = 'collections.general.view_all' | t
+  assign counter = 0
+  assign padding_top = section.settings.padding_top
+  assign padding_top_desktop = section.settings.padding_top_desktop
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_bottom_desktop = section.settings.padding_bottom_desktop
+  assign section_y_padding = padding_top | append: ' ' | append: padding_top_desktop | append: ' ' | append: padding_bottom | append: ' ' | append: padding_bottom_desktop
+-%}
+<section class="relative bg-{{ section_color }}-background text-{{ section_color }}-text {{ section_y_padding }}" data-section-type="slideshow" data-section-id="{{ section.id }}" data-slide-speed="{{ section.settings.slide_speed }}" {% if section.settings.auto_rotate %}data-auto-rotate="true"{% endif %}>
+  {% if section.settings.title != '' %}
+    {%- render 'section-title',
+      title: section.settings.title,
+      show_link: show_view_all,
+      link_text: view_all_text,
+      link_url: collection.url,
+      section_color: section_color
+    -%}
+  {% endif %}
+
+  <div class="splide" data-splide='{ "perPage": 4, "perMove": 4 }'>
+    <button class="splide__autoplay-control absolute top-0 left-0 z-10 p-2 opacity-0 transition-opacity"
+            aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}"
+            data-play="{{ 'sections.slideshow.rotate_slideshow' | t }}"
+            data-pause="{{ 'sections.slideshow.pause_slideshow' | t }}">
+      <span class="flex items-center justify-center relative">
+        <span class="splide__pause inline-block w-6">{% render 'icon-pause' %}</span>
+        <span class="splide__play inline-block w-6">{% render 'icon-play' %}</span>
+      </span>
+    </button>
+    <div class="splide__track {% if settings.fill_image_to_border_edge  %}border-b-grid border-grid-color{% endif %}">
+      <div class="splide__list">
+        {% for product in collection.products limit: product_limit %}
+          {%- assign counter = counter | plus: 1 -%}
+          {%- liquid
+            assign ratio = section.settings.crop | plus: 0
+            assign text_size_class = block.settings.text_size
+            assign content_position = block.settings.content_position
+            assign text_color = block.settings.text_color
+            assign collection = collections[block.settings.collection]
+          -%}
+          <div class="splide__slide" data-index="{{ forloop.index0 }}" {{ block.shopify_attributes }}>
+            {%- render 'product-grid-item',
+              product: product,
+              section_color: section_color,
+              responsive_image_counter: forloop.index
+            -%}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="js-enabled splide__arrows hidden lg:block right-0 text-{{ section_color }}-text {% if first_3d_model %}bottom-slide-arrows lg:bottom-auto{% endif %} mr-4 mt-2 lg:m-0 text-right">
+      <button class="splide__arrow splide__arrow--prev lg:absolute top-0 pb-theme lg:grid lg:h-full lg:left-2 hover:text-primary-accent">
+        <span class="visually-hidden">{{ 'sections.slideshow.previous_slide' | t }}</span>
+        <span class="block self-center w-8 lg:w-12 lg:h-12 rounded-full bg-primary-background mx-auto">{% render 'icon-previous' %}</span>
+      </button>
+      <button class="splide__arrow splide__arrow--next lg:absolute top-0 pb-theme lg:grid lg:h-full lg:right-2 hover:text-primary-accent">
+        <span class="visually-hidden">{{ 'sections.slideshow.next_slide' | t }}</span>
+        <span class="block self-center w-8 lg:w-12 lg:h-12 rounded-full bg-primary-background mx-auto">{% render 'icon-next' %}</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    },
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Products displayed",
+      "min": 4,
+      "max": 12,
+      "step": 4,
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "crop",
+      "label": "Crop images",
+      "options": [
+        {
+          "value": "0",
+          "label": "No crop"
+        },
+        {
+          "value": "1.3",
+          "label": "Landscape"
+        },
+        {
+          "value": "1",
+          "label": "Square"
+        },
+        {
+          "value": "0.8",
+          "label": "Portrait"
+        }
+      ],
+      "default": "0.8"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_view_all",
+      "label": {
+        "en": "Show 'View all' link"
+    },
+    "default": false
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_desktop",
+      "options": [
+        { "value": "lg:pt-2px", "label": "None" },
+        { "value": "lg:pt-theme-half", "label": "Half" },
+        { "value": "lg:pt-theme", "label": "Standard" },
+        { "value": "lg:pt-theme-double", "label": "Double" }
+      ],
+      "label": "Top padding desktop",
+      "default": "lg:pt-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_desktop",
+      "options": [
+        { "value": "lg:pb-2px", "label": "None" },
+        { "value": "lg:pb-theme-half", "label": "Half" },
+        { "value": "lg:pb-theme", "label": "Standard" },
+        { "value": "lg:pb-theme-double", "label": "Double" }
+      ],
+      "label": "Bottom padding desktop",
+      "default": "lg:pb-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_top",
+      "options": [
+        { "value": "pt-2px", "label": "None" },
+        { "value": "pt-theme-half", "label": "Half" },
+        { "value": "pt-theme", "label": "Standard" },
+        { "value": "pt-theme-double", "label": "Double" }
+      ],
+      "label": "Top padding mobile",
+      "default": "pt-theme"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom",
+      "options": [
+        { "value": "pb-2px", "label": "None" },
+        { "value": "pb-theme-half", "label": "Half" },
+        { "value": "pb-theme", "label": "Standard" },
+        { "value": "pb-theme-double", "label": "Double" }
+      ],
+      "label": "Bottom padding mobile",
+      "default": "pb-theme"
+    },
+    {
+      "type":      "header",
+      "content":   "Color"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "options": [
+          { "value": "primary", "label": "Primary"},
+          { "value": "secondary", "label": "Secondary"},
+          { "value": "tertiary", "label": "Tertiary"}
+      ],
+      "default":   "primary"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured collection",
+      "category": "Collection"
+    }
+  ]
+}
+{% endschema %}

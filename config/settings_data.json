@@ -1,0 +1,253 @@
+{
+  "current": {
+    "color_border": "#ffffff",
+    "color_primary_text": "#5b5b5b",
+    "color_primary_background": "#ffffff",
+    "color_primary_accent": "#b1974e",
+    "color_primary_meta": "#adadad",
+    "color_secondary_text": "#b1974e",
+    "color_secondary_background": "#ffffff",
+    "color_secondary_accent": "#f2ede8",
+    "color_secondary_meta": "#5b5b5b",
+    "color_tertiary_text": "#f2ede8",
+    "color_tertiary_background": "#906b5c",
+    "color_tertiary_accent": "#777f6f",
+    "color_tertiary_meta": "#f2ede8",
+    "button_color": "transparent_background_text_border",
+    "button_style": "slightly_rounded",
+    "base_font_size": 14,
+    "font_heading": "lato_n4",
+    "heading_uppercase": true,
+    "heading_underline": false,
+    "heading_letterspacing": 150,
+    "base_heading_size": "text-2xl",
+    "template_heading_size": "text-2xl lg:text-4xl",
+    "secondary_heading_size": "text-2xl",
+    "font_body": "lato_n4",
+    "header_uppercase": true,
+    "product_grid_uppercase": false,
+    "button_uppercase": true,
+    "buttons_show_arrow": false,
+    "links_uppercase": true,
+    "links_show_arrow": false,
+    "links_show_underline": true,
+    "spacing": "large",
+    "fill_image_to_border_edge": true,
+    "border_width": 2,
+    "product_grid_show_sale_badge": true,
+    "color_badge_text": "#f2ede8",
+    "color_badge_background": "#906b5c",
+    "product_grid_image_size": "0.6667",
+    "under_image_display_format": "title_left_price_under",
+    "products_show_second_image_on_hover": true,
+    "enable_color_swatches": false,
+    "enable_color_swatches_collections": true,
+    "enable_breadcrumbs": true,
+    "sharing_display": "text",
+    "social_style": "icons",
+    "social_instagram_link": "https:\/\/www.instagram.com\/indigoluna.store\/",
+    "social_facebook_link": "https:\/\/www.facebook.com\/indigolunastore\/",
+    "social_twitter_link": "",
+    "social_pinterest_link": "https:\/\/id.pinterest.com\/indigolunastore\/",
+    "social_snapchat_link": "",
+    "social_tiktok_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "ajax_cart_method": "page",
+    "cart_additional_buttons": false,
+    "cart_notes_enable": false,
+    "show_cart_on_add": false,
+    "cart_color_scheme": "primary",
+    "checkout_customization": true,
+    "gift_wrapping_text": "Add Gift Wrapping for $5",
+    "favicon": "shopify:\/\/shop_images\/indigo-luna-store-favicon.png",
+    "app_wk_enabled": true,
+    "app_wk_login_required": false,
+    "app_wk_icon": "heart",
+    "app_wk_col_bg_shape": "square",
+    "app_wk_share_position": "top",
+    "app_wk_products_per_row": "4",
+    "checkout_logo_image": "shopify:\/\/shop_images\/indigo-luna-checkout_98168d47-f60b-4d20-af10-1214eab63aa7.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_color": "#f2ede8",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_color": "#f2ede8",
+    "checkout_heading_font": "Lato",
+    "checkout_body_font": "Lato",
+    "checkout_accent_color": "#b1974e",
+    "checkout_button_color": "#5b5b5b",
+    "checkout_error_color": "#906b5c",
+    "custom_badge_color": "secondary",
+    "full_bleed_grid": true,
+    "heading_line_height": 1,
+    "sections": {
+      "sidebar": {
+        "type": "sidebar",
+        "settings": {
+          "menu": "mobile-menu",
+          "secondary_menu": "secondary-menu",
+          "text_size": "text-3xl lg:text-4xl",
+          "show_borders": false,
+          "show_search": true,
+          "show_social": true,
+          "color_scheme": "secondary"
+        }
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {
+          "show_announcement_bar": false,
+          "home_page_only": false,
+          "display": "static",
+          "text": "We are taking a short Christmas break. Parcels will be shipped from January 4th",
+          "link": "",
+          "color_scheme": "tertiary",
+          "speed": 280,
+          "direction": "reverse"
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "mobile-menu",
+          "secondary_menu": "secondary-menu",
+          "color_scheme": "secondary",
+          "overlay_homepage": true,
+          "overlay_text_color": "white"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "7902405c-d6cf-4e4b-8309-cd98a1b5d0e3": {
+            "type": "menu",
+            "settings": {
+              "main_linklist": "footer-menu-shop",
+              "show_heading": true
+            }
+          },
+          "42bdb500-474f-43a4-a6ce-bea4a870ccd9": {
+            "type": "menu",
+            "settings": {
+              "main_linklist": "footer-menu-support",
+              "show_heading": true
+            }
+          },
+          "ac13b776-13eb-4292-b7d0-86015312a019": {
+            "type": "menu",
+            "settings": {
+              "main_linklist": "footer-menu-about",
+              "show_heading": true
+            }
+          }
+        },
+        "block_order": [
+          "7902405c-d6cf-4e4b-8309-cd98a1b5d0e3",
+          "42bdb500-474f-43a4-a6ce-bea4a870ccd9",
+          "ac13b776-13eb-4292-b7d0-86015312a019"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "show_locale_selector": false,
+          "show_currency_selector": true,
+          "text_heading": "",
+          "text_text": "",
+          "show_social": true,
+          "social_title": "",
+          "show_newsletter": true,
+          "newsletter_section_title": "Subscribe",
+          "newsletter_subheading": "<p>Sign up for the chance to win $200 every month!<\/p><p>Be the first to find out about new releases, discounts, restocks and more.<\/p>",
+          "customer_tag": "EMBED",
+          "newsletter_color_scheme": "primary",
+          "show_grid_border": false,
+          "color_scheme": "primary"
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "display_mode": "disabled",
+          "delay": 4,
+          "frequency": 30,
+          "title": "",
+          "text": "<p>Receive special offers and first look at new products.<\/p>",
+          "text_size": "text-base",
+          "call_to_action": "newsletter",
+          "cta_link": "",
+          "cta_text": "Shop Now",
+          "color_scheme": "tertiary"
+        }
+      },
+      "sidebar_support": {
+        "type": "sidebar_support",
+        "settings": {
+          "secondary_menu": "secondary-menu",
+          "text_size": "text-3xl lg:text-4xl",
+          "icon": "chevron",
+          "show_social": true,
+          "color_scheme": "secondary"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "733389323033596483": {
+        "type": "shopify:\/\/apps\/okendo-product-reviews-ugc\/blocks\/theme-settings\/bb689e69-ea70-4661-8fb7-ad24a2e23c29",
+        "disabled": false,
+        "settings": {
+          "show_preview_data": false
+        }
+      },
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "7586417359830130585": {
+        "type": "shopify:\/\/apps\/govalo\/blocks\/app-embed\/0261c814-5eb7-41a0-a529-3dcb870c5415",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "16275430657926763838": {
+        "type": "shopify:\/\/apps\/flash-incentives-cart-upsell\/blocks\/upsell-cart\/ae66766b-0b4d-4801-a38e-5692b1140cb1",
+        "disabled": false,
+        "settings": {
+          "upsell_auto_rotate_upsells": true,
+          "upsell_auto_rotate_speed": "4000",
+          "upsell_image_size": "large",
+          "upsell_action_type": "add_to_cart",
+          "upsell_checkout_action": "checkout",
+          "upsell_use_theme_styles": true,
+          "upsell_color_drawer": "#ffffff",
+          "upsell_color_borders": "#f2ede8",
+          "upsell_color_text": "#5b5b5b",
+          "upsell_color_button": "#5b5b5b",
+          "upsell_color_button_text": "#ffffff",
+          "upsell_color_shipping_bar": "#777f6f",
+          "upsell_color_disclaimer": "#5b5b5b",
+          "upsell_color_discount_price": "#b1974e",
+          "upsell_save_type": "dollar",
+          "upsell_continue_collections": [
+            "women-yoga-clothes",
+            "womens-underwear",
+            "all-clothing",
+            "best-sellers"
+          ],
+          "upsell_notes_enable": true,
+          "upsell_terms_enable": false,
+          "upsell_show_payment_icons": false,
+          "upsell_show_installments_banner": false,
+          "upsell_terms_page": "",
+          "upsell_floating_cart_button": "off",
+          "upsell_custom_css": ":root {\n--upsellButtonTextTransform: uppercase;\n}\n.upsell-cart-overlay, .upsell-cart-riser-open .upsell-cart__form:before {\nbackground-color: rgba(242,237,232,0.5);\n}\n.upsell-cart-open .upsell-cart-overlay {\nopacity: 1;\n}\n.upsell-cart__close, .upsell-cart__close-riser {\ntop: 10px;\nright: 10px;\n}\n.upsell-cart__items {\npadding-top: 2rem;\n}\n.upsell-cart__empty-icon {\ndisplay: none;\n}\n.upsell-cart--empty .upsell-cart__empty {\ndisplay: flex;\nflex-direction: column;\nwidth: 100%;\nheight: 100%;\njustify-content: space-between;\npadding: 2rem 2px;\n}\n.upsell-cart__empty-content { \nmax-width: 100%;\nwidth: 100%;\n}\n.upsell-cart__empty-label {\nfont-size: 1rem;\ntext-transform: uppercase;\nletter-spacing: 0.03em;\n}\n.upsell-cart__checkout, .upsell-cart__cta, .upsell-cart__empty-btn {\nborder-radius: 0;\nfont-size: 1.4rem !important;\npadding: 0.2rem 2rem !important;\nmin-height: 32px;\nline-height: 1.2;\nborder-width: 1px;\n}\n.upsell-cart__add-btn {\nborder-radius: 2px;\npadding: 0.2rem 2rem !important;\nfont-size: 1.1rem !important;\nline-height: 1.2 !important;\nborder-width: 1px;\n}\n.upsell-cart-open .upsell-cart__footer {\nmargin: 0 2px;\npadding: 1rem 0 2rem;\n}\n.upsell-cart__riser {\npadding: 2rem 2px;\n}\n.upsell-cart, .upsell-cart, .upsell-cart__riser {\nbox-shadow: none;\nwidth: 400px;\nmax-width: 100%;\n}\n@media (max-width: 1023px) {\n.upsell-cart, .upsell-cart, .upsell-cart__riser {\nwidth: 100%;\n}\n.upsell-cart-open .upsell-cart__footer {\npadding: 1rem 0 2rem;\n}\n.upsell-cart__image {\n\tflex: 0 0 100px;\n}\n}\n@media (max-width: 768px) {\n\t.upsell-cart__image {\n\t\tflex: 0 0 100px;\n\t}\n}\n.upsell-cart__item-row {\npadding: 0 2rem;\nmargin-bottom: 0.5rem;\n}\n.upsell-cart__checkout-wrapper, .upsell-shipping {\nmargin-top: 1rem;\n}\n.upsell-cart__subtotal-label, .upsell-cart__subtotal {\nfont-size: 1.1rem;\nfont-weight: 400;\nletter-spacing: 0.03em;\n}\n.upsell-cart__image {\n\talign-self: flex-start;\n}\n.upsell-cart__image img, a.upsell-cart__riser-header-image img {\nwidth: 100%;\naspect-ratio: 1 \/ 1.2;\nobject-fit: cover;\n}\n.upsell-cart__item {\npadding: 1rem 0;\nmargin: 0 2rem;\n}\n.upsell-cart__item-details {\njustify-content: space-between;\n}\n.upsell-cart__item-title, .upsell-shipping__text, .upsell-shipping__text span, .upsell-shipping__full-text, .upsell-shipping__full-text span {\nalign-self: unset;\ntext-transform: uppercase;\nletter-spacing: 0.03em;\n}\n.upsell-cart__quantity-input, .upsell-cart__quantity-adjust, .upsell-cart__item--variants, .upsell-shipping__text, .upsell-shipping__text span, .upsell-cart__add-note, .upsell-shipping__full-text, .upsell-shipping__full-text span {\nfont-size: 0.9rem !important;\n}\n.upsell-shipping__text span, .upsell-shipping__text, .upsell-shipping__full-text, .upsell-shipping__full-text span {\ncolor: #777F6F;\n}\n.upsell-cart__item-name,\n.upsell-cart__price, .upsell-cart__riser-title--product [data-product-title], .upsell-cart__riser-title:not(.upsell-cart__riser-title--product) {\nfont-size: 1rem;\nletter-spacing: 0.03em;\ntext-transform: uppercase;\nfont-weight: 400;\n}\n.upsell-cart__upsell {\npadding: 0 1rem 1rem;\n}\n.upsell-cart__slider, .upsell-cart__upsell-products {\npadding-top: 0px;\nmargin-bottom: 0px;\n}\n.upsell-cart .btn:active, .upsell-cart .btn:hover, .upsell-cart .button:active, .upsell-cart .button:hover, .upsell-cart__riser .btn:hover, .upsell-cart__riser .button:hover {\nbackground-color: #B1974E;\n}\n.upsell-cart__upsell-label, .upsell-cart__variant-label, .upsell-cart__slider-arrow[data-action=prev] {\ndisplay: none;\n}\n.upsell-cart__slider {\nborder: none;\npadding: 0;\n}\n.upsell-cart__slider-arrow[data-action=next] {\nright: -2px;\n}\n.upsell-cart__slider-arrow:hover {\nbackground: white !important;\nborder-color: #f2ede8;\ncolor: #b1974e !important;\n}\n.upsell-cart__image--small {\nflex: 0 0 100px;\n}\n.upsell-cart__upsell .upsell-cart__item--slider {\njustify-content: flex-start;\nmargin: 0 1rem;\n}\n.upsell-cart__item--slider.upsell-cart__item--slider {\npadding-left: 0px;\n}\n.upsell-cart__riser.upsell-cart__riser--open {\nborder-top: solid 1px #F2EDE8;\n}\n.upsell-cart__riser-header, .upsell-cart__riser-main {\npadding: 0 2rem;\nmargin: 0 0 1rem;\nborder-bottom: none;\n}\nlabel[data-upsell-variant-label] {\npadding: 0.25rem 0.75rem;\nfont-size: 1.2rem !important;\nmargin: 0;\nmin-width: unset;\nbox-shadow: none;\nborder: solid 1px white;\n}\ninput[data-upsell-variant][type=radio]:checked+label {\nborder: solid 1px var(--upsellDrawerBorder);\nbox-shadow: none;\nbackground: transparent;\ncolor: #5b5b5b;\n}\nlabel[data-upsell-variant-label]:hover {\nborder: solid 1px var(--upsellDrawerBorder);\nbox-shadow: none;\n}"
+        }
+      }
+    }
+  }
+}

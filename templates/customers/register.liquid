@@ -1,0 +1,61 @@
+<div class="section-x-padding py-theme-double max-w-md mx-auto" x-data="BaselineLogin()" x-init="mounted()">
+  <h1 class="font-heading text-2xl py-8">{{ 'customer.register.title' | t }}</h1>
+
+  {%- assign formId = 'RegisterForm' -%}
+  {% form 'create_customer', id: formId %}
+
+    {% render 'form-status', form: form, form_id: formId, section_color: 'primary' %}
+
+    <label for="FirstName" class="block mt-4 mb-2">
+      {{ 'customer.register.first_name' | t }}
+    </label>
+    <input type="text"
+      class="w-full py-1 bg-transparent border-b-text border-secondary-accent"
+      name="customer[first_name]"
+      id="FirstName"
+      {% unless form.errors %}autofocus{% endunless %}
+      {% if form.first_name %}value="{{ form.first_name }}"{% endif %}>
+
+    <label for="LastName" class="block mt-4 mb-2">
+      {{ 'customer.register.last_name' | t }}
+    </label>
+    <input type="text"
+      class="w-full py-1 bg-transparent border-b-text border-secondary-accent"
+      name="customer[last_name]"
+      id="LastName"
+      {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+
+    <label for="Email" class="block mt-4 mb-2">
+      {{ 'customer.register.email' | t }}
+    </label>
+    <input type="email"
+      name="customer[email]"
+      id="Email"
+      class="w-full py-1 bg-transparent border-b-text border-secondary-accent {% if form.errors contains 'email' %}border-theme-color{% endif %}"
+      value="{% if form.email %}{{ form.email }}{% endif %}"
+      spellcheck="false"
+      autocomplete="off"
+      autocapitalize="off">
+
+    <label for="CreatePassword" class="block mt-4 mb-2">
+      {{ 'customer.register.password' | t }}
+    </label>
+    <input type="password"
+      class="w-full py-1 bg-transparent border-b-text border-secondary-accent {% if form.errors contains 'password' %}border-theme-color{% endif %}"
+      name="customer[password]"
+      id="CreatePassword">
+
+    <div class="mt-8">
+      <input type="submit" value="{{ 'customer.register.submit' | t }}" class="cursor-pointer inline-flex justify-center items-center uppercase text-md px-8 py-1 rounded-md bg-transparent border border-primary-text text-primary-text hover:bg-primary-text hover:text-primary-accent-overlay">
+    </div>
+
+    <div class="mt-8 md:flex md:justify-between">
+      {%- assign text = 'customer.login.sign_in' | t -%}
+      {%- render 'link-underline',
+        section_color: 'primary',
+        text: text,
+        link: routes.account_login_url,
+      -%}
+    </div>
+  {% endform %}
+</div>

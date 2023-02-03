@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "crop": "4.0",
+        "image_width_desktop": "full",
+        "indent_image": false,
+        "show_author": false,
+        "show_date": false,
+        "show_share_buttons": false,
+        "show_tags": false,
+        "show_next_previous_links": false,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "d52e5860-0b8e-4d96-8036-4c4837d9a219": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Shop Myra's Looks",
+        "text": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "49411387-e7cc-49c7-9407-0919ec01872d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Interview-with-Hale-pule-ayurvedic-teacher.jpg",
+            "title": "Agni Wrap top off white",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/agni-wrap-top-off-white",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/organic-cotton-yoga-clothes_243dbddd-3b85-4072-a2d9-635a95efe237.jpg",
+            "title": "Kundalini pants",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/kundalini-yoga-pants",
+            "color_scheme": "primary"
+          }
+        },
+        "6a5f3164-7b9f-489c-b351-749f34e724fb": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Agni-Yoga-Cross-top.jpg",
+            "title": "AGNI CROSS TOP PEARL",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/agni-cross-top-pearl",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/DSC_2009_bb1f2fbb-6651-4ec0-993f-7b5c033c4378.jpg",
+            "title": "Layla flares azure",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/layla-flares-azure",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-0",
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-2",
+        "6a5f3164-7b9f-489c-b351-749f34e724fb",
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-1"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "d52e5860-0b8e-4d96-8036-4c4837d9a219",
+    "49411387-e7cc-49c7-9407-0919ec01872d"
+  ]
+}

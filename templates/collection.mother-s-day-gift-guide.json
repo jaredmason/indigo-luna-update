@@ -1,0 +1,403 @@
+{
+  "sections": {
+    "16442102347cf74a1c": {
+      "type": "rich-text",
+      "settings": {
+        "title": "MOTHER'S DAY GIFT GUIDE",
+        "text": "<p>We’ve put together an Indigo Luna Gift Guide so you can make your gift giving choices easy and sustainable this Mother’s Day.<\/p>",
+        "text_size_mobile": "text-sm",
+        "text_size_desktop": "default",
+        "font": "heading",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "two_thirds",
+        "desktop_alignment": "center",
+        "color_scheme": "primary"
+      }
+    },
+    "1651034273fbd07fd3": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "16510342737fd86478-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Thoko_sarong.jpg",
+            "title": "",
+            "text": "<p>Our new Sarongs are here in the stunning earthy shades. A wrap top, head scarf or wrap skirt, tie her however you wish.<\/p>",
+            "cta_link": "shopify:\/\/collections\/sarongs",
+            "color_scheme": "primary"
+          }
+        },
+        "16510342737fd86478-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/SLIDESHOW_1.jpg",
+            "title": "",
+            "text": "<p>Plant dyed Intimates. Let her feel and smell mother nature on her skin.<\/p>",
+            "cta_link": "shopify:\/\/collections\/plant-dyed-intimates",
+            "color_scheme": "primary"
+          }
+        },
+        "16510342737fd86478-0": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/IMG_0751.jpg",
+            "title": "",
+            "text": "<p>Our most loved Knitwear pieces. Timeless garments with loose, elegant shapes that wrap around us like a warm, soft hug.<\/p>",
+            "cta_link": "shopify:\/\/collections\/knitwear",
+            "color_scheme": "primary"
+          }
+        },
+        "fc985726-3160-4a8b-889a-b110c575565d": {
+          "type": "column",
+          "disabled": true,
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/LaylaFlaresSpice33.jpg",
+            "title": "",
+            "text": "<p>Layla flares, Feeling like a soft second skin<\/p>",
+            "cta_link": "",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "16510342737fd86478-1",
+        "16510342737fd86478-2",
+        "16510342737fd86478-0",
+        "fc985726-3160-4a8b-889a-b110c575565d"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center"
+      }
+    },
+    "1651480732929a96f7": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "1651480732509a1018-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/IMG_0751.jpg",
+            "title": "",
+            "text": "<p>Our most loved Knitwear pieces. Timeless garments with loose, elegant shapes that wrap around us like a warm, soft hug.<\/p>",
+            "cta_link": "shopify:\/\/collections\/knitwear",
+            "color_scheme": "primary"
+          }
+        },
+        "1651480732509a1018-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/LaylaFlaresSpice33.jpg",
+            "title": "",
+            "text": "<p>Layla Flares. Inspired by the moving and evolving body, giving you comfort and effortless style no matter the stage of your female form.<\/p>",
+            "cta_link": "shopify:\/\/collections\/layla-flares",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "1651480732509a1018-0",
+        "1651480732509a1018-1"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center"
+      }
+    },
+    "1644208900f5519e89": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Our most loved Knitwear",
+        "collection": "knitwear",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "color_scheme": "primary"
+      }
+    },
+    "165103730790f046e4": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Layla Flares, feeling like a soft second skin.",
+        "collection": "layla-flares",
+        "limit": 8,
+        "crop": "0.8",
+        "show_view_all": true,
+        "color_scheme": "primary"
+      }
+    },
+    "16514754997cabb61f": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "text": "<p>Or let Mum choose her own eco-staple with a Gift Voucher.<\/p>",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "lg:text-5xl",
+        "font": "body",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "color_scheme": "primary"
+      }
+    },
+    "16514618826813bfe8": {
+      "type": "featured-product",
+      "blocks": {
+        "de27738a-37c7-4627-b1cf-e0243d818940": {
+          "type": "text",
+          "settings": {
+            "text": "Or let Mum choose her own eco-staple.",
+            "font": "body",
+            "text_size": "text-base lg:text-lg",
+            "icon": "heart"
+          }
+        },
+        "1651461882869da832-0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "1651461882869da832-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "1651461882869da832-2": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": false
+          }
+        },
+        "1651461882869da832-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": true
+          }
+        }
+      },
+      "block_order": [
+        "de27738a-37c7-4627-b1cf-e0243d818940",
+        "1651461882869da832-0",
+        "1651461882869da832-1",
+        "1651461882869da832-2",
+        "1651461882869da832-3"
+      ],
+      "settings": {
+        "product": "gift-card",
+        "desktop_image_width": "one-half",
+        "desktop_image_position": "right",
+        "desktop_content_position": "items-center",
+        "color_scheme": "primary",
+        "enable_video_looping": false
+      }
+    },
+    "1651479911ebce20f9": {
+      "type": "collection-list",
+      "blocks": {
+        "165147991168be2a32-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewellery",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "165147991168be2a32-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "layla-sustainable-intimates",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "dd648213-6b4f-4f48-8a70-59b4ebc32297": {
+          "type": "collection",
+          "settings": {
+            "collection": "indo-pants",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "b2b930b3-7f24-4279-a0eb-bd67ba391cd5": {
+          "type": "collection",
+          "settings": {
+            "collection": "dresses",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "e9a069f6-1771-426c-8d98-b2ffb645407e": {
+          "type": "collection",
+          "settings": {
+            "collection": "agni-yoga-collection",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "be839147-41d3-4fd7-a7b1-1330a19bd3b3": {
+          "type": "collection",
+          "settings": {
+            "collection": "accessories",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "a7e88208-cacd-4d4c-bde4-4d112d1ad307": {
+          "type": "collection",
+          "settings": {
+            "collection": "capris-and-7-8s",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "b20227cf-ecf4-43ea-8669-4f90a01ee18f": {
+          "type": "collection",
+          "settings": {
+            "collection": "linen-cotton",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "165147991168be2a32-0",
+        "165147991168be2a32-1",
+        "dd648213-6b4f-4f48-8a70-59b4ebc32297",
+        "b2b930b3-7f24-4279-a0eb-bd67ba391cd5",
+        "e9a069f6-1771-426c-8d98-b2ffb645407e",
+        "be839147-41d3-4fd7-a7b1-1330a19bd3b3",
+        "a7e88208-cacd-4d4c-bde4-4d112d1ad307",
+        "b20227cf-ecf4-43ea-8669-4f90a01ee18f"
+      ],
+      "settings": {
+        "title": "Explore other gift ideas",
+        "text_size": "text-2xl",
+        "color_scheme": "primary",
+        "crop": "0.8"
+      }
+    },
+    "164420917309f6ec7e": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p><strong>Dear Mum, where would we be without you?<\/strong><\/p><p><\/p><p>...<\/p><p>Thank you for being a source of strength, guidance, safety and unconditional love. May we pass your inspiration forward to others. <\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "color_scheme": "primary"
+      }
+    },
+    "1644208919a3458f43": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "ADORNE YOURSELF",
+        "collection": "jewellery",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": false,
+        "color_scheme": "primary"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "hide_title": false,
+        "description_position": "under_title",
+        "description_color_scheme": "primary",
+        "grid": 4,
+        "rows": 40,
+        "grid_mobile": "2",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "linklist": "",
+        "capitalize_filters": true,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "16442098303c1ac359": {
+      "type": "marquee",
+      "disabled": true,
+      "settings": {
+        "text": "Happy mother's day · Happy mother's day · Happy mother's day · Happy mother's day · Happy mother's day · Happy mother's day ·",
+        "link": "",
+        "text_size": "text-2xl",
+        "font": "heading",
+        "speed": 160,
+        "direction": "",
+        "color_scheme": "tertiary"
+      }
+    },
+    "1651464020a105313a": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/BANNER_MOTHER_DAY.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/Banner_MOTHER_DAY_MOBILE.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "border",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    }
+  },
+  "order": [
+    "16442102347cf74a1c",
+    "1651034273fbd07fd3",
+    "1651480732929a96f7",
+    "1644208900f5519e89",
+    "165103730790f046e4",
+    "16514754997cabb61f",
+    "16514618826813bfe8",
+    "1651479911ebce20f9",
+    "164420917309f6ec7e",
+    "1644208919a3458f43",
+    "main",
+    "16442098303c1ac359",
+    "1651464020a105313a"
+  ]
+}

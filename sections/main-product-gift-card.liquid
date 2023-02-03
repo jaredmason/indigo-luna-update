@@ -1,0 +1,328 @@
+{%- liquid
+  assign section_color = section.settings.color_scheme
+  assign current_variant = product.selected_or_first_available_variant
+  assign featured_media = current_variant.featured_media | default: product.featured_media
+  assign enable_video_looping = section.settings.enable_video_looping
+  assign desktop_image_height = section.settings.desktop_image_height
+  assign current_variant = product.selected_or_first_available_variant
+  assign featured_media = current_variant.featured_media | default: product.featured_media
+-%}
+
+<section class="bg-primary-background text-primary-text" x-data="ThemeSection_{{ section.id | handleize | replace: '-', '_' }}()" x-init="mounted()" data-section-id="{{ section.id }}" data-alpine-id="{{ section.id | handleize | replace: '-', '_' }}" data-section-type="product" data-enable-history-state="true" data-enable-image-zoom={{ section.settings.enable_image_zoom | json }} data-variant-image-behaviour="{{ section.settings.variant_image_behaviour }}">
+
+  {% if settings.enable_breadcrumbs %}
+    {% render 'breadcrumbs', section_color: 'header' %}
+  {% endif %}
+
+  <div class="flex items-center justify-center py-8 section-x-padding">
+    <h1 class="font-heading text-2xl lg:text-3xl text-center uppercase">Select your amount</h1>
+  </div>
+
+  <div class="product-media-container w-full lg:max-w-1024px mx-auto" data-product-single-media-group>
+    <div class="w-full lg:w-1/3 py-4 px-8 mx-auto">
+      <div class="relative card-shadow">
+        {%- if featured_media != null -%}
+          {%- assign media = featured_media -%}
+          <div data-first-media data-index="0">
+            {%- render 'product-media_horizontal-gallery-template',
+              media: media,
+              image_index: image_index,
+              desktop_image_height: desktop_image_height,
+              slideshow_enabled: false
+            -%}
+          </div>
+          {%- if media.media_type == 'image' -%}
+            {%- assign image_index = image_index | plus: 1 -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        <div class="absolute left-0 right-0 top-0 bottom-0 flex justify-center z-1">
+          <div class="relative bg-{{ section_color }}-background text-{{ section_color }}-text card-shadow section-x-padding flex flex-col items-center justify-between pb-theme-half text-base text-center" style="width: 70%; height: 70%;">
+            <div class="px-section py-4 mx-auto">
+              {% render 'icon-logo' %}
+            </div>
+            <p aria-hidden="true" class="uppercase">{{ product.title }}</p>
+            {% if section.settings.enable_descriptions and product.description != blank %}
+              <div class="flex-grow mt-2 py-4 flex items-center font-body text-sm border-t-text border-b-text border-{{ section_color }}-text">
+                {{ product.description }}
+              </div>
+            {% endif %}
+            <div data-price-wrapper class="product-price-block flex justify-between items-start mt-2" :class="{ 'invisible': !current_variant }">
+              <div class="flex flex-wrap">
+                <span class="visually-hidden">{{ 'products.product.regular_price'| t }}</span>
+                <span data-product-price x-html="formatMoney(current_price)" class="flex-grow" :class="{ 'text-{{ section_color }}-accent': current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price, 'invisible': !current_variant }">
+                  {{ current_variant.price | money }}
+                </span>
+
+                {% if product.compare_at_price_max > product.price %}
+                <template x-if="current_variant && product.compare_at_price_max && current_variant.compare_at_price > current_variant.price">
+                  <span>
+                    <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
+                    <s data-compare-price
+                      x-html="formatMoney(current_variant.compare_at_price)">
+                      {% if current_variant.compare_at_price > current_variant.price %}
+                        {{ current_variant.compare_at_price | money }}
+                      {% endif %}
+                    </s>
+                  </span>
+                </template>
+                {% endif %}
+
+                <template x-if="current_variant && current_variant.unit_price">
+                  <div class="text-sm" data-unit-price-wrapper>
+                    <span class="visually-hidden">
+                      {{- 'products.product.unit_price_label' | t -}}
+                    </span>
+                    <span x-html="formatMoney(current_variant.unit_price)">
+                      {{- current_variant.unit_price | money -}}
+                    </span>
+                    <span aria-hidden="true">
+                      /
+                    </span>
+                    <span class="visually-hidden">
+                      {{- 'general.accessibility.unit_price_separator' | t -}}
+                    </span>
+                    <span x-html="current_variant.unit_price_measurement.reference_value != 1? current_variant.unit_price_measurement.reference_value :''">
+                      {%- if current_variant.unit_price_measurement.reference_value != 1 -%}
+                        {{- current_variant.unit_price_measurement.reference_value -}}
+                      {%- endif -%}
+                    </span><!--
+                    --><span x-html="current_variant.unit_price_measurement.reference_unit">
+                      {{- current_variant.unit_price_measurement.reference_unit -}}
+                    </span>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="product-block-area lg:max-w-2xl section-x-padding pt-4 mx-auto">
+    {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+    <div class="flex justify-center items-center w-full">
+      {% unless product.has_only_default_variant %}
+        {% for option in product.options_with_values %}
+          {% assign option_array_index = forloop.index0 %}
+          {%- assign label_class = 'visually-hidden' -%}
+          <fieldset class="product-variant-picker-block js-enabled mt-4">
+            <div class="mt-2 flex flex-wrap justify-center gap-2">
+              {% for value in option.values %}
+                {% assign variant_label_state = true %}
+                {% if product.options.size == 1 %}
+                  {% unless product.variants[forloop.index0].available %}
+                    {% assign variant_label_state = false %}
+                  {% endunless %}
+                {% endif %}
+                {% liquid
+                  assign color_image = value | handle | append: '.' | append: 'png' | file_img_url: '50x' | prepend: 'https:'
+                  assign color_swatch_fallback = value | split: ' ' | last | handle
+                %}
+                <div class="relative variant-input">
+                  <input class="custom-input cursor-pointer absolute top-0 left-0 w-full h-full opacity-0" @change="optionChange()" type="radio" id="Option{{ option.position }}-{{ value | escape }}" name="options[{{ option.name }}]" value="{{ value | escape }}" {% if option.selected_value == value %} checked{% endif %} data-single-option-selector>
+                  <label
+                    :class="{ 'bg-secondary-accent': options[{{ option_array_index }}] === '{{ value | escape }}', 'bg-transparent': options[{{ option_array_index }}] !== '{{ value | escape }}' }"
+                    class="relative block p-2 min-w-4 border-{{ section_color }}-text {% render 'button-style', section_color: section_color %} border-text text-center cursor-pointer" for="Option{{ option.position }}-{{ value | escape }}"
+                    title="{{ option.value }}"
+                    >
+                    <span>{{ value }}</span>
+                  </label>
+                </div>
+              {% endfor %}
+            </div>
+          </fieldset>
+        {% endfor %}
+      {% endunless %}
+    </div>
+    {% form 'product', product, id: product_form_id, data-product-form: '', data-product-handle: product.handle, data-enable-history-state: 'true', data-product-form: '', x-ref: 'productForm' %}
+      {{ form | payment_terms }}
+
+      <div class="no-js hidden">
+        <label class="block mt-theme" for="variant_{{ section.id }}">Variant</label>
+        <select name="id" id="variant_{{ section.id }}" class="mt-2 appearance-none rounded-none bg-{{ section_color }}-background text-{{ section_color }}-text border-b-grid py-1 border-{{ section_color }}-text text-{{ section_color }}-text pr-6">
+          {% for variant in product.variants %}
+            <option
+              {% if variant == current_variant %}selected="selected"{% endif %}
+              {% unless variant.available %}disabled="disabled"{% endunless %}
+              x-bind:selected="currentVariantId === {{ variant.id }}"
+              value="{{ variant.id }}">
+                {{ variant.title }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      {%- if settings.ajax_cart_method == 'page' or settings.show_cart_on_add == false -%}
+        <div  class="mt-4 mb-8"
+              x-show="addedToCart"
+              x-cloak
+              x-transition:enter="transition ease duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="transition ease duration-300"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0">
+          <p>{{ 'cart.popup.added_to_cart' | t }}!</p>
+          <p class="accent-links-{{ section_color }}">{{ 'products.product.add_to_cart_confirm_html' | t: cart_url: routes.cart_url, link_url: routes.all_products_collection_url }}.</p>
+        </div>
+      {%- endif -%}
+
+      <div class="add-to-cart-container mt-8" id="backInStock">
+        {%- if block.settings.enable_payment_button -%}
+          {%- capture cta_button_class -%}{% render 'button-style' %} bg-transparent text-{{ section_color }}-accent border-text border-{{ section_color }}-accent hover:bg-{{ section_color }}-accent hover:border-{{ section_color }}-accent hover:text-{{ section_color }}-text-overlay{%- endcapture -%}
+        {%- else -%}
+          {%- capture cta_button_class -%}{% render 'button-style' %} {% render 'button-color', section_color: 'secondary' %}{%- endcapture -%}
+        {%- endif -%}
+
+        <button
+          id="addToCartButton"
+          @click="$store.drawer.cartOpener = $event.currentTarget"
+          class="add-to-cart p-1 text-xl w-full {% if settings.button_uppercase %}uppercase{% endif %} {{ cta_button_class }}
+          {% unless current_variant.available %}opacity-50 cursor-not-allowed{% endunless %}"
+          type="submit"
+          :class="{ 'bg-{{ section_color }}-accent text-{{ section_color }}-text-overlay opacity-50 cursor-not-allowed': !currentVariantAvailable }"
+          :disabled="!currentVariantAvailable || loading"
+          {% unless current_variant.available %}disabled="disabled"{% endunless %}>
+            <span class="no-js">
+              {% if current_variant.available %}
+                {{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}
+              {% else %}
+                {{ 'products.product.sold_out' | t }}
+              {% endif %}
+            </span>
+            <template x-if="current_variant">
+              <div>
+                <template x-if="currentVariantAvailable">
+                  <span>{{ 'products.product.add_to_cart' | t }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                </template>
+                <template x-if="!currentVariantAvailable">
+                  <span>{{ 'products.product.sold_out' | t }}</span>
+                </template>
+              </div>
+            </template>
+            <template x-if="!current_variant">
+              <span> {{ 'products.product.unavailable' | t }}</span>
+            </template>
+        </button>
+
+        {%- if block.settings.enable_payment_button -%}
+          {%- assign button_color = settings.button_color -%}
+          {%- if button_color == 'transparent_background_text_border' -%}
+            {%- assign button_color = 'text_background' -%}
+          {%- endif -%}
+          <div class="my-2 payment-button-wrapper text-xl {% render 'button-style' %} color-{{ section_color }} style-{{ button_color }}" :class="{ 'opacity-50 cursor-not-allowed': !currentVariantAvailable }">{{ form | payment_button }}</div>
+        {%- endif -%}
+
+      </div>
+    {% endform %}
+  </div>
+
+  {% unless product == empty %}
+    <script type="application/json" data-product-json>
+      {{ product | json }}
+    </script>
+    <script type="application/json" data-selected-variant-json>
+      {{ current_variant | json }}
+    </script>
+    <script type="application/json" data-featured-media-id>
+      {{ featured_media.id | json }}
+    </script>
+    {% if section.settings.enable_image_zoom %}
+    {% assign product_image_media = product.media | where: 'media_type', 'image' %}
+    <script type="application/json" data-product-images>
+    {
+      {% for media in product_image_media %}
+        "{{ media.id }}": {
+          "fullSizeUrl": {{ media | img_url: 'master' | json }},
+          "width": {{ media.width | json }},
+          "height": {{ media.height | json }},
+          "aspectRatio": {{ media.aspect_ratio | json }},
+          "alt": {{ media.alt | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    }
+    </script>
+    {% endif %}
+    <script type="application/json" id="ModelJson-{{ section.id }}">
+        {{ product.media | where: 'media_type', 'model' | json }}
+    </script>
+  {% endunless %}
+
+</section>
+
+{% assign current_variant = product.selected_or_first_available_variant %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": {{ product.title | json }},
+  "url": {{ shop.url | append: product.url | json }},
+  {%- if product.featured_media -%}
+    {%- assign media_size = product.featured_media.preview_image.width | append: 'x' -%}
+    "image": [
+      {{ product.featured_media | img_url: media_size | prepend: "https:" | json }}
+    ],
+  {%- endif -%}
+  "description": {{ product.description | strip_html | json }},
+  {%- if current_variant.sku != blank -%}
+    "sku": {{ current_variant.sku | json }},
+  {%- endif -%}
+  "brand": {
+    "@type": "Thing",
+    "name": {{ product.vendor | json }}
+  },
+  "offers": [
+    {%- for variant in product.variants -%}
+      {
+        "@type" : "Offer",
+        {%- if variant.sku != blank -%}
+          "sku": {{ variant.sku | json }},
+        {%- endif -%}
+        "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+        "price" : {{ variant.price | divided_by: 100.00 | json }},
+        "priceCurrency" : {{ cart.currency.iso_code | json }},
+        "url" : {{ shop.url | append: variant.url | json }}
+      }{% unless forloop.last %},{% endunless %}
+  {%- endfor -%}
+  ]
+}
+</script>
+
+<script>
+window.addEventListener("govalo:productAddedToCart", () => {
+  document.dispatchEvent(new CustomEvent('obsidian:upsell:refresh'));
+});
+</script>
+
+{% schema %}
+  {
+    "name": "Gift card",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_descriptions",
+        "label":  "Enable descriptions on cards",
+        "default": false
+      },
+      {
+        "type": "header",
+        "content": "Color"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "options": [
+            { "value": "primary", "label": "Primary"},
+            { "value": "secondary", "label": "Secondary"},
+            { "value": "tertiary", "label": "Tertiary"}
+        ],
+        "default":   "primary"
+      }
+    ]
+  }
+{% endschema %}

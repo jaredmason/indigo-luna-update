@@ -1,0 +1,366 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "crop": "4.0",
+        "image_width_desktop": "full",
+        "indent_image": false,
+        "show_author": false,
+        "show_date": false,
+        "show_share_buttons": false,
+        "show_tags": false,
+        "show_next_previous_links": false,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "1646628435266193bf": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "BEST MOTHER'S DAY GIFTS",
+        "collection": "plant-dyed-intimates",
+        "limit": 8,
+        "crop": "0.8",
+        "show_view_all": false,
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "1651807729bb64418f": {
+      "type": "collection-list",
+      "disabled": true,
+      "blocks": {
+        "9f5a6ee6-c941-4a21-a074-88e49191ed94": {
+          "type": "collection",
+          "settings": {
+            "collection": "flare-yoga-pants-and-yoga-top",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "11b92258-5b9e-469e-a621-9006fdf7e140": {
+          "type": "collection",
+          "settings": {
+            "collection": "knitwear",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "165180772909410997-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "e948cfc7-ddbb-45fa-b9d9-b0f139fdd5ca": {
+          "type": "collection",
+          "settings": {
+            "collection": "agni-yoga-collection",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "165180772909410997-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "plant-dyed-intimates",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "24e1280a-3738-47dc-88bb-d1a5e35d9ef7": {
+          "type": "collection",
+          "settings": {
+            "collection": "jewellery",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "03c2d82c-fd94-48f9-99b7-fa3d7a562b00": {
+          "type": "collection",
+          "settings": {
+            "collection": "organic-ananda-yoga",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        },
+        "0c43788a-3ca9-4377-9b46-692af34f0e7a": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "indent_image": false,
+            "content_position": "justify-center items-center text-center",
+            "text_color": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "9f5a6ee6-c941-4a21-a074-88e49191ed94",
+        "11b92258-5b9e-469e-a621-9006fdf7e140",
+        "165180772909410997-1",
+        "e948cfc7-ddbb-45fa-b9d9-b0f139fdd5ca",
+        "165180772909410997-0",
+        "24e1280a-3738-47dc-88bb-d1a5e35d9ef7",
+        "03c2d82c-fd94-48f9-99b7-fa3d7a562b00",
+        "0c43788a-3ca9-4377-9b46-692af34f0e7a"
+      ],
+      "settings": {
+        "title": "EXPLORE OUR COLLECTIONS",
+        "text_size": "text-2xl",
+        "color_scheme": "primary",
+        "crop": "0.8",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme"
+      }
+    },
+    "1656990086bba1eb8d": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Shop Her Look",
+        "collection": "knitwear",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-theme-half",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "d52e5860-0b8e-4d96-8036-4c4837d9a219": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Shop Her Look",
+        "text": "",
+        "text_size_mobile": "text-2xl",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "9ae867fb-04ed-4bd8-93fd-2e0667c27c86": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-2": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": false
+          }
+        },
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-0",
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-1",
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-2",
+        "template--14492492169287__9ae867fb-04ed-4bd8-93fd-2e0667c27c86-16668496747bc5b1c0-3"
+      ],
+      "settings": {
+        "product": "helga-cardigan-oat",
+        "desktop_image_width": "one-third",
+        "desktop_image_position": "left",
+        "desktop_content_position": "items-center",
+        "color_scheme": "primary",
+        "enable_video_looping": false
+      }
+    },
+    "bde0eb1c-28d9-494e-b723-95aae7cb1b03": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-2": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": false
+          }
+        },
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-0",
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-1",
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-2",
+        "template--14492492169287__bde0eb1c-28d9-494e-b723-95aae7cb1b03-16668496747bc5b1c0-3"
+      ],
+      "settings": {
+        "product": "agni-cross-top-chocolate",
+        "desktop_image_width": "one-third",
+        "desktop_image_position": "right",
+        "desktop_content_position": "items-center",
+        "color_scheme": "primary",
+        "enable_video_looping": false
+      }
+    },
+    "f348c8f7-6d26-4f92-9f9e-8e67ab8e4439": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-0": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-1": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-2": {
+          "type": "variant_picker",
+          "settings": {
+            "option_style": "text_underline",
+            "hide_option_labels": false
+          }
+        },
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "enable_payment_button": true,
+            "show_pickup_availability": false
+          }
+        }
+      },
+      "block_order": [
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-0",
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-1",
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-2",
+        "template--14492492169287__f348c8f7-6d26-4f92-9f9e-8e67ab8e4439-16668496747bc5b1c0-3"
+      ],
+      "settings": {
+        "product": "helga-pants-marble",
+        "desktop_image_width": "one-third",
+        "desktop_image_position": "left",
+        "desktop_content_position": "items-center",
+        "color_scheme": "primary",
+        "enable_video_looping": false
+      }
+    },
+    "49411387-e7cc-49c7-9407-0919ec01872d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-0": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Cardigan4.jpg",
+            "title": "Helga Cardigan Oat",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/helga-cardigan-oat",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-1": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/IMG_1764.jpg",
+            "title": "Agni CRoss top Chocolate",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/agni-cross-top-chocolate",
+            "color_scheme": "primary"
+          }
+        },
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-2": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify:\/\/shop_images\/Pants4.jpg",
+            "title": "Helga Pants Marble",
+            "text": "",
+            "cta_link": "shopify:\/\/products\/helga-pants-marble",
+            "color_scheme": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-0",
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-1",
+        "template--14492492169287__49411387-e7cc-49c7-9407-0919ec01872d-166684967462cb1b5c-2"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "0.8",
+        "text_alignment": "text-center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1646628435266193bf",
+    "1651807729bb64418f",
+    "1656990086bba1eb8d",
+    "d52e5860-0b8e-4d96-8036-4c4837d9a219",
+    "9ae867fb-04ed-4bd8-93fd-2e0667c27c86",
+    "bde0eb1c-28d9-494e-b723-95aae7cb1b03",
+    "f348c8f7-6d26-4f92-9f9e-8e67ab8e4439",
+    "49411387-e7cc-49c7-9407-0919ec01872d"
+  ]
+}

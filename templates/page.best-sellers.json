@@ -1,0 +1,279 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "content_width": "lg:w-1\/2",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "1656042417724ebda6": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "",
+        "text_size_mobile": "text-xl",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1656040496fda79e06": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Layla & Boxy",
+        "collection": "flare-yoga-pants-and-yoga-top",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "d6d612df-9255-414b-8ec5-aac292c54e31": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "moon Collection",
+        "collection": "moon-collection",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560406272e59632d": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Agni Yoga",
+        "collection": "agni-yoga-collection",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560435655469cc3e": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "kundalini capsule",
+        "collection": "kundalini-yoga-clothing",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1664859595c9cf5421": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Indigo Luna X SighSwoon",
+        "collection": "sighswoon",
+        "limit": 4,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1656040966c70f92c3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "linen & Cotton",
+        "collection": "linen-cotton",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560406353070b36b": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Knitwear",
+        "collection": "knitwear",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1664859642ac3d3681": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Creator Capsule",
+        "collection": "creator-capsule",
+        "limit": 8,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560410307e5fa706": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Eco-Swimwear",
+        "collection": "sustainable-swimwear",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1656040632231ad730": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Indo Pants",
+        "collection": "indo-pants",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560406387d35fcb8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Organic Ananda Yoga",
+        "collection": "organic-ananda-yoga",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "1656040642b2691b27": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Layla Intimates",
+        "collection": "layla-sustainable-intimates",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560408917c7c8be9": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Plant dyed Intimates",
+        "collection": "plant-dyed-intimates",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "165604318046d54b30": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Accessories",
+        "collection": "accessories",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16560433479812a083": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Jewellery",
+        "collection": "jewellery",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1656042417724ebda6",
+    "1656040496fda79e06",
+    "d6d612df-9255-414b-8ec5-aac292c54e31",
+    "16560406272e59632d",
+    "16560435655469cc3e",
+    "1664859595c9cf5421",
+    "1656040966c70f92c3",
+    "16560406353070b36b",
+    "1664859642ac3d3681",
+    "16560410307e5fa706",
+    "1656040632231ad730",
+    "16560406387d35fcb8",
+    "1656040642b2691b27",
+    "16560408917c7c8be9",
+    "165604318046d54b30",
+    "16560433479812a083"
+  ]
+}

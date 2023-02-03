@@ -1,0 +1,44 @@
+<section class="py-theme bg-{{ section_color }}-background text-{{ section_color }}-text">
+  <div class="lg:flex lg:flex-wrap justify-center lg:items-center lg:justify-end">
+    <div class="{{ text_size_class }} {% if text_size_class contains 'xl' %}lg:w-1/2{% endif %}">
+      {% if section_title != blank %}
+        <h2 class="text-{{ section_color }}-meta uppercase text-sm lg:text-right mb-8" for="Email">{{ section_title | escape }}</h2>
+      {% endif %}
+
+      {% if subheading != blank %}
+        <div class="lg:text-right {% if section_title != blank %}mt-2{% endif %}">{{ subheading }}</div>
+      {% endif %}
+    </div>
+
+    <div class="mt-theme w-full lg:max-w-reading {% if text_size_class contains 'xl' %}lg:w-1/2{% endif %}">
+      {% form 'customer' %}
+
+      {% if form.errors and template.suffix != 'contact' %}
+        {{ form.errors | default_errors }}
+      {% endif %}
+
+      {% if form.posted_successfully? %}
+        <p class="">{{ 'general.newsletter_form.confirmation' | t }}</p>
+      {% else %}
+        <input type="hidden" name="contact[tags]" value="newsletter{% if customer_tag != blank %}, {{ customer_tag }}{% endif %}">
+      	<input type="hidden" name="customer[accepts_marketing]" checked="checked" value="true" id="marketing">
+        <div class="flex items-end border-b-text border-current">
+          <label class="visually-hidden" for="Email-{{ section.id }}">{{ 'general.newsletter_form.email_placeholder' | t }}</label>
+          <input type="email"
+            class="placeholder-current font-body w-full block bg-transparent ml-4 py-1"
+            name="contact[email]"
+            id="Email-{{ section.id }}"
+            value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+            placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+            autocorrect="off"
+            autocapitalize="off">
+
+          <button class="font-body align-top inline-flex items-center justify-center hover:text-{{ section_color }}-accent hover:bg-{{ section_color }}-text hover:text-white-accent py-1 px-4 transition" type="submit" name="commit" id="Subscribe">
+            <span class="{% if settings.links_uppercase %}uppercase{% endif %} whitespace-nowrap">{{ 'general.newsletter_form.submit' | t }}{% if settings.links_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </button>
+        </div>
+      {% endif %}
+    {% endform %}
+    </div>
+  </div>
+</section>

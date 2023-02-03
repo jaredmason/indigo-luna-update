@@ -1,0 +1,175 @@
+{%- comment -%}
+  This is a required section for the Shopify Theme Store.
+  It is available when you add "Newsletter" section on the Theme Editor.
+
+  Theme Store required settings
+  - Heading: title of the newsletter section
+  - Subheading: description of the newsletter section
+{%- endcomment -%}
+{%- liquid
+  assign section_color = section.settings.color_scheme
+  assign text_size_class = section.settings.text_size
+  assign section_title = section.settings.section_title
+  assign subheading = section.settings.subheading
+  assign padding_top = section.settings.padding_top
+  assign padding_top_desktop = section.settings.padding_top_desktop
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_bottom_desktop = section.settings.padding_bottom_desktop
+  assign section_y_padding = padding_top | append: ' ' | append: padding_top_desktop | append: ' ' | append: padding_bottom | append: ' ' | append: padding_bottom_desktop
+-%}
+
+<section class="section-x-padding {{ section_y_padding }} bg-{{ section_color }}-background text-{{ section_color }}-text">
+  <div class="lg:flex lg:flex-wrap justify-center lg:items-center lg:w-1/3 mx-auto">
+    <div class="{{ text_size_class }} {% if text_size_class contains 'xl' %}lg:w-1/2{% endif %}">
+      {% if section_title != blank %}
+        <h2 class="text-{{ section_color }}-meta uppercase text-sm text-center mb-8" for="Email">{{ section_title | escape }}</h2>
+      {% endif %}
+
+      {% if subheading != blank %}
+        <div class="text-center {% if section_title != blank %}mt-2{% endif %}">{{ subheading }}</div>
+      {% endif %}
+    </div>
+
+    <div class="mt-theme w-full {% if text_size_class contains 'xl' %}lg:w-1/2{% endif %}">
+      {% form 'customer' %}
+
+      {% if form.errors and template.suffix != 'contact' %}
+      <span class="text-center">{{ form.errors | default_errors }}</span>
+      {% endif %}
+
+      {% if form.posted_successfully? %}
+        <p class="text-center">{{ 'general.newsletter_form.confirmation' | t }}</p>
+      {% else %}
+        <input type="hidden" name="contact[tags]" value="newsletter{% if customer_tag != blank %}, {{ customer_tag }}{% endif %}">
+        <div class="flex items-end border-b-text border-current">
+          <label class="visually-hidden" for="Email-{{ section.id }}">{{ 'general.newsletter_form.email_placeholder' | t }}</label>
+          <input type="email"
+            class="placeholder-current font-body w-full block bg-transparent ml-4 py-1"
+            name="contact[email]"
+            id="Email-{{ section.id }}"
+            value="{% if customer.email != blank %}{{ customer.email }}{% endif %}"
+            placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
+            autocorrect="off"
+            autocapitalize="off">
+
+          <button class="mt-2 lg:mt-0 pb-1 font-body align-top inline-flex items-center justify-center hover:text-{{ section_color }}-accent hover:bg-{{ section_color }}-text hover:text-white-accent py-1 px-4 transition" type="submit" name="commit" id="Subscribe">
+            <span class="{% if settings.links_uppercase %}uppercase{% endif %} whitespace-nowrap">{{ 'general.newsletter_form.submit' | t }}{% if settings.links_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+          </button>
+        </div>
+      {% endif %}
+
+      {% endform %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "subheading",
+        "label": "Subheading",
+        "default": "<p>Receive special offers and first look at new products.</p>"
+      },
+      {
+        "type": "select",
+        "id": "text_size",
+        "label": "Text size",
+        "options": [
+          { "value": "text-sm", "label": "S"},
+          { "value": "text-base", "label": "M"},
+          { "value": "text-lg", "label": "L"},
+          { "value": "text-xl", "label": "XL"}
+        ],
+        "default":   "text-base"
+      },
+      {
+        "type": "paragraph",
+        "content": "Any customers who sign up will have an account created for them in Shopify. [View customers](/admin/customers?query=&accepts_marketing=1)"
+      },
+      {
+        "type": "text",
+        "id": "customer_tag",
+        "label": "Add custom form tag (accessible from Klaviyo)"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_desktop",
+        "options": [
+          { "value": "lg:pt-2px", "label": "None" },
+          { "value": "lg:pt-theme-half", "label": "Half" },
+          { "value": "lg:pt-theme", "label": "Standard" },
+          { "value": "lg:pt-theme-double", "label": "Double" }
+        ],
+        "label": "Top padding desktop",
+        "default": "lg:pt-theme"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_desktop",
+        "options": [
+          { "value": "lg:pb-2px", "label": "None" },
+          { "value": "lg:pb-theme-half", "label": "Half" },
+          { "value": "lg:pb-theme", "label": "Standard" },
+          { "value": "lg:pb-theme-double", "label": "Double" }
+        ],
+        "label": "Bottom padding desktop",
+        "default": "lg:pb-theme"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "options": [
+          { "value": "pt-2px", "label": "None" },
+          { "value": "pt-theme-half", "label": "Half" },
+          { "value": "pt-theme", "label": "Standard" },
+          { "value": "pt-theme-double", "label": "Double" }
+        ],
+        "label": "Top padding mobile",
+        "default": "pt-theme"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "options": [
+          { "value": "pb-2px", "label": "None" },
+          { "value": "pb-theme-half", "label": "Half" },
+          { "value": "pb-theme", "label": "Standard" },
+          { "value": "pb-theme-double", "label": "Double" }
+        ],
+        "label": "Bottom padding mobile",
+        "default": "pb-theme"
+      },
+      {
+        "type":      "header",
+        "content":   "Color"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme",
+        "label": "Color scheme",
+        "options": [
+            { "value": "primary", "label": "Primary"},
+            { "value": "secondary", "label": "Secondary"},
+            { "value": "tertiary", "label": "Tertiary"}
+        ],
+        "default":   "primary"
+      }
+    ],
+    "presets": [{
+      "name": "Newsletter",
+      "category": "Promotional"
+    }]
+  }
+{% endschema %}

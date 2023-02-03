@@ -1,0 +1,544 @@
+{%- liquid
+  case section.settings.image_size
+    when 'third'
+      assign image_width_1 = 'lg:col-span-4'
+      assign image_width_2 = 'lg:col-span-8'
+    when 'half'
+      assign image_width_1 = 'lg:col-span-6'
+      assign image_width_2 = 'lg:col-span-6'
+    when 'two_thirds'
+      assign image_width_1 = 'lg:col-span-8'
+      assign image_width_2 = 'lg:col-span-4'
+    when 'two_fifths'
+      assign image_width_1 = 'lg:col-span-5'
+      assign image_width_2 = 'lg:col-span-7'
+    when 'three_fifths'
+      assign image_width_1 = 'lg:col-span-7'
+      assign image_width_2 = 'lg:col-span-5'
+  endcase
+  assign ratio = section.settings.crop | plus: 0
+  assign padding_top = section.settings.padding_top
+  assign padding_top_desktop = section.settings.padding_top_desktop
+  assign padding_bottom = section.settings.padding_bottom
+  assign padding_bottom_desktop = section.settings.padding_bottom_desktop
+  assign section_y_padding = padding_top | append: ' ' | append: padding_top_desktop | append: ' ' | append: padding_bottom | append: ' ' | append: padding_bottom_desktop
+-%}
+
+<section class="overflow-hidden">
+  <div class="grid grid-cols-1 lg:grid-cols-12 {{ section_y_padding }} {% if section.settings.indent_image %}section-x-padding gap-4 lg:gap-8{% else %}px-2px gap-gutter{% endif %}">
+    {% for i in (1..2) %}
+    {%- capture image %}image_{{ i }}{%- endcapture -%}
+    {%- capture block_color %}color_scheme_{{ i }}{%- endcapture -%}
+    {%- capture preserve_ratio %}preserve_ratio_{{ i }}{%- endcapture -%}
+    {%- capture cta_link %}cta_link_{{ i }}{%- endcapture -%}
+    {%- capture title %}title_{{ i }}{%- endcapture -%}
+    {%- capture text %}text_{{ i }}{%- endcapture -%}
+    {% capture heading_size %}heading_size_{{ i }}{% endcapture %}
+    {%- capture cta_text %}cta_text_{{ i }}{%- endcapture -%}
+    {%- capture cta_style %}cta_style_{{ i }}{%- endcapture -%}
+    {%- capture content_position_mobile %}content_position_mobile_{{ i }}{%- endcapture -%}
+    {%- capture content_position_desktop %}content_position_desktop_{{ i }}{%- endcapture -%}
+    {%- capture text_align %}text_align_{{ i }}{%- endcapture -%}
+    {%- capture text_color %}text_color_{{ i }}{%- endcapture -%}
+    {%- liquid
+      assign image = section.settings[image]
+      assign block_color = section.settings[block_color]
+      assign preserve_ratio = section.settings[preserve_ratio]
+      assign cta_link = section.settings[cta_link]
+      assign title = section.settings[title]
+      assign text = section.settings[text]
+      assign heading_size = section.settings[heading_size]
+      assign cta_text = section.settings[cta_text]
+      assign cta_style = section.settings[cta_style]
+      assign content_position_mobile = section.settings[content_position_mobile]
+      assign content_position_desktop = section.settings[content_position_desktop]
+      assign text_align = section.settings[text_align]
+      assign text_color = section.settings[text_color]
+    -%}
+    <div class="{% if i == 1 %}{{ image_width_1 }}{% else %}{{ image_width_2 }}{% endif %} bg-{{ block_color }}-background relative overflow-hidden">
+      <div class="block h-full w-full {% unless settings.fill_image_to_border_edge %}p-2 lg:p-4{% endunless %}">
+
+          <div class="relative min-h-full flex items-center justify-center {% if image == blank %}bg-placeholder-bg flex items-center justify-center{% endif %}">
+            {% if image != blank %}
+              {% if i == 1 %}
+                {% render 'image-crop' with
+                  image: image,
+                  ratio: ratio
+                %}
+              {% else %}
+                {%- if preserve_ratio -%}
+                  {% render 'responsive-image' with image: image %}
+                {%- else -%}
+                  <div class="hidden lg:block w-full">
+                    {% render 'image-object' with
+                      image: image
+                    %}
+                  </div>
+                  <div class="w-full block lg:hidden">
+                    {% render 'responsive-image' with image: image %}
+                  </div>
+                {%- endif -%}
+              {% endif %}
+            {% else %}
+              <div class="gallery-placeholder w-full {% unless preserve_ratio or i == 1  %}absolute top-0 left-0 right-0 bottom-0{% endunless %}">
+                {% assign placeholder_svg_tag = 'placeholder-svg placeholder-svg--no-border' %}
+                {{ 'image' | placeholder_svg_tag: placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="absolute top-0 left-0 right-0 bottom-0 z-10 p-4 lg:p-8">
+            <div class="w-full h-full flex {{ content_position_mobile }} {{ content_position_desktop }} p-2 lg:p-8">
+              <div class="{{ content_position }} text-{{ text_color }}-text">
+                {% if title != blank %}
+                  <h2 class="font-heading {{ heading_size }} break-words">{{ title }}</h2>
+                {% endif %}
+
+                {% if text != blank %}
+                <div class="rte text-base mt-4">
+                  {{ text }}
+                </div>
+                {% endif %}
+
+                {% if cta_link != blank and cta_text != '' %}
+                <div class="mt-6 text-0">
+                  {%- case cta_style -%}
+                  {%- when 'link' -%}
+                    {%- render 'link-underline',
+                      section_color: text_color,
+                      text: cta_text,
+                      link: cta_link,
+                    -%}
+                  {%- when 'button_transparent' -%}
+                    <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-transparent text-white border-text border-white-text hover:bg-white-text hover:text-primary-text transition">
+                      <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    </a>
+                  {%- when 'button_primary' -%}
+                    <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-white text-primary-text hover:bg-primary-text hover:text-white-accent transition">
+                      <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    </a>
+                  {%- when 'button_accent' -%}
+                    <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-white text-primary-accent hover:bg-primary-accent hover:text-white-accent transition">
+                      <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    </a>
+                  {%- when 'button_primary_opacity' -%}
+                    <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-primary-text text-white hover:opacity-80 transition-opacity">
+                      <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    </a>
+                  {%- when 'button_accent_opacity' -%}
+                    <a href="{{ cta_link }}" class="inline-flex justify-center items-center text-md px-8 py-1 {% render 'button-style' %} bg-primary-accent text-white hover:opacity-80 transition-opacity">
+                      <span class="{% if settings.button_uppercase %}uppercase{% endif %}">{{ cta_text }}{% if settings.buttons_show_arrow %}&nbsp;&rarr;{% endif %}</span>
+                    </a>
+                  {%- endcase -%}
+                </div>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Image split",
+    "settings": [
+      {
+        "type": "select",
+        "id": "image_size",
+        "label": "Left image width on desktop",
+        "default": "half",
+        "options": [
+          {
+            "value": "third",
+            "label": "One third"
+          },
+          {
+            "value": "half",
+            "label": "One half"
+          },
+          {
+            "value": "two_thirds",
+            "label": "Two thirds"
+          },
+          {
+            "value": "two_fifths",
+            "label": "Two fifths"
+          },
+          {
+            "value": "three_fifths",
+            "label": "Three fifths"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "indent_image",
+        "label": "Indent images",
+        "default": false
+      },
+      {
+        "type":      "header",
+        "content":   "Left image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1",
+        "label": "Image",
+        "info": "2000 x 2000px .jpg recommended"
+      },
+      {
+        "type": "select",
+        "id": "crop",
+        "label": "Crop image",
+        "options": [
+          {
+            "value": "0",
+            "label": "No crop"
+          },
+          {
+            "value": "1.3",
+            "label": "Landscape"
+          },
+          {
+            "value": "1",
+            "label": "Square"
+          },
+          {
+            "value": "0.8",
+            "label": "Portrait"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "select",
+        "id": "color_scheme_1",
+        "label": "Background color",
+        "options": [
+            { "value": "primary", "label": "Primary background"},
+            { "value": "secondary", "label": "Secondary background"},
+            { "value": "tertiary", "label": "Tertiary background"}
+        ],
+        "default":   "primary"
+      },
+      {
+        "type":      "header",
+        "content":   "Content"
+      },
+      {
+        "type": "text",
+        "id": "title_1",
+        "label": "Heading",
+        "default": "Image with text overlay"
+      },
+      {
+        "type": "select",
+        "id": "heading_size_1",
+        "label": "Heading size",
+        "options": [
+          { "value": "text-sm", "label": "S"},
+          { "value": "text-base", "label": "M"},
+          { "value": "text-lg", "label": "L"},
+          { "value": "text-xl", "label": "XL"},
+          { "value": "text-2xl", "label": "2XL"},
+          { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
+          { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
+          { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL" },
+          { "value": "text-2xl lg:text-6xl", "label": "2XL / desktop 6XL" },
+          { "value": "text-2xl lg:text-7xl", "label": "2XL / desktop 7XL" }
+        ],
+        "default":   "text-2xl lg:text-5xl"
+      },
+      {
+        "type": "richtext",
+        "id": "text_1",
+        "label": "Text"
+      },
+      {
+        "type": "select",
+        "id": "content_position_mobile_1",
+        "label": "Content position mobile",
+        "options": [
+            { "value": "justify-start items-start text-left", "label": "Top left"},
+            { "value": "justify-center items-start text-center", "label": "Top center"},
+            { "value": "justify-end items-start text-right", "label": "Top right"},
+            { "value": "justify-start items-center text-left", "label": "Left"},
+            { "value": "justify-center items-center text-center", "label": "Center"},
+            { "value": "justify-end items-center text-right", "label": "Right"},
+            { "value": "justify-start items-end text-left", "label": "Bottom left"},
+            { "value": "justify-center items-end text-center", "label": "Bottom center"},
+            { "value": "justify-end items-end text-right", "label": "Bottom right"}
+        ],
+        "default":   "justify-center items-center text-center"
+      },
+      {
+        "type": "select",
+        "id": "content_position_desktop_1",
+        "label": "Content position desktop",
+        "options": [
+            { "value": "lg:justify-start lg:items-start lg:text-left", "label": "Top left"},
+            { "value": "lg:justify-center lg:items-start lg:text-center", "label": "Top center"},
+            { "value": "lg:justify-end lg:items-start lg:text-right", "label": "Top right"},
+            { "value": "lg:justify-start lg:items-center lg:text-left", "label": "Left"},
+            { "value": "lg:justify-center lg:items-center lg:text-center", "label": "Center"},
+            { "value": "lg:justify-end lg:items-center lg:text-right", "label": "Right"},
+            { "value": "lg:justify-start lg:items-end lg:text-left", "label": "Bottom left"},
+            { "value": "lg:justify-center lg:items-end lg:text-center", "label": "Bottom center"},
+            { "value": "lg:justify-end lg:items-end lg:text-right", "label": "Bottom right"}
+        ],
+        "default":   "lg:justify-center lg:items-center lg:text-center"
+      },
+      {
+        "type": "select",
+        "id": "text_color_1",
+        "label": "Text color",
+        "options": [
+            { "value": "primary", "label": "Primary text"},
+            { "value": "secondary", "label": "Secondary text"},
+            { "value": "tertiary", "label": "Tertiary text"},
+            { "value": "white", "label": "White"},
+            { "value": "black", "label": "Black"}
+        ],
+        "default":   "primary"
+      },
+      {
+        "type":      "header",
+        "content":   "Call to action"
+      },
+      {
+        "type": "url",
+        "id": "cta_link_1",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "cta_text_1",
+        "label": "Text"
+      },
+      {
+        "type": "select",
+        "id": "cta_style_1",
+        "label": "Style",
+        "options": [
+          { "value": "link", "label": "Link" },
+          { "value": "button_transparent", "label": "Button transparent/white" },
+          { "value": "button_primary", "label": "Button white/primary" },
+          { "value": "button_accent", "label": "Button white/accent" },
+          { "value": "button_primary_opacity", "label": "Button primary/opacity" },
+          { "value": "button_accent_opacity", "label": "Button accent/opacity" }
+        ],
+        "default":   "link"
+      },
+      {
+        "type":      "header",
+        "content":   "Right image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2",
+        "label": "Image",
+        "info": "2000 x 2000px .jpg recommended"
+      },
+      {
+        "type": "checkbox",
+        "id": "preserve_ratio_2",
+        "label": "Preserve image aspect ratio",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "color_scheme_2",
+        "label": "Background color",
+        "options": [
+            { "value": "primary", "label": "Primary background"},
+            { "value": "secondary", "label": "Secondary background"},
+            { "value": "tertiary", "label": "Tertiary background"}
+        ],
+        "default":   "secondary"
+      },
+      {
+        "type":      "header",
+        "content":   "Content"
+      },
+      {
+        "type": "text",
+        "id": "title_2",
+        "label": "Heading",
+        "default": "Image with text overlay"
+      },
+      {
+        "type": "select",
+        "id": "heading_size_2",
+        "label": "Heading size",
+        "options": [
+          { "value": "text-sm", "label": "S"},
+          { "value": "text-base", "label": "M"},
+          { "value": "text-lg", "label": "L"},
+          { "value": "text-xl", "label": "XL"},
+          { "value": "text-2xl", "label": "2XL"},
+          { "value": "text-2xl lg:text-3xl", "label": "2XL / desktop 3XL"},
+          { "value": "text-2xl lg:text-4xl", "label": "2XL / desktop 4XL"},
+          { "value": "text-2xl lg:text-5xl", "label": "2XL / desktop 5XL" },
+          { "value": "text-2xl lg:text-6xl", "label": "2XL / desktop 6XL" },
+          { "value": "text-2xl lg:text-7xl", "label": "2XL / desktop 7XL" }
+        ],
+        "default":   "text-2xl lg:text-5xl"
+      },
+      {
+        "type": "richtext",
+        "id": "text_2",
+        "label": "Text"
+      },
+      {
+        "type": "select",
+        "id": "content_position_mobile_2",
+        "label": "Content position mobile",
+        "options": [
+            { "value": "justify-start items-start text-left", "label": "Top left"},
+            { "value": "justify-center items-start text-center", "label": "Top center"},
+            { "value": "justify-end items-start text-right", "label": "Top right"},
+            { "value": "justify-start items-center text-left", "label": "Left"},
+            { "value": "justify-center items-center text-center", "label": "Center"},
+            { "value": "justify-end items-center text-right", "label": "Right"},
+            { "value": "justify-start items-end text-left", "label": "Bottom left"},
+            { "value": "justify-center items-end text-center", "label": "Bottom center"},
+            { "value": "justify-end items-end text-right", "label": "Bottom right"}
+        ],
+        "default":   "justify-center items-center text-center"
+      },
+      {
+        "type": "select",
+        "id": "content_position_desktop_2",
+        "label": "Content position desktop",
+        "options": [
+            { "value": "lg:justify-start lg:items-start lg:text-left", "label": "Top left"},
+            { "value": "lg:justify-center lg:items-start lg:text-center", "label": "Top center"},
+            { "value": "lg:justify-end lg:items-start lg:text-right", "label": "Top right"},
+            { "value": "lg:justify-start lg:items-center lg:text-left", "label": "Left"},
+            { "value": "lg:justify-center lg:items-center lg:text-center", "label": "Center"},
+            { "value": "lg:justify-end lg:items-center lg:text-right", "label": "Right"},
+            { "value": "lg:justify-start lg:items-end lg:text-left", "label": "Bottom left"},
+            { "value": "lg:justify-center lg:items-end lg:text-center", "label": "Bottom center"},
+            { "value": "lg:justify-end lg:items-end lg:text-right", "label": "Bottom right"}
+        ],
+        "default":   "lg:justify-center lg:items-center lg:text-center"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment_2",
+        "label": "Text alignment",
+        "options": [
+          { "value": "text-left", "label": "Left"},
+          { "value": "text-center", "label": "Center"},
+          { "value": "text-right", "label": "Right"}
+        ],
+        "default":   "text-left"
+      },
+      {
+        "type": "select",
+        "id": "text_color_2",
+        "label": "Text color",
+        "options": [
+            { "value": "primary", "label": "Primary text"},
+            { "value": "secondary", "label": "Secondary text"},
+            { "value": "tertiary", "label": "Tertiary text"},
+            { "value": "white", "label": "White"},
+            { "value": "black", "label": "Black"}
+        ],
+        "default":   "primary"
+      },
+      {
+        "type":      "header",
+        "content":   "Call to action"
+      },
+      {
+        "type": "url",
+        "id": "cta_link_2",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "cta_text_2",
+        "label": "Text"
+      },
+      {
+        "type": "select",
+        "id": "cta_style_2",
+        "label": "Style",
+        "options": [
+          { "value": "link", "label": "Link" },
+          { "value": "button_transparent", "label": "Button transparent/white" },
+          { "value": "button_primary", "label": "Button white/primary" },
+          { "value": "button_accent", "label": "Button white/accent" },
+          { "value": "button_primary_opacity", "label": "Button primary/opacity" },
+          { "value": "button_accent_opacity", "label": "Button accent/opacity" }
+        ],
+        "default": "link"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "select",
+        "id": "padding_top_desktop",
+        "options": [
+          { "value": "", "label": "None" },
+          { "value": "lg:pt-2px", "label": "Border" },
+          { "value": "lg:pt-theme-half", "label": "Half" },
+          { "value": "lg:pt-theme", "label": "Standard" },
+          { "value": "lg:pt-theme-double", "label": "Double" }
+        ],
+        "label": "Top padding desktop",
+        "default": "lg:pt-2px"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom_desktop",
+        "options": [
+          { "value": "", "label": "None" },
+          { "value": "lg:pb-2px", "label": "Border" },
+          { "value": "lg:pb-theme-half", "label": "Half" },
+          { "value": "lg:pb-theme", "label": "Standard" },
+          { "value": "lg:pb-theme-double", "label": "Double" }
+        ],
+        "label": "Bottom padding desktop",
+        "default": "lg:pb-2px"
+      },
+      {
+        "type": "select",
+        "id": "padding_top",
+        "options": [
+          { "value": "", "label": "None" },
+          { "value": "pt-2px", "label": "Border" },
+          { "value": "pt-theme-half", "label": "Half" },
+          { "value": "pt-theme", "label": "Standard" },
+          { "value": "pt-theme-double", "label": "Double" }
+        ],
+        "label": "Top padding mobile",
+        "default": "pt-2px"
+      },
+      {
+        "type": "select",
+        "id": "padding_bottom",
+        "options": [
+          { "value": "", "label": "None" },
+          { "value": "pb-2px", "label": "Border" },
+          { "value": "pb-theme-half", "label": "Half" },
+          { "value": "pb-theme", "label": "Standard" },
+          { "value": "pb-theme-double", "label": "Double" }
+        ],
+        "label": "Bottom padding mobile",
+        "default": "pb-2px"
+      }
+    ],
+    "presets": [{
+      "name": "Image split",
+      "category": "Image"
+    }]
+  }
+{% endschema %}

@@ -1,0 +1,28 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "lg:w-1\/2",
+        "content_position": "lg:justify-center",
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "164420764345c1b0e8": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "agni-yoga-collection",
+        "limit": 12,
+        "crop": "0.8",
+        "show_view_all": true,
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "164420764345c1b0e8"
+  ]
+}

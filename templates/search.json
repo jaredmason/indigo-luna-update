@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-search",
+      "settings": {
+        "gift_cards": "gift-cards"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

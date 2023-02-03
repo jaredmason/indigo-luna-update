@@ -1,0 +1,198 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "settings": {
+        "hide_title": false,
+        "description_position": "under_title",
+        "description_color_scheme": "primary",
+        "grid": 4,
+        "rows": 40,
+        "grid_mobile": "2",
+        "enable_filtering": true,
+        "enable_sorting": true,
+        "linklist": "",
+        "capitalize_filters": true,
+        "color_scheme": "primary",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "166234709870740fd9": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Indigo Luna x AGCF",
+        "text": "<p>We are collaborating with the <strong>Australian Gynaecological Cancer Foundation<\/strong> (AGCF), donating<strong> 10% of all sales<\/strong> from this limited capsule to raise awareness around cancers that affect women's bodies. <\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme-half",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-theme-half",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "16623462589101b0f7": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "image": "shopify:\/\/shop_images\/AGCF_Journal_4.jpg",
+        "image_position": "right",
+        "image_size": "half",
+        "indent_image": false,
+        "fill_image": true,
+        "background_color": "primary",
+        "title": "Australian Gynaecological Cancer Foundation",
+        "richtext": "<p>We are so happy to be collaborating with the Australian Gynaecological Cancer Foundation (AGCF) to raise awareness this September around cancers that affect women's bodies. <br\/><br\/> <strong>We are donating 10%<\/strong> of all sales from this limited capsule <strong>in support of the AGCF<\/strong>’s important work. <\/p><p>Only research will help turn these dreadful statistics around. <\/p>",
+        "text_size": "text-base",
+        "font": "body",
+        "text_alignment": "text-left",
+        "text_position": "items-center",
+        "color_scheme": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "16623523974bfef75d": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "australian-gynaecological-cancer-foundation-collaboration",
+        "limit": 4,
+        "crop": "0.8",
+        "show_view_all": false,
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-2px",
+        "color_scheme": "primary"
+      }
+    },
+    "166235358578210400": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>We also prepared a Journal for you to learn to recognise the early symptoms of gynae cancers.<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "shopify:\/\/blogs\/news\/recognise-symptoms-gynaecological-cancers",
+        "cta_text": "Read Now",
+        "cta_style": "button",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    },
+    "166235258883cc541c": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/desktop-1.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/mobile-2.jpg",
+        "height": "natural",
+        "image_focal_point": "object-center",
+        "indent_image": "full_bleed",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "",
+        "padding_top": "pt-2px",
+        "padding_bottom": "",
+        "title": "",
+        "heading_size": "text-2xl lg:text-5xl",
+        "text": "",
+        "content_position": "justify-center items-center text-center",
+        "content_position_desktop": "lg:justify-center lg:items-center lg:text-center",
+        "content_width_desktop": "lg:w-2\/3",
+        "text_color": "primary",
+        "background_color": "primary",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link"
+      }
+    },
+    "1662362246dae3528c": {
+      "type": "image-split",
+      "disabled": true,
+      "settings": {
+        "image_size": "half",
+        "indent_image": false,
+        "image_1": "shopify:\/\/shop_images\/bloque-journal-2.jpg",
+        "crop": "1",
+        "color_scheme_1": "primary",
+        "title_1": "",
+        "heading_size_1": "text-2xl lg:text-5xl",
+        "text_1": "",
+        "content_position_mobile_1": "justify-center items-center text-center",
+        "content_position_desktop_1": "lg:justify-center lg:items-center lg:text-center",
+        "text_color_1": "primary",
+        "cta_link_1": "",
+        "cta_text_1": "",
+        "cta_style_1": "link",
+        "image_2": "shopify:\/\/shop_images\/bloque-journal-1.jpg",
+        "preserve_ratio_2": false,
+        "color_scheme_2": "secondary",
+        "title_2": "",
+        "heading_size_2": "text-2xl lg:text-5xl",
+        "text_2": "",
+        "content_position_mobile_2": "justify-center items-center text-center",
+        "content_position_desktop_2": "lg:justify-center lg:items-center lg:text-center",
+        "text_alignment_2": "text-left",
+        "text_color_2": "primary",
+        "cta_link_2": "",
+        "cta_text_2": "",
+        "cta_style_2": "link",
+        "padding_top_desktop": "lg:pt-2px",
+        "padding_bottom_desktop": "lg:pb-2px",
+        "padding_top": "pt-2px",
+        "padding_bottom": "pb-2px"
+      }
+    },
+    "166236327873d83851": {
+      "type": "rich-text",
+      "settings": {
+        "title": "",
+        "text": "<p>Let the colour Purple remind you that caring for your body also requires regular doctor checkups.<\/p><p> <\/p><p>With love,<\/p><p> <\/p><p>Indigo Luna xx<\/p>",
+        "text_size_mobile": "text-base",
+        "text_size_desktop": "default",
+        "font": "body",
+        "text_alignment": "text-center",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "center",
+        "padding_top_desktop": "lg:pt-theme",
+        "padding_bottom_desktop": "lg:pb-theme",
+        "padding_top": "pt-theme",
+        "padding_bottom": "pb-theme",
+        "color_scheme": "primary"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "166234709870740fd9",
+    "16623462589101b0f7",
+    "16623523974bfef75d",
+    "166235358578210400",
+    "166235258883cc541c",
+    "1662362246dae3528c",
+    "166236327873d83851"
+  ]
+}

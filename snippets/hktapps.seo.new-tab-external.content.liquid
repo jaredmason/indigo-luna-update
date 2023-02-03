@@ -1,0 +1,12 @@
+<script>
+    function hktappsAddTargetBlank() {
+        let links = document.links;
+        for (let i = 0; i< links.length; i++) {
+            let a = links[i];
+            if (a.host !== location.host) {
+                a.target = '_blank';
+            }
+        }
+    }
+    hktappsDocReady(function() {hktappsAddTargetBlank();});
+</script>
